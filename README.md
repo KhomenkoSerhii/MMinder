@@ -1,16 +1,134 @@
-# React + Vite
+# Minute Minder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A meeting management application with **dual deployment modes**: **Landing Page** and **Full Site**.
 
-Currently, two official plugins are available:
+## 🌟 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project supports two different deployment configurations from a single codebase:
 
-## React Compiler
+### 🎯 **Landing Mode**
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Purpose**: Marketing/Landing page only
+- **Routes**: Home page only (`/`)
+- **Use Case**: Public-facing landing page for marketing campaigns
 
-## Expanding the ESLint configuration
+### 🚀 **Site Mode**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Purpose**: Full-featured application
+- **Routes**: All application routes (Home, Features, Pricing, Use Cases, etc.)
+- **Use Case**: Complete application with full navigation and features
+
+## 🔧 Environment Configuration
+
+The deployment mode is controlled by the `VITE_APP_MODE` environment variable:
+
+### **.env** (Development - Site Mode)
+
+```bash
+VITE_APP_MODE=site
+```
+
+### **.env.landing** (Landing Mode)
+
+```bash
+VITE_APP_MODE=landing
+```
+
+## 📦 Available Scripts
+
+### Development
+
+```bash
+npm run dev              # Default development mode (site)
+npm run dev:landing      # Run in landing mode
+npm run dev:site         # Run in site mode
+```
+
+### Build
+
+```bash
+npm run build            # Default build (site)
+npm run build:landing    # Build landing page only
+npm run build:site       # Build full site
+```
+
+### Preview
+
+```bash
+npm run preview          # Preview production build
+npm run preview:landing  # Preview landing build
+npm run preview:site     # Preview site build
+```
+
+## 🚀 Getting Started
+
+1. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Run development server:**
+
+   ```bash
+   npm run dev:site      # Full site mode
+   # or
+   npm run dev:landing   # Landing mode
+   ```
+
+3. **Build for production:**
+   ```bash
+   npm run build:site
+   # or
+   npm run build:landing
+   ```
+
+## 🔀 How Routing Works
+
+The application uses conditional routing in `src/App.jsx`:
+
+- **Landing Mode**: Only shows the landing home page, redirects all other routes to `/`
+- **Site Mode**: Shows all application routes with full navigation
+
+## 📤 Deployment
+
+### Vercel Deployment (Recommended)
+
+**Landing Page:**
+
+```bash
+# Set environment variable in Vercel
+VITE_APP_MODE=landing
+
+# Build command
+npm run build:landing
+```
+
+**Full Site:**
+
+```bash
+# Set environment variable in Vercel
+VITE_APP_MODE=site
+
+# Build command
+npm run build:site
+```
+
+### Setup Two Vercel Projects
+
+1. **Project 1: Minute Minder Landing**
+   - Branch: `main` (or `landing`)
+   - Environment Variable: `VITE_APP_MODE=landing`
+   - Build Command: `npm run build:landing`
+
+2. **Project 2: Minute Minder App**
+   - Branch: `main`
+   - Environment Variable: `VITE_APP_MODE=site`
+   - Build Command: `npm run build:site`
+
+## 🔒 Environment Modes
+
+| Mode    | Environment Variable    | Pages Included    | Redirects        |
+| ------- | ----------------------- | ----------------- | ---------------- |
+| Landing | `VITE_APP_MODE=landing` | Landing page only | All routes → `/` |
+| Site    | `VITE_APP_MODE=site`    | All pages         | Standard routing |

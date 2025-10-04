@@ -5,7 +5,7 @@ import AccordionItem from "@/Components/AccordionItem";
 import DashboardFilled from "@/assets/Images/DashboardFilled.png";
 import { Button } from "@/Components/UI/Button";
 import ChevronDown from "@/assets/icons/ChevronDown.svg";
-import { CTASection } from "@/Pages/Home/CTASection";
+import { CTASection } from "@/Pages/Landing/CTASection";
 import { PrivacyFeature } from "@/Components/PrivacyFeature";
 import SecurityShield from "@/assets/Images/SecurityShield.png";
 import { FeatureCard } from "@/Components/FeatureCard";

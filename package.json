@@ -5,9 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:landing": "vite --mode landing",
+    "dev:site": "vite --mode site",
     "build": "vite build",
+    "build:landing": "vite build --mode landing",
+    "build:site": "vite build --mode site",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:landing": "vite preview --mode landing",
+    "preview:site": "vite preview --mode site"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
