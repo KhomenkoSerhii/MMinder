@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import CalendarIcon from "@/assets/icons/CalendarIcon.svg";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 
 const Logo = memo(() => {
   return (

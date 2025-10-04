@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import Logo from "./Logo";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 
 const Footer = memo(() => {
   const currentYear = new Date().getFullYear();

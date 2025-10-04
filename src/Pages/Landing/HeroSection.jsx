@@ -1,10 +1,10 @@
 import React from "react";
-import { Typography } from "@/Components/Typography";
-import { HERO_DATA } from "./data";
-import { Card } from "@/Components/Card";
+import { Typography } from "@/Components/UI/Typography";
+import { HERO_DATA } from "../../utils/Data/data";
+import { Card } from "@/Components/UI/Card";
 import ImgBlock from "@/assets/Images/ImgBlock.png";
 import { cn } from "@/utils/cn";
-import ActionSection from "@/Components/ActionSection";
+import ActionSection from "@/Components/Feature/ActionSection";
 import { Badge } from "@/Components/UI/Badge";
 import Checked from "@/assets/Images/Checked.png";
 import CheckedLg from "@/assets/Images/CheckedLg.png";

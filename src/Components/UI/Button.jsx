@@ -12,10 +12,13 @@ const getButtonClasses = (variant = "primary", size = "default") => {
       "bg-white text-[var(--color-primary-dark)] p-3 hover:bg-[var(--color-secondary-light)] transition-all duration-200",
     ghost:
       "bg-[var(--color-secondary)] text-[var(--color-primary-dark)] p-3 hover:bg-[var(--color-secondary-light)] text-center transition-all duration-200",
+    transparent:
+      "bg-transparent p-3 border border-[var(--stroke-light)] hover:bg-[var(--bg-light)] text-center transition-all duration-200",
   };
 
   const sizeClasses = {
     lg: "px-5 h-[52px]",
+    md: "px-5 h-[44px]",
     "2xl": "px-5 py-3 h-[52px] w-full sm:w-[230px]",
   };
 

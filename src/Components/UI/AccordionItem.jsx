@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import ChevronDown from "@/assets/icons/ChevronDown.svg";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 
 const AccordionItem = memo(({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);

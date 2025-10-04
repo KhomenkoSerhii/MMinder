@@ -1,14 +1,13 @@
 import Layout from "@/Layouts/MainLayout";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LandingHome from "@/Pages/Landing";
-import SiteHome from "@/Pages/Site/Home";
-import {
-  LANDING_ROUTES,
-  SITE_ROUTES,
-  isLandingMode,
-  APP_MODE,
-} from "@/utils/constants";
+import Home from "@/Pages/Site/Home";
+import { LANDING_ROUTES, SITE_ROUTES, isLandingMode } from "@/utils/constants";
 import Features from "@/Pages/Site/Features";
+import Pricing from "@/Pages/Site/Pricing";
+import UseCases from "@/Pages/Site/UseCases";
+import PrivacyPolicy from "@/Pages/Site/PrivacyPolicy";
+import TermsAndConditions from "@/Pages/Site/TermsAndConditions";
 
 function App() {
   return (
@@ -27,11 +26,19 @@ function App() {
         ) : (
           /* Site Mode Routes */
           <>
-            <Route path={SITE_ROUTES.HOME} element={<SiteHome />} />
+            <Route path={SITE_ROUTES.HOME} element={<Home />} />
             <Route path={SITE_ROUTES.FEATURES} element={<Features />} />
-            {/* Add more site routes here */}
-            {/* <Route path={SITE_ROUTES.DASHBOARD} element={<Dashboard />} /> */}
-            {/* <Route path={SITE_ROUTES.ABOUT} element={<About />} /> */}
+            <Route path={SITE_ROUTES.PRICING} element={<Pricing />} />
+            <Route path={SITE_ROUTES.USE_CASES} element={<UseCases />} />
+
+            <Route
+              path={SITE_ROUTES.PRIVACY_POLICY}
+              element={<PrivacyPolicy />}
+            />
+            <Route
+              path={SITE_ROUTES.TERMS_AND_CONDITIONS}
+              element={<TermsAndConditions />}
+            />
           </>
         )}
       </Routes>

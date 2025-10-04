@@ -81,48 +81,26 @@ export const FAQ_DATA = [
   },
 ];
 
-export const ADDITIONAL_FAQ_DATA = [
+export const SITE_FAQ_DATA = [
   {
-    id: 5,
-    question: "How does Minute Minder save money?",
-    answer:
-      "By keeping meetings focused and on-time, reducing overruns and improving productivity across your organization.",
+    id: 1,
+    question: "Sign in with Google",
+    answer: "Just use Google sign in and start right away.",
   },
   {
-    id: 6,
-    question: "Does Minute Minder work inside Google Meet?",
-    answer:
-      "Yes, Minute Minder integrates seamlessly with Google Meet and other popular video conferencing platforms.",
+    id: 2,
+    question: "Install the browser extension",
+    answer: "Land on the dashboard for a quick start.",
   },
   {
-    id: 7,
-    question: "Can I create and edit my own reminders?",
-    answer:
-      "Absolutely! You can create custom reminders tailored to your meeting types and team preferences.",
+    id: 3,
+    question: "Customize reminders",
+    answer: "Name, trigger time, message; save for future meetings.",
   },
   {
-    id: 8,
-    question: "What happens if the meeting time changes?",
-    answer:
-      "Minute Minder automatically syncs with your calendar and adjusts timing accordingly in real-time.",
-  },
-  {
-    id: 9,
-    question: "Can I invite teammates?",
-    answer:
-      "Yes, you can easily invite team members and manage permissions for shared meeting management.",
-  },
-  {
-    id: 10,
-    question: "How do plans and billing work?",
-    answer:
-      "We offer flexible plans based on team size with transparent pricing and no hidden fees.",
-  },
-  {
-    id: 11,
-    question: "What analytics are included?",
-    answer:
-      "Get insights on meeting efficiency, time usage patterns, and team productivity metrics.",
+    id: 4,
+    question: "Start your first efficient meeting",
+    answer: "Start saving $1K/month by finishing on time and cutting overtime.",
   },
 ];
 

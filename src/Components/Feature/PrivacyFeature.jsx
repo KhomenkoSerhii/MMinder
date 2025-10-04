@@ -1,5 +1,5 @@
 import React, { memo } from "react";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 
 const PrivacyFeature = memo(
   ({ icon, title, description, index, dataLength }) => {

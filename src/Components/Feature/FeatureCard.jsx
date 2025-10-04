@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 import { cn } from "@/utils/cn";
 
 const FeatureCard = React.memo(

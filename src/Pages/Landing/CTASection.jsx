@@ -1,11 +1,11 @@
 import React from "react";
 import { cn } from "@/utils/cn";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 import { Button } from "@/Components/UI/Button";
 import { memo } from "react";
 import ChromeIcon from "@/assets/icons/ChromeIcon.svg";
 import ChromePartImage from "@/assets/Images/ChromePartImage.png";
-import ActionSection from "@/Components/ActionSection";
+import ActionSection from "@/Components/Feature/ActionSection";
 
 const CTASection = memo(() => {
   return (

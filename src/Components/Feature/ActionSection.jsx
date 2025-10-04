@@ -1,7 +1,7 @@
 import React from "react";
 import ChromeIcon from "@/assets/icons/ChromeIcon.svg";
 import { Button } from "@/Components/UI/Button";
-import { Typography } from "@/Components/Typography";
+import { Typography } from "@/Components/UI/Typography";
 import { cn } from "@/utils/cn";
 
 const ActionSection = ({ variant = "default", className }) => {
