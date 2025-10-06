@@ -53,7 +53,7 @@ const Home = () => {
               <img src={WhyMinderSiteBg} alt="" />
             </section>
 
-            <div className="flex flex-col lg:flex-row lg:gap-5 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 gap-2">
               <article className="relative flex-row lg:flex-col  lg:flex-1 lg:justify-end rounded-[20px] flex gap-5 text-white h-[218px] lg:h-[300px] bg-[var(--color-primary)]">
                 <img
                   src={LockBg}

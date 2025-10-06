@@ -42,11 +42,13 @@ const Landing = () => {
                 title="Built for teams"
                 description="Draft a realistic, time‑boxed agenda from your calendar so everyone knows the plan"
                 icon={StarCalendar}
+                className="flex-1"
               />
               <FeatureCard
                 title="Calm control in the call"
                 description="A clear on‑screen timer and milestone cues keep you on track - without being intrusive."
                 icon={CallIcon}
+                className="flex-1"
               />
             </div>
             {/* Dashboard Preview Card */}
@@ -61,12 +63,14 @@ const Landing = () => {
                 title="Decisions locked at the end"
                 description="Wrap‑up nudges help confirm owners and dates so meetings end with outcomes."
                 icon={DocumentIcon}
+                className="flex-1"
               />
 
               <FeatureCard
                 title="Built for teams"
                 description="Team templates, admin reminders, analytics, and simple plan controls."
                 icon={TeamIcon}
+                className="flex-1"
               />
               <section className="relative w-full lg:hidden flex justify-center h-auto bg-[var(--color-secondary)] text-white rounded-[20px] overflow-hidden">
                 <img src={HalftimeBg} alt="" />
