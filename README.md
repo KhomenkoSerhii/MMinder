@@ -15,7 +15,7 @@ This project supports two different deployment configurations from a single code
 ### 🚀 **Site Mode**
 
 - **Purpose**: Full-featured application
-- **Routes**: All application routes (Home, Features, Pricing, Use Cases, etc.)
+- **Routes**: All application routes (Home, Features, Pricing, etc.)
 - **Use Case**: Complete application with full navigation and features
 
 ## 🔧 Environment Configuration

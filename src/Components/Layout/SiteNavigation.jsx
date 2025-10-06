@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
-import { SITE_ROUTES } from "@/utils/constants";
+import { CHROME_REDIRECT_URL, SITE_ROUTES } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 import { Button } from "../UI/Button";
 
@@ -12,7 +12,6 @@ const SiteNavigation = () => {
   const navLinks = [
     { path: SITE_ROUTES.FEATURES, label: "Features" },
     { path: SITE_ROUTES.PRICING, label: "Pricing" },
-    { path: SITE_ROUTES.USE_CASES, label: "Use Cases" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -51,10 +50,16 @@ const SiteNavigation = () => {
             variant="transparent"
             size="md"
             className="w-full sm:w-[179px]"
+            onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
           >
             Log in
           </Button>
-          <Button variant="primary" size="md" className="w-full sm:w-[179px]">
+          <Button
+            variant="primary"
+            onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+            size="md"
+            className="w-full sm:w-[179px]"
+          >
             Try for FREE
           </Button>
         </div>
@@ -100,8 +105,8 @@ const SiteNavigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-[var(--stroke-light)] bg-white">
-          <div className="max-w-8xl mx-auto px-5 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t px-5 py-4  border-[var(--stroke-light)] bg-white">
+          <div className="max-w-8xl mx-auto flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
@@ -118,15 +123,21 @@ const SiteNavigation = () => {
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex pt-5 items-center flex-col gap-2">
             <Button
               variant="transparent"
               size="md"
               className="w-full sm:w-[179px]"
+              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
             >
               Log in
             </Button>
-            <Button variant="primary" size="md" className="w-full sm:w-[179px]">
+            <Button
+              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              variant="primary"
+              size="md"
+              className="w-full sm:w-[179px]"
+            >
               Try for FREE
             </Button>
           </div>

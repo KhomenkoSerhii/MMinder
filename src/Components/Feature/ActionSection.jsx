@@ -1,8 +1,8 @@
 import React from "react";
 import ChromeIcon from "@/assets/icons/ChromeIcon.svg";
 import { Button } from "@/Components/UI/Button";
-import { Typography } from "@/Components/UI/Typography";
 import { cn } from "@/utils/cn";
+import { CHROME_REDIRECT_URL } from "@/utils/constants";
 
 const ActionSection = ({ variant = "default", className }) => {
   return (
@@ -16,6 +16,7 @@ const ActionSection = ({ variant = "default", className }) => {
         variant={variant}
         className="flex w-full lg:w-max gap-1.5"
         size="lg"
+        onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
       >
         <img
           className="size-6 relative overflow-hidden"
@@ -24,19 +25,6 @@ const ActionSection = ({ variant = "default", className }) => {
         />
         Add to Chrome
       </Button>
-
-      <div
-        className={`w-[179px] ${
-          variant === "primary" ? "text-black" : "text-white"
-        } h-[52px] py-3 flex flex-col justify-center lg:items-start items-center`}
-      >
-        <Typography variant="p" className="font-bold">
-          Free trial for 7 days
-        </Typography>
-        <Typography variant="p" className="text-[10px] font-normal">
-          No credit card for the free plan.
-        </Typography>
-      </div>
     </div>
   );
 };

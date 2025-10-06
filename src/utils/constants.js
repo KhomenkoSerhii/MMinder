@@ -9,11 +9,13 @@ export const SITE_ROUTES = {
   HOME: "/",
   FEATURES: "/features",
   PRICING: "/pricing",
-  USE_CASES: "/use-cases",
 
   PRIVACY_POLICY: "/privacy-policy",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
 };
+
+export const CHROME_REDIRECT_URL =
+  "https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic";
 
 export const DEPLOYMENT_ROUTES = {
   landing: [LANDING_ROUTES.HOME],

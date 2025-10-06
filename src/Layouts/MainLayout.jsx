@@ -1,5 +1,6 @@
 import Navigation from "@/Components/Layout/Navigation";
 import SiteNavigation from "@/Components/Layout/SiteNavigation";
+import SiteFooter from "@/Components/Layout/SiteFooter";
 import Footer from "@/Components/Layout/Footer";
 import CTACard from "@/Components/Feature/CTACard";
 import { isLandingMode } from "@/utils/constants";
@@ -23,7 +24,7 @@ export default function Layout({ children }) {
         </div>
       )}
 
-      <Footer />
+      {isLandingMode() ? <Footer /> : <SiteFooter />}
     </div>
   );
 }

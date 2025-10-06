@@ -42,10 +42,6 @@ const CTA_CONFIG = {
     showCTA: true,
     title: CTATitles.savingCTA,
   },
-  [SITE_ROUTES.USE_CASES]: {
-    showCTA: true,
-    title: CTATitles.savingCTA,
-  },
 
   // Legal Pages - No CTA
   [SITE_ROUTES.PRIVACY_POLICY]: {
