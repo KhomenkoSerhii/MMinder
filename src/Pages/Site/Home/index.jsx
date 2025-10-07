@@ -50,7 +50,7 @@ const Home = () => {
             </div>
             {/* Dashboard Preview Card */}
             <section className="relative w-full lg:flex hidden h-auto bg-[var(--color-secondary)] text-white rounded-[20px] justify-end border-[1px] border-solid border-[var(--bg-light)] overflow-hidden">
-              <img src={WhyMinderSiteBg} alt="" />
+              <img src={WhyMinderSiteBg} alt="" className="h-[300px]" />
             </section>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 gap-2">
@@ -58,7 +58,7 @@ const Home = () => {
                 <img
                   src={LockBg}
                   alt=""
-                  className="absolute top-0 right-0 z-0"
+                  className="absolute w-[200px] top-0 right-0 z-0"
                 />
                 <div className="p-5 z-10">
                   <Typography variant="h3" className="font-bold">
@@ -91,7 +91,7 @@ const Home = () => {
                 className="flex-1"
               />
               <section className="relative w-full lg:hidden flex justify-center h-auto bg-[var(--color-secondary)] text-white rounded-[20px] overflow-hidden">
-                <img src={HalftimeBg} alt="" />
+                <img src={HalftimeBg} alt="" className="h-[200px]" />
               </section>
             </div>
           </div>

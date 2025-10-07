@@ -50,7 +50,9 @@ const SiteNavigation = () => {
             variant="transparent"
             size="md"
             className="w-full sm:w-[179px]"
-            onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+            onClick={() =>
+              window.open("https://app.minuteminder.io/login", "_blank")
+            }
           >
             Log in
           </Button>
@@ -128,7 +130,9 @@ const SiteNavigation = () => {
               variant="transparent"
               size="md"
               className="w-full sm:w-[179px]"
-              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              onClick={() =>
+                window.open("https://app.minuteminder.io/login", "_blank")
+              }
             >
               Log in
             </Button>

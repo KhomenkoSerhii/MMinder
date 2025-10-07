@@ -27,7 +27,7 @@ const PrivacySection = () => {
             <Typography variant="h2">Access stays encrypted.</Typography>
 
             <img
-              className="hidden lg:block translate-y-[-20%]"
+              className="hidden w-[359px] lg:block translate-y-[-20%]"
               src={SecurityShield}
               alt="Security illustration"
             />

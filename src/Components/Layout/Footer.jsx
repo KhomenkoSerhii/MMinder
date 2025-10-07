@@ -15,7 +15,7 @@ const Footer = memo(() => {
               @ {currentYear} Minute Minder
             </Typography>
             <Typography variant="p-muted">
-              Your funds. Our service. Shared success.
+              Run meetings that end on time.
             </Typography>
           </div>
         </div>

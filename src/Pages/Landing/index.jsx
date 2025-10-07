@@ -56,7 +56,7 @@ const Landing = () => {
               <img src={WhyMinuteCardBg} alt="" />
             </section>
             <section className="relative w-full lg:flex hidden justify-center h-auto bg-[var(--color-secondary)] text-white rounded-[20px] overflow-hidden">
-              <img src={HalftimeBg} alt="" />
+              <img src={HalftimeBg} alt="" className="h-[200px] lg:h-[300px]" />
             </section>
             <div className="flex flex-col lg:flex-row lg:gap-5 gap-2">
               <FeatureCard
@@ -73,7 +73,11 @@ const Landing = () => {
                 className="flex-1"
               />
               <section className="relative w-full lg:hidden flex justify-center h-auto bg-[var(--color-secondary)] text-white rounded-[20px] overflow-hidden">
-                <img src={HalftimeBg} alt="" />
+                <img
+                  src={HalftimeBg}
+                  alt=""
+                  className="h-[200px] lg:h-[300px]"
+                />
               </section>
             </div>
           </div>

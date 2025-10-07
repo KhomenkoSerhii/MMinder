@@ -88,11 +88,7 @@ const HeroSection = () => {
               <Badge key={badge.id} {...badge} />
             ))}
           </div>
-          <img
-            src={Checked}
-            alt=""
-            className=" xl:block hidden flex-shrink-0"
-          />
+          <img src={Checked} alt="" className=" xl:block hidden w-[200px] " />
           <img
             src={CheckedLg}
             alt=""

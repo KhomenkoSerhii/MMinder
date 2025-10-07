@@ -104,7 +104,7 @@ const Features = () => {
               <img
                 src={Checked}
                 alt=""
-                className=" xl:block hidden flex-shrink-0"
+                className="w-[200px] xl:block hidden flex-shrink-0"
               />
               <img
                 src={CheckedLg}
@@ -113,7 +113,7 @@ const Features = () => {
               />
             </div>
           </div>
-          <section className=" items-center relative hidden lg:flex rounded-[32px] pb-8 pl-8 bg-[var(--color-secondary)] flex-col gap-6">
+          <section className=" items-center relative hidden lg:flex rounded-[32px] pb-8 lg:pt-10 pl-8 bg-[var(--color-secondary)] flex-col gap-6">
             <img
               src={NotificatonVideo}
               alt=""

@@ -43,7 +43,7 @@ const CTASection = memo(() => {
               </Typography>
             </div>
             <img
-              className="w-[167px] object-contain right-0 h-auto top-0 rounded-tl-[20px] rounded-bl-[20px]"
+              className="w-[167px] right-0 h-auto top-0 rounded-tl-[20px] rounded-bl-[20px]"
               src={ChromePartImage}
               alt=""
             />
@@ -54,7 +54,7 @@ const CTASection = memo(() => {
       </div>
 
       <img
-        className="w-1/3 xl:w-auto top-0 lg:block hidden lg:rounded-tl-none rounded-tl-[20px] rounded-bl-[20px]"
+        className="h-[344px] xl:w-auto top-0 lg:block hidden lg:rounded-tl-none rounded-tl-[20px] rounded-bl-[20px]"
         src={ChromePartImage}
         alt=""
       />

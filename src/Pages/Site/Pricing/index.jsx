@@ -72,7 +72,7 @@ const Pricing = () => {
                 entrepreneurship to kids.
               </Typography>
             </article>
-            <img src={Bulb} alt="" className="w-[120px] lg:w-auto" />
+            <img src={Bulb} alt="" className="w-[120px] lg:w-[194px]" />
           </section>
         </section>
 
@@ -117,7 +117,7 @@ const Pricing = () => {
                   </Typography>
                 </a>
               </article>
-              <img src={MailBg} alt="" className="w-[120px] lg:w-auto" />
+              <img src={MailBg} alt="" className="w-[120px] lg:w-[194px]" />
             </div>
           </section>
 

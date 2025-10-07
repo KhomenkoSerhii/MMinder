@@ -1,7 +1,6 @@
 import ScreenHalfTime from "@/assets/Images/ScreenHalfTime.png";
 import ReminderCardLg from "@/assets/Images/ReminderCardLg.png";
 import TeamReminders from "@/assets/Images/TeamReminders.png";
-import BasicDialog from "@/assets/Images/BasicDialog.png";
 
 export const FEATURES_SHOWCASE_DATA = [
   {
@@ -54,6 +53,6 @@ export const FEATURES_SHOWCASE_DATA = [
     width: "wide",
     bgColor: "light",
     image: TeamReminders,
-    imgStyle: "right-0 bottom-0 lg:block hidden",
+    imgStyle: "right-0 bottom-0 lg:block hidden w-[461px]",
   },
 ];
