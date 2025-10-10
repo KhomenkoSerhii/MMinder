@@ -3,15 +3,15 @@ import SiteNavigation from "@/Components/Layout/SiteNavigation";
 import SiteFooter from "@/Components/Layout/SiteFooter";
 import Footer from "@/Components/Layout/Footer";
 import CTACard from "@/Components/Feature/CTACard";
-import { isLandingMode } from "@/utils/constants";
 import { useCTAConfig } from "./PageLayout";
+import { isLandingMode } from "@/utils/constants";
 
 export default function Layout({ children }) {
   const { showCTA, title: ctaTitle } = useCTAConfig();
 
   return (
     <div className="min-h-screen flex flex-col">
-      {isLandingMode() ? <Navigation /> : <SiteNavigation />}
+      {isLandingMode ? <Navigation /> : <SiteNavigation />}
 
       <main className="flex-1 max-w-8xl mx-auto px-5 l pt-16 pb-8 w-full">
         {children}
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         </div>
       )}
 
-      {isLandingMode() ? <Footer /> : <SiteFooter />}
+      {isLandingMode ? <Footer /> : <SiteFooter />}
     </div>
   );
 }

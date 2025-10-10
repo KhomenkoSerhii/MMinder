@@ -14,12 +14,14 @@ import LockBg from "@/assets/Images/LockBg.png";
 import { FeatureCard } from "@/Components/Feature/FeatureCard";
 import FounderSection from "@/Components/Feature/FounderSection";
 import { FOUNDER_SECTION_DATA } from "@/utils/Data/FAQs";
+import SEO from "@/Components/SEO/SEO";
 
 const Home = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.home;
 
   return (
     <main className="w-full">
+      <SEO page="home" />
       <div className="main-layout">
         <HeroSection />
         <section

@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { SITE_ROUTES, LANDING_ROUTES } from "@/utils/constants";
+import { SITE_ROUTES } from "@/utils/constants";
 
 const CTATitles = {
   homeCTA: (
@@ -24,7 +24,7 @@ const CTATitles = {
 
 const CTA_CONFIG = {
   // Landing Mode
-  [LANDING_ROUTES.HOME]: {
+  [SITE_ROUTES.LANDING]: {
     showCTA: true,
     title: CTATitles.homeCTA,
   },

@@ -1,10 +1,3 @@
-// Environment-based configuration
-export const APP_MODE = import.meta.env.VITE_APP_MODE || "site";
-
-export const LANDING_ROUTES = {
-  HOME: "/",
-};
-
 export const SITE_ROUTES = {
   HOME: "/",
   FEATURES: "/features",
@@ -12,18 +5,11 @@ export const SITE_ROUTES = {
 
   PRIVACY_POLICY: "/privacy-policy",
   TERMS_AND_CONDITIONS: "/terms-and-conditions",
+
+  LANDING: "/online-calls-timer-and-AI-reminders",
 };
 
 export const CHROME_REDIRECT_URL =
   "https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic";
 
-export const DEPLOYMENT_ROUTES = {
-  landing: [LANDING_ROUTES.HOME],
-  site: Object.values(SITE_ROUTES),
-};
-
-export const getAvailableRoutes = () => {
-  return DEPLOYMENT_ROUTES[APP_MODE] || DEPLOYMENT_ROUTES.site;
-};
-
-export const isLandingMode = () => APP_MODE === "landing";
+export const isLandingMode = window.location.pathname === SITE_ROUTES.LANDING;

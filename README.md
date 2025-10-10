@@ -1,7 +1,5 @@
 # Minute Minder
 
-A meeting management application with **dual deployment modes**: **Landing Page** and **Full Site**.
-
 ## 🌟 Project Overview
 
 This project supports two different deployment configurations from a single codebase:

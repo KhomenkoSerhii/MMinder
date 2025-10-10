@@ -46,7 +46,7 @@ const SiteFooter = memo(() => {
             {links.map((link) => (
               <li
                 key={link.title}
-                className="py-2 text-blackfont-medium text-base"
+                className="py-2 text-black font-medium text-base"
               >
                 <a href={link.href}>{link.title}</a>
               </li>

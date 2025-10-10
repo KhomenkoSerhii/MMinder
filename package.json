@@ -1,5 +1,5 @@
 {
-  "name": "react-tailwind-app",
+  "name": "Minute Minder",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,6 +20,7 @@
     "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.9.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.13"
