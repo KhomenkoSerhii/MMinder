@@ -21,6 +21,7 @@ import ShieldLocked from "@/assets/Images/ShieldLocked.png";
 import { CHROME_REDIRECT_URL } from "@/utils/constants";
 import Eclipse from "@/assets/Images/Eclipse.png";
 import Cross from "@/assets/icons/Cross.svg";
+import SEO from "@/Components/SEO/SEO";
 const Features = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.features;
   const cardData = [
@@ -34,6 +35,7 @@ const Features = () => {
   ];
   return (
     <main className="w-full">
+      <SEO page="features" />
       <div className="main-layout">
         <section
           className="flex flex-col lg:gap-x-12 w-full justify-between lg:flex-row h-full"
