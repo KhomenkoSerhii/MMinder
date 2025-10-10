@@ -6,10 +6,12 @@ import Bulb from "@/assets/Images/Bulb.png";
 import Percent from "@/assets/Images/Percent.png";
 import MailBg from "@/assets/Images/MailBg.png";
 import { CHROME_REDIRECT_URL } from "@/utils/constants";
+import SEO from "@/Components/SEO/SEO";
 
 const Pricing = () => {
   return (
     <main className="w-full">
+      <SEO page="pricing" />
       <div className="main-layout">
         <section
           className="flex flex-col lg:gap-x-12 w-full justify-between lg:flex-row h-full"
