@@ -18,10 +18,92 @@ import SEO from "@/Components/SEO/SEO";
 
 const Home = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.home;
+  const SEO = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://minuteminder.io/#org",
+        name: "Minute Minder",
+        url: "https://minuteminder.io/",
+        logo: "https://minuteminder.io/assets/logo-512.png",
+        sameAs: [
+          "https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic",
+        ],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://minuteminder.io/#website",
+        url: "https://minuteminder.io/",
+        name: "Minute Minder",
+        publisher: { "@id": "https://minuteminder.io/#org" },
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://minuteminder.io/#app",
+        name: "Minute Minder",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Chrome (desktop), Web",
+        description:
+          "Google Meet timer with smart nudges, AI Agenda Timer, analytics, and team controls.",
+        browserRequirements:
+          "Requires Google Chrome; works inside Google Meet with a connected web dashboard.",
+        featureList: [
+          "In‑meeting timer with halftime / 10‑minute / 5‑minute / overtime cues, AI Agenda hints and AI notifications",
+          "Customizable reminders library",
+          "AI Agenda Timer and AI hints",
+          "Dashboard & analytics",
+          "Invite your team",
+        ],
+        offers: {
+          "@type": "Offer",
+          price: "3.00",
+          priceCurrency: "USD",
+          category: "subscription",
+          url: "https://minuteminder.io/pricing",
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://minuteminder.io/#breadcrumbs",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://minuteminder.io/",
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://minuteminder.io/#faq",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Does Minute Minder work inside Google Meet?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. The Chrome extension shows a compact in‑meeting timer and gentle nudges with AI Agenda hints; the web dashboard manages reminders, invites your teammates, analytics, and billing.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "What’s Agenda Timer AI?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "It drafts a realistic, time‑boxed agenda from your calendar context and guides transitions, helping you finish on time and confirm owners & dates.",
+            },
+          },
+        ],
+      },
+    ],
+  };
 
   return (
     <main className="w-full">
-      <SEO page="home" />
+      <script type="application/ld+json">{JSON.stringify(SEO)}</script>
+      {/* <SEO page="home" /> */}
       <div className="main-layout">
         <HeroSection />
         <section
