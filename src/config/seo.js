@@ -118,12 +118,72 @@ export const seoConfig = {
   },
 
   features: {
-    title: "Features - Minute Minder Meeting Assistant",
+    title: "Features - Timer, nudges, AI Agenda Timer, Team timers, analytics | Minute Minder",
     description:
-      "Discover powerful features: real-time call tracking, AI-powered reminders, customizable notifications, and seamless integration with popular video platforms.",
+      "See how Minute Minder keeps Google Meet on track: in‑meeting timer, halftime/5‑min/overtime cards, AI Agenda Timer, reminders library, analytics, timers for your team.",
     keywords:
-      "meeting features, AI reminders, call tracking, meeting notifications, productivity features",
+      "google meet timer, meeting features, AI agenda timer, meeting nudges, team timers, meeting analytics, halftime cues, overtime alerts",
     ogType: "website",
+    ogTitle: "Minute Minder features: timer, nudges, Agenda Timer AI",
+    ogDescription: "See how Minute Minder keeps Google Meet on track: in‑meeting timer, halftime/5‑min/overtime cards, AI Agenda Timer, reminders library, analytics, timers for your team.",
+    ogImage: "https://minuteminder.io/og/features-1200x630.png",
+    ogImageWidth: "1200",
+    ogImageHeight: "630",
+    twitterTitle: "Minute Minder features: timer, nudges, Agenda Timer AI",
+    twitterDescription: "In‑meeting timer, halftime/5‑min/overtime cards, AI Agenda Timer, reminders library, analytics, timers for your team.",
+    twitterImage: "https://minuteminder.io/og/features-1200x630.png",
+    canonical: "/features",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://minuteminder.io/features",
+          "url": "https://minuteminder.io/features",
+          "name": "Minute Minder Features",
+          "breadcrumb": "https://minuteminder.io/#breadcrumbs"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Minute Minder for Google Meet",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Chrome (desktop), Web",
+          "softwareVersion": "1.x",
+          "featureList": [
+            "In‑meeting timer overlay with halftime & overtime cues",
+            "Custom reminders library (admin templates & user custom)",
+            "Agenda Timer AI (calendar‑aware segments)",
+            "Analytics (on‑time % and overrun trends)",
+            "Timers for your team"
+          ],
+          "offers": {
+            "@type": "Offer",
+            "price": "19.00",
+            "priceCurrency": "USD",
+            "url": "https://minuteminder.io/pricing"
+          }
+        },
+        {
+          "@type": "HowTo",
+          "name": "Add a timer to Google Meet with Minute Minder",
+          "totalTime": "PT2M",
+          "estimatedCost": {"@type":"MonetaryAmount","currency":"USD","value":"0"},
+          "step": [
+            {"@type":"HowToStep","name":"Install the Chrome extension","text":"Open the Chrome Web Store listing and add Minute Minder to Chrome."},
+            {"@type":"HowToStep","name":"Sign in with Google","text":"Grant Calendar read access so Minute Minder can timebox from your event."},
+            {"@type":"HowToStep","name":"Join your Meet","text":"The timer overlay appears automatically; halftime and overtime cues will nudge you at the right moments."}
+          ],
+          "tool": "Google Chrome"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type":"ListItem","position":1,"name":"Home","item":"https://minuteminder.io/"},
+            {"@type":"ListItem","position":2,"name":"Features","item":"https://minuteminder.io/features"}
+          ]
+        }
+      ]
+    }
   },
 
   pricing: {
