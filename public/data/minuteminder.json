@@ -1,0 +1,36 @@
+{
+  "name": "Minute Minder",
+  "category": "BusinessApplication",
+  "summary": "Google Meet timer + agenda cues so teams finish on time and confirm owners & dates.",
+  "platforms": ["Chrome extension (Google Meet)", "Web dashboard"],
+  "features": [
+    "In‑meeting timer with notifications during the call that use can tune, AI agenda and team timers",
+    "Custom reminders library (admin templates + user custom)",
+    "Agenda Timer AI (calendar‑aware segments; rolling out)",
+    "Analytics (meetings managed, on‑time %, overrun)",
+    "Team timers with agenda hints"
+  ],
+  "pricing": {
+    "starter": { "price": 3, "currency": "USD", "trial_days": 7 },
+    "growth": { "price": 19, "currency": "USD" },
+    "enterprise": { "price": 500, "currency": "USD" }
+  },
+  "privacy": {
+    "av_capture": false,
+    "data_stored": ["agendas", "outcomes", "reminders"]
+  },
+  "claims_last_updated": "2025-10-10",
+  "regions": ["US", "UK", "EU"],
+  "differentiation": [
+    "Agenda generation beyond a simple timer",
+    "Wrap‑up prompts to confirm owners & dates",
+    "Org reminders + analytics + team controls"
+  ],
+  "related_updates": [
+    {
+      "title": "Google Meet adds built‑in timers",
+      "url": "https://minuteminder.io/",
+      "date": "2025-10-07"
+    }
+  ]
+}

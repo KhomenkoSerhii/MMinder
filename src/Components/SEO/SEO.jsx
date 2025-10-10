@@ -1,41 +1,30 @@
 import { Helmet } from "react-helmet-async";
 import { seoConfig, siteConfig } from "@/config/seo";
 
-/**
- * SEO component for managing page metadata
- * @param {Object} props
- * @param {string} props.page - Key from seoConfig (e.g., 'home', 'features')
- * @param {Object} props.overrides - Optional overrides for any SEO field
- */
 export default function SEO({ page = "default", overrides = {} }) {
-  // Get page-specific config or fallback to default
   const pageConfig = seoConfig[page] || seoConfig.default;
 
-  // Merge page config with overrides
   const seo = {
-    ...seoConfig.default, // Start with defaults
-    ...pageConfig, // Apply page-specific config
-    ...overrides, // Apply any custom overrides
+    ...seoConfig.default,
+    ...pageConfig,
+    ...overrides,
   };
 
   const fullTitle = seo.title;
   const canonicalUrl = `${siteConfig.siteUrl}${seo.canonical || ""}`;
-  
-  // Handle OG image - support both absolute and relative URLs
+
   const ogImage = seo.ogImage
     ? seo.ogImage.startsWith("http")
       ? seo.ogImage
       : `${siteConfig.siteUrl}${seo.ogImage}`
     : `${siteConfig.siteUrl}/web-app-manifest-512x512.png`;
 
-  // Handle Twitter image separately (may differ from OG image)
   const twitterImage = seo.twitterImage
     ? seo.twitterImage.startsWith("http")
       ? seo.twitterImage
       : `${siteConfig.siteUrl}${seo.twitterImage}`
     : ogImage;
 
-  // Use custom OG/Twitter titles if provided, otherwise use main title
   const ogTitle = seo.ogTitle || fullTitle;
   const ogDescription = seo.ogDescription || seo.description;
   const twitterTitle = seo.twitterTitle || fullTitle;
@@ -43,7 +32,6 @@ export default function SEO({ page = "default", overrides = {} }) {
 
   return (
     <Helmet>
-      {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={seo.description} />
@@ -65,7 +53,10 @@ export default function SEO({ page = "default", overrides = {} }) {
       <meta property="og:locale" content={siteConfig.locale} />
 
       {/* Twitter */}
-      <meta name="twitter:card" content={seo.twitterCard || "summary_large_image"} />
+      <meta
+        name="twitter:card"
+        content={seo.twitterCard || "summary_large_image"}
+      />
       <meta name="twitter:title" content={twitterTitle} />
       <meta name="twitter:description" content={twitterDescription} />
       <meta name="twitter:image" content={twitterImage} />
