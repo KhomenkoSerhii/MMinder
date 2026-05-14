@@ -8,6 +8,7 @@ import StarCalendar from "@/assets/icons/StarCalendar.svg";
 import CallIcon from "@/assets/icons/CallIcon.svg";
 import DocumentIcon from "@/assets/icons/DocumentIcon.svg";
 import TeamIcon from "@/assets/icons/TeamIcon.svg";
+import TimeIcon from "@/assets/icons/TimeIcon.svg";
 import HalftimeBg from "@/assets/Images/HalftimeBg.png";
 import WhyMinderSiteBg from "@/assets/Images/WhyMinderSiteBg.png";
 import LockBg from "@/assets/Images/LockBg.png";
@@ -16,6 +17,8 @@ import FounderSection from "@/Components/Feature/FounderSection";
 import { FOUNDER_SECTION_DATA } from "@/utils/Data/FAQs";
 import SEO from "@/Components/SEO/SEO";
 import WhatDoesDo from "@/Components/Feature/WhatDoesDo";
+import WhatDoesDoSubComponent from "@/Components/Feature/WhatDoesDoSubComponent";
+import ThreeStepProcess from "@/Components/Feature/ThreeStepProcess";
 
 const Home = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.home;
@@ -88,7 +91,7 @@ const Home = () => {
                 className="flex-1"
               />
               <FeatureCard
-                title="AI meeting assistant (coming soon)"
+                title="AI meeting assistant"
                 description="Pre‑meeting prep from Calendar: agenda, goals, timeboxes."
                 icon={TeamIcon}
                 className="flex-1"
@@ -97,25 +100,37 @@ const Home = () => {
                 <img src={HalftimeBg} alt="" className="h-[200px]" />
               </section>
             </div>
+
+            <div className="flex flex-col lg:flex-row lg:gap-5 gap-2">
+              <FeatureCard
+                title="End with outcomes"
+                description="Close calls with decisions, owners, and next steps."
+                icon={DocumentIcon}
+                className="flex-1"
+              />
+            </div>
+            <div className="flex flex-col lg:flex-row lg:gap-5 gap-2">
+              <FeatureCard
+                title="Protect your time"
+                description="Stop small overruns from eating your day."
+                icon={TimeIcon}
+                className="flex-1"
+              />
+              <FeatureCard
+                title="Lead with confidence"
+                description="Keep the agenda, timing, and flow under control."
+                icon={StarCalendar}
+                className="flex-1"
+              />
+            </div>
           </div>
         </section>
+        <WhatDoesDoSubComponent />
         <section
           className="flex flex-col gap-5 lg:gap-10"
           aria-labelledby="faq-heading"
         >
-          <Typography variant="h2">
-            From install to{" "}
-            <span className="text-[var(--color-primary)]">
-              impact in minutes
-            </span>
-          </Typography>
-          {/* FAQ Section */}
-
-          <div className="flex flex-col gap-3">
-            {SITE_FAQ_DATA.map((item, index) => (
-              <FAQItem key={item.id} item={item} index={index} />
-            ))}
-          </div>
+          <ThreeStepProcess />
         </section>
         <PrivacySection />
 

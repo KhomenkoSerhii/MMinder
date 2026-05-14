@@ -16,7 +16,7 @@ const FounderSection = ({ title, description, faqs }) => {
             {title}
           </Typography>
         </header>
-        <Typography variant="p">{description}</Typography>
+        <Typography variant="p" className="whitespace-pre-line">{description}</Typography>
       </div>
 
       <div className="flex-1 flex flex-col gap-4 lg:gap-5">

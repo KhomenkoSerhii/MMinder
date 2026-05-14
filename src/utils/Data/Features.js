@@ -35,7 +35,7 @@ export const FEATURES_FAQ_DATA = [
   },
   {
     id: 4,
-    question: "AI Assistant (Coming soon)",
+    question: "AI Assistant",
     answer: [
       "Calendar‑aware prep: agenda, goals, timeboxes from event data.",
       "Role‑based prompts for teammates in your team workspace.",

@@ -20,10 +20,11 @@ const Pricing = () => {
           <div className="flex flex-1 w-full lg:max-w-[750px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
             <header className="text-start">
               <Typography variant="h1">
+                Find the &nbsp;
                 <span className="text-[var(--color-primary)]">
-                  Simple pricing
+                  right plan
                 </span>{" "}
-                that respects your time
+                for the way you meet.
               </Typography>
             </header>
             <article>

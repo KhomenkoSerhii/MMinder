@@ -1,7 +1,7 @@
 const baseFaqs = {
   title: `From the <span class='text-[var(--color-primary)]'>founder</span>`,
   description:
-    "We built Minute Minder after too many calls drifted and ran over. Our goal is simple: keep time visible, keep people calm, and end with owners & dates - without recording a thing. If that sounds like how you want your team to run, we made this for you.",
+    "We built MinuteMinder for the calls that actually matter - client meetings, sales calls, strategy sessions, team check-ins, and follow-ups where time, structure, and clear next steps make all the difference.\n\nToo often, meetings drift, run over, and end with \"we'll follow up\" instead of real decisions. Our goal is simple: keep the agenda visible, make timing easier to manage, and help every call end with owners, dates, and next steps - without recording a thing.\n\nIf you want to lead meetings with more clarity, confidence, and respect for everyone's time, we made this for you.",
   faqs: [
     {
       id: 1,

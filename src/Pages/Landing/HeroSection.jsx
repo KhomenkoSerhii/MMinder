@@ -11,6 +11,45 @@ import Timer from "@/assets/Images/Timer.png";
 import { Button } from "@/Components/UI/Button";
 import { getGridCols, loginRedirect } from "@/utils";
 
+const HERO_MAIN_FEATURE_CARDS = [
+  {
+    id: "ai-agendas",
+    title: "Create AI agendas",
+    description:
+      "Turn Google Calendar context into a structured, time-boxed agenda before the call starts.",
+  },
+  {
+    id: "guide-live",
+    title: "Guide meetings live",
+    description:
+      "Use a visible in-meeting agenda and section timer directly inside your Google Meet flow.",
+  },
+  {
+    id: "smart-nudges",
+    title: "Get smart nudges",
+    description:
+      "Receive subtle timing cues when it's time to move forward, refocus, or wrap up.",
+  },
+  {
+    id: "wrap-up",
+    title: "Wrap up clearly",
+    description:
+      "Confirm decisions, owners, dates, and next steps before the meeting ends.",
+  },
+  {
+    id: "align-team",
+    title: "Align your team",
+    description:
+      "Let teammates follow the same agenda, timer, and meeting cues during the call.",
+  },
+  {
+    id: "review-performance",
+    title: "Review performance",
+    description:
+      "See meeting analytics like time spent, overtime, completed sections, and meeting patterns.",
+  },
+];
+
 const HeroSection = () => {
   return (
     <section
@@ -20,15 +59,14 @@ const HeroSection = () => {
       <div className="flex flex-1 w-full lg:max-w-[750px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
         <header className="text-start">
           <Typography variant="h2">
-            Meeting timer & AI Agenda Assistant to finish the meetings on time
-            with desired results
+            Run client meetings like a pro - with AI agendas, live timing, and
+            smart nudges inside Google Meet.
           </Typography>
         </header>
         <Typography variant="p">
-          Minute Minder shows (for you and your team!) meeting timer,
-          notifications, AI Agenda Assistant tailored to your meeting that help
-          you to stop reminding about the meeting schedule, agenda and goals and
-          stop wasting money.
+          Connect Google Calendar, join Google Meet, and let MinuteMinder turn
+          every call into a structured agenda with live section timers, smart
+          nudges, team visibility, wrap-up prompts, and meeting analytics.
         </Typography>
         <section className=" items-center lg:hidden flex  relative  rounded-[18px] pb-3 px-3 bg-[var(--color-secondary)] flex-col space-y-2.5">
           <img src={Timer} alt="" className="absolute top-0 left-0 h-[30px]" />
@@ -59,16 +97,28 @@ const HeroSection = () => {
           </p>
         </Button>
 
-        <div
-          className={cn(
-            `grid grid-cols-1 gap-2`,
-            getGridCols(HERO_DATA.cards.length),
-          )}
+        <section
+          className="flex flex-col gap-4 w-full"
+          aria-labelledby="hero-features-cards-heading"
         >
-          {HERO_DATA.cards.map((card) => (
-            <Card key={card.id} {...card} />
-          ))}
-        </div>
+          <header>
+            <Typography variant="h6" id="hero-features-cards-heading">
+              Everything your meeting needs - before, during, and after the
+              call.
+            </Typography>
+          </header>
+
+          <div
+            className={cn(
+              `grid grid-cols-1 gap-2`,
+              getGridCols(HERO_MAIN_FEATURE_CARDS.length),
+            )}
+          >
+            {HERO_MAIN_FEATURE_CARDS.map((card) => (
+              <Card key={card.id} {...card} titleVariant="h6" />
+            ))}
+          </div>
+        </section>
 
         <Button
           variant="primary"

@@ -9,6 +9,7 @@ const Card = React.memo(
     title,
     description,
     variant = "default",
+    titleVariant = "h4",
     className,
     ...props
   }) => {
@@ -30,7 +31,7 @@ const Card = React.memo(
 
         {/* Content */}
         <div className="flex flex-col text-start gap-2.5">
-          {title && <Typography variant="h4">{title}</Typography>}
+          {title && <Typography variant={titleVariant}>{title}</Typography>}
 
           {description && <Typography variant="p">{description}</Typography>}
 

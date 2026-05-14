@@ -7,17 +7,17 @@ import { Typography } from "@/Components/UI/Typography";
 
 const PrivacySection = () => {
   return (
-    <section className="flex flex-col lg:flex-row">
+    <section className="flex flex-col gap-8 lg:gap-10">
       <div
         className={cn(
-          "grid grid-cols-1 lg:grid-cols-2  flex-col relative flex-wrap lg:flex-row justify-start items-start gap-5"
+          "grid grid-cols-1 lg:grid-cols-2  flex-col relative flex-wrap lg:flex-row justify-start items-start gap-5",
         )}
       >
         {/* Hero Privacy Card */}
         <div
           className={cn(
-            "flex-1 pl-4 pt-4 lg:pl-8 w-full pb-6 z-0 h-auto lg:h-[416px] lg:pt-8 relative flex bg-[var(--color-secondary-light)] rounded-[20px]",
-            "border border-[var(--bg-light)] flex flex-col justify-start items-start lg:gap-2.5 overflow-hidden"
+            "flex-1 pl-4 pt-4 lg:pl-8 w-full pb-6 z-0 h-auto lg:h-[308px] lg:pt-8 relative flex bg-[var(--color-secondary-light)] rounded-[20px]",
+            "border border-[var(--bg-light)] flex flex-col justify-start items-start lg:gap-2.5 overflow-hidden",
           )}
         >
           <Typography variant="h2">
@@ -49,6 +49,11 @@ const PrivacySection = () => {
           ))}
         </div>
       </div>
+
+      <Typography variant="p-muted" className="text-sm text-center">
+        No recording · No audio/video capture · No microphone/camera access · No
+        data selling
+      </Typography>
     </section>
   );
 };

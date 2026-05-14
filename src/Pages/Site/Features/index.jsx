@@ -27,7 +27,7 @@ const Features = () => {
     {
       id: 1,
       description:
-        "Control the call with timer in Google Meet, get gentle reminders, and guide segment transitions. Meeting AI Assistant (coming soon) drafts agenda and helps run the meeting.",
+        "MinuteMinder helps you plan the call, guide the conversation, stay on time, and end with clear next steps - all inside Google Meet.",
       icon: "",
       title: "",
     },
@@ -43,10 +43,9 @@ const Features = () => {
           <div className="flex flex-1 w-full lg:max-w-[750px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
             <header className="text-start">
               <Typography variant="h1">
-                The meeting <br className="lg:block hidden" /> efficiency
-                partner that keeps{" "}
+                Everything you need to lead better{" "}
                 <span className="text-[var(--color-primary)]">
-                  teams on time
+                  Google Meet calls.
                 </span>
               </Typography>
             </header>
@@ -77,11 +76,11 @@ const Features = () => {
             <div
               className={cn(
                 `grid grid-cols-1 gap-2`,
-                getGridCols(cardData.length)
+                getGridCols(cardData.length),
               )}
             >
               {cardData.map((card) => (
-                <Card key={card.id} {...card} />
+                <Card key={card.id} {...card} titleVariant="h4" />
               ))}
             </div>
 
@@ -194,13 +193,13 @@ const Features = () => {
         <section className="flex w-full flex-col lg:flex-row">
           <div
             className={cn(
-              "flex flex-col  relative w-full items-center xl:flex-row justify-between gap-5"
+              "flex flex-col  relative w-full items-center xl:flex-row justify-between gap-5",
             )}
           >
             {/* Hero Privacy Card */}
             <div
               className={cn(
-                " p-5 lg:p-8 h-[256px] md:w-[538px] w-full z-10  relative flex bg-[var(--color-secondary-light)] rounded-[20px]"
+                " p-5 lg:p-8 h-[256px] md:w-[538px] w-full z-10  relative flex bg-[var(--color-secondary-light)] rounded-[20px]",
               )}
             >
               <Typography variant="h2" className="lg:leading-[64px] z-10">
