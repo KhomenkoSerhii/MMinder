@@ -1,7 +1,6 @@
 import React, { memo } from "react";
 import Logo from "./Logo";
 import { Typography } from "@/Components/UI/Typography";
-import { SITE_ROUTES } from "@/utils/constants";
 
 const SiteFooter = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -20,12 +19,18 @@ const SiteFooter = memo(() => {
   const articles = [
     {
       title: "Privacy Policy",
-      href: SITE_ROUTES.PRIVACY_POLICY,
+      href: "https://minuteminder.io/privacy",
     },
 
     {
       title: "Terms and Conditions",
-      href: SITE_ROUTES.TERMS_AND_CONDITIONS,
+      href: "https://minuteminder.io/terms",
+    },
+    {
+      title: "Support",
+      href: "https://forms.gle/B84XkLwbhBqoNJez7",
+      target: "_blank",
+      rel: "noopener noreferrer",
     },
   ];
 
@@ -58,7 +63,9 @@ const SiteFooter = memo(() => {
                 key={article.title}
                 className="py-2 text-black font-medium text-base"
               >
-                <a href={article.href}>{article.title}</a>
+                <a href={article.href} target={article.target} rel={article.rel}>
+                  {article.title}
+                </a>
               </li>
             ))}
           </ul>

@@ -9,8 +9,7 @@ import Checked from "@/assets/Images/Checked.png";
 import CheckedLg from "@/assets/Images/CheckedLg.png";
 import Timer from "@/assets/Images/Timer.png";
 import { Button } from "@/Components/UI/Button";
-import { getGridCols } from "@/utils";
-import { CHROME_REDIRECT_URL } from "@/utils/constants";
+import { getGridCols, loginRedirect } from "@/utils";
 
 const HeroSection = () => {
   return (
@@ -20,17 +19,17 @@ const HeroSection = () => {
     >
       <div className="flex flex-1 w-full lg:max-w-[750px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
         <header className="text-start">
-          <Typography variant="h1">
-            Save more than{" "}
-            <span className="text-[var(--color-primary)]">
-              $1K/
-              <br className="lg:block hidden" />
-              month
-            </span>{" "}
-            on overtime meetings
+          <Typography variant="h2">
+            Meeting timer & AI Agenda Assistant to finish the meetings on time
+            with desired results
           </Typography>
         </header>
-
+        <Typography variant="p">
+          Minute Minder shows (for you and your team!) meeting timer,
+          notifications, AI Agenda Assistant tailored to your meeting that help
+          you to stop reminding about the meeting schedule, agenda and goals and
+          stop wasting money.
+        </Typography>
         <section className=" items-center lg:hidden flex  relative  rounded-[18px] pb-3 px-3 bg-[var(--color-secondary)] flex-col space-y-2.5">
           <img src={Timer} alt="" className="absolute top-0 left-0 h-[30px]" />
 
@@ -51,7 +50,8 @@ const HeroSection = () => {
           variant="primary"
           className="fex w-full flex-col lg:w-max lg:hidden  "
           size="lg"
-          onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+          onClick={loginRedirect}
+          data-gtm="try-for-free"
         >
           Try for FREE
           <p className="text-xs font-normal">
@@ -62,7 +62,7 @@ const HeroSection = () => {
         <div
           className={cn(
             `grid grid-cols-1 gap-2`,
-            getGridCols(HERO_DATA.cards.length)
+            getGridCols(HERO_DATA.cards.length),
           )}
         >
           {HERO_DATA.cards.map((card) => (
@@ -74,7 +74,8 @@ const HeroSection = () => {
           variant="primary"
           className="fex w-full flex-col lg:w-max lg:flex hidden "
           size="lg"
-          onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+          onClick={loginRedirect}
+          data-gtm="try-for-free"
         >
           Try for FREE
           <p className="text-xs font-normal">

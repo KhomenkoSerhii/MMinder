@@ -6,11 +6,11 @@ const FeatureCard = React.memo(
   ({ title, description, icon, className, ...props }) => {
     const baseClasses = cn(
       "p-5 rounded-[20px] flex flex-col gap-5 bg-[var(--bg-light)] h-[218px] lg:h-[300px]",
-      className
+      className,
     );
 
     const iconClasses = cn(
-      "size-[68px] p-2.5 rounded-[12px] flex justify-center items-center bg-[var(--color-secondary-light)]"
+      "size-[68px] p-2.5 rounded-[12px] flex justify-center items-center bg-[var(--color-secondary-light)]",
     );
 
     return (
@@ -28,7 +28,7 @@ const FeatureCard = React.memo(
         </div>
       </article>
     );
-  }
+  },
 );
 
 FeatureCard.displayName = "FeatureCard";

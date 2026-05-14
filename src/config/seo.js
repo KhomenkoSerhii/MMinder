@@ -117,7 +117,7 @@ export const seoConfig = {
   },
 
   landing: {
-    title: "Online Calls Timer and AI Reminders - Minute Minder",
+    title: "Meeting Timer & AI Agenda Assistant That Keeps Your Meetings On Track | Minute Minder",
     description:
       "Transform your online meetings with Minute Minder's intelligent timer and AI-powered reminders. Available as a Chrome extension for seamless integration.",
     keywords:
@@ -318,7 +318,7 @@ export const seoConfig = {
       "Learn how Minute Minder protects your privacy and handles your data. We're committed to transparency and security.",
     keywords: "privacy policy, data protection, user privacy",
     ogType: "website",
-    canonical: "/privacy-policy",
+    canonical: "/privacy",
     structuredData: {
       "@context": "https://schema.org",
       "@graph": [
@@ -335,7 +335,7 @@ export const seoConfig = {
               "@type": "ListItem",
               position: 2,
               name: "Privacy Policy",
-              item: "https://minuteminder.io/privacy-policy",
+              item: "https://minuteminder.io/privacy",
             },
           ],
         },
@@ -349,7 +349,7 @@ export const seoConfig = {
       "Read our terms of service and user agreement for using Minute Minder meeting timer and AI reminder features.",
     keywords: "terms of service, user agreement, terms and conditions",
     ogType: "website",
-    canonical: "/terms-and-conditions",
+    canonical: "/terms",
     structuredData: {
       "@context": "https://schema.org",
       "@graph": [
@@ -366,7 +366,7 @@ export const seoConfig = {
               "@type": "ListItem",
               position: 2,
               name: "Terms and Conditions",
-              item: "https://minuteminder.io/terms-and-conditions",
+              item: "https://minuteminder.io/terms",
             },
           ],
         },

@@ -2,7 +2,7 @@ import React from "react";
 import { Typography } from "@/Components/UI/Typography";
 import { Button } from "@/Components/UI/Button";
 import DashboardFilled from "@/assets/Images/DashboardFilled.png";
-import { CHROME_REDIRECT_URL } from "@/utils/constants";
+import { loginRedirect } from "@/utils";
 
 const CTACard = ({ title }) => {
   return (
@@ -17,7 +17,7 @@ const CTACard = ({ title }) => {
         <div className="flex items-center lg:gap-4 flex-wrap gap-2">
           <Button
             variant="primary"
-            onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+            onClick={loginRedirect}
             className="w-full sm:w-[179px]"
           >
             Try for FREE

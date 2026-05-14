@@ -11,14 +11,13 @@ import { FOUNDER_SECTION_DATA } from "@/utils/Data/FAQs";
 import { FEATURES_FAQ_DATA, PRIVACY_FEATURES } from "@/utils/Data/Features";
 import { FEATURES_SHOWCASE_DATA } from "@/utils/Data/featuresShowcase";
 import { HERO_DATA } from "@/utils/Data/data";
-import { getGridCols } from "@/utils";
+import { getGridCols, loginRedirect } from "@/utils";
 import { cn } from "@/utils/cn";
 import Checked from "@/assets/Images/Checked.png";
 import CheckedLg from "@/assets/Images/CheckedLg.png";
 import NotificatonVideo from "@/assets/Images/NotificatonVideo.png";
 import ReminderCard from "@/assets/Images/ReminderCard.png";
 import ShieldLocked from "@/assets/Images/ShieldLocked.png";
-import { CHROME_REDIRECT_URL } from "@/utils/constants";
 import Eclipse from "@/assets/Images/Eclipse.png";
 import Cross from "@/assets/icons/Cross.svg";
 import SEO from "@/Components/SEO/SEO";
@@ -66,7 +65,8 @@ const Features = () => {
               variant="primary"
               className="fex w-full flex-col lg:w-max lg:hidden  "
               size="lg"
-              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              onClick={loginRedirect}
+              data-gtm="try-for-free"
             >
               Try for FREE
               <p className="text-xs font-normal">
@@ -89,7 +89,8 @@ const Features = () => {
               variant="primary"
               className="fex w-full flex-col lg:w-max lg:flex hidden "
               size="lg"
-              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              onClick={loginRedirect}
+              data-gtm="try-for-free"
             >
               Try for FREE
               <p className="text-xs font-normal">

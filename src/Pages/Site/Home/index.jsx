@@ -15,6 +15,7 @@ import { FeatureCard } from "@/Components/Feature/FeatureCard";
 import FounderSection from "@/Components/Feature/FounderSection";
 import { FOUNDER_SECTION_DATA } from "@/utils/Data/FAQs";
 import SEO from "@/Components/SEO/SEO";
+import WhatDoesDo from "@/Components/Feature/WhatDoesDo";
 
 const Home = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.home;
@@ -24,6 +25,7 @@ const Home = () => {
       <SEO page="home" />
       <div className="main-layout">
         <HeroSection />
+        <WhatDoesDo />
         <section
           className="flex flex-col lg:gap-10 gap-4"
           aria-labelledby="features-heading"
@@ -33,7 +35,6 @@ const Home = () => {
               Why Minute Minder
             </Typography>
           </header>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 gap-2">
             {/* Team Features */}
             <div className="flex flex-col lg:flex-row lg:gap-5 gap-2">
@@ -98,8 +99,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <PrivacySection />
-        {/* FAQ Section */}
         <section
           className="flex flex-col gap-5 lg:gap-10"
           aria-labelledby="faq-heading"
@@ -110,12 +109,16 @@ const Home = () => {
               impact in minutes
             </span>
           </Typography>
+          {/* FAQ Section */}
+
           <div className="flex flex-col gap-3">
             {SITE_FAQ_DATA.map((item, index) => (
               <FAQItem key={item.id} item={item} index={index} />
             ))}
           </div>
         </section>
+        <PrivacySection />
+
         <FounderSection title={title} description={description} faqs={faqs} />
       </div>
     </main>

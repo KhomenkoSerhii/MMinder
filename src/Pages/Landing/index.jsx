@@ -1,5 +1,4 @@
 import React from "react";
-import { FAQ_DATA } from "../../utils/Data/data";
 import { Typography } from "@/Components/UI/Typography";
 import { CTASection } from "@/Pages/Landing/CTASection";
 import PrivacySection from "@/Pages/Landing/PrivacySection";
@@ -13,7 +12,6 @@ import HalftimeBg from "@/assets/Images/HalftimeBg.png";
 import WhyMinuteCardBg from "@/assets/Images/WhyMinuteCardBg.png";
 
 import HeroSection from "./HeroSection";
-import FAQItem from "@/Components/Feature/FAQItem";
 import FounderSection from "@/Components/Feature/FounderSection";
 import { FOUNDER_SECTION_DATA } from "@/utils/Data/FAQs";
 
@@ -81,23 +79,6 @@ const Landing = () => {
               </section>
             </div>
           </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="flex flex-col gap-5" aria-labelledby="faq-heading">
-          <header className="flex flex-col gap-5 lg:mb-10">
-            <Typography variant="h2">Make the value concrete</Typography>
-            <Typography variant="p" className="max-w-2xl">
-              Below the fold we turn the promise into specifics: benefits first,
-              then how it
-              <br className="lg:block hidden" /> works. Structure inspired by
-              Marketing Examples - clarity over creativity.
-            </Typography>
-          </header>
-
-          {FAQ_DATA.map((item, index) => (
-            <FAQItem key={item.id} item={item} index={index} />
-          ))}
         </section>
 
         {/* Privacy & Security Section */}

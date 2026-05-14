@@ -90,6 +90,25 @@ The application uses conditional routing in `src/App.jsx`:
 
 ## 📤 Deployment
 
+### SEO + Deploy Preparation
+
+The build now auto-generates:
+
+- `public/sitemap.xml`
+- `public/robots.txt`
+
+Set `SITE_URL` in your deployment environment so these files use your production domain:
+
+```bash
+SITE_URL=https://minuteminder.io
+```
+
+You can run this manually as well:
+
+```bash
+npm run prepare:deploy
+```
+
 ### Vercel Deployment (Recommended)
 
 **Landing Page:**

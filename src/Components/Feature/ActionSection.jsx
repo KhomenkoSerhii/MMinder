@@ -16,7 +16,7 @@ const ActionSection = ({ variant = "default", className }) => {
         variant={variant}
         className="flex w-full lg:w-max gap-1.5"
         size="lg"
-        onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+        onClick={() => window.open(CHROME_REDIRECT_URL, "_self")}
       >
         <img
           className="size-6 relative overflow-hidden"

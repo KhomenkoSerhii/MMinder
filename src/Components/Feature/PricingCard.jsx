@@ -1,11 +1,12 @@
 import { Button } from "@/Components/UI/Button";
 import { Typography } from "@/Components/UI/Typography";
 import ChevronGreen from "@/assets/icons/ChevronGreen.svg";
-import { CHROME_REDIRECT_URL } from "@/utils/constants";
+import { loginRedirect } from "@/utils";
 
 const PricingCard = ({
   name,
   subtitle,
+  originalPrice,
   price,
   period,
   features,
@@ -13,6 +14,15 @@ const PricingCard = ({
   note,
   highlighted = false,
 }) => {
+  const originalPriceValue = Number(originalPrice?.replace(/[^\d.]/g, ""));
+  const currentPriceValue = Number(price?.replace(/[^\d.]/g, ""));
+  const savingsPercentage =
+    originalPriceValue > currentPriceValue
+      ? Math.round(
+          ((originalPriceValue - currentPriceValue) / originalPriceValue) * 100,
+        )
+      : null;
+
   return (
     <div
       className={`relative text-center bg-[var(--bg-light)] flex flex-col rounded-3xl overflow-hidden border-1 transition-all ${
@@ -44,9 +54,31 @@ const PricingCard = ({
       {/* Body */}
       <div className="flex-1 lg:px-15 px-5 py-5 h-full flex flex-col justify-between ">
         <div className="mb-6">
+          {originalPrice && (
+            <div className="mb-3 flex flex-col items-center gap-2">
+              <span className="rounded-full bg-[#FFE8CC] px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-[#A15C00]">
+                Limited-time offer
+              </span>
+              <Typography
+                variant="p"
+                className="text-base md:text-lg font-bold text-[#9CA3AF] line-through"
+              >
+                Was {originalPrice}
+                {period}
+              </Typography>
+              {savingsPercentage && (
+                <Typography
+                  variant="p"
+                  className="rounded-full bg-[var(--color-primary)] px-3 py-1 text-sm font-extrabold text-white"
+                >
+                  Save {savingsPercentage}% today
+                </Typography>
+              )}
+            </div>
+          )}
           <Typography
             variant="h2"
-            className="text-[var(--color-primary)] font-bold"
+            className="text-[var(--color-primary)] font-black lg:text-[52px] text-[40px] leading-none"
           >
             {price}
             {period}
@@ -75,7 +107,8 @@ const PricingCard = ({
           <Button
             variant="primary"
             className="w-full mb-2"
-            onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+            onClick={loginRedirect}
+            data-gtm={buttonText?.toLowerCase() === "try for free" ? "try-for-free" : undefined}
           >
             {buttonText}
           </Button>

@@ -5,8 +5,8 @@ import { PRICING_DATA } from "@/utils/Data/Pricing";
 import Bulb from "@/assets/Images/Bulb.png";
 import Percent from "@/assets/Images/Percent.png";
 import MailBg from "@/assets/Images/MailBg.png";
-import { CHROME_REDIRECT_URL } from "@/utils/constants";
 import SEO from "@/Components/SEO/SEO";
+import { loginRedirect } from "@/utils";
 
 const Pricing = () => {
   return (
@@ -41,7 +41,8 @@ const Pricing = () => {
               variant="primary"
               className="fex w-full flex-col lg:w-max lg:hidden  "
               size="lg"
-              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              onClick={loginRedirect}
+              data-gtm="try-for-free"
             >
               Try for FREE
               <p className="text-xs font-normal">
@@ -53,7 +54,8 @@ const Pricing = () => {
               variant="primary"
               className="fex w-full flex-col lg:w-max lg:flex hidden "
               size="lg"
-              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              onClick={loginRedirect}
+              data-gtm="try-for-free"
             >
               Try for FREE
               <p className="text-xs font-normal">

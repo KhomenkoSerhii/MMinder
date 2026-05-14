@@ -3,7 +3,7 @@ import { cn } from "@/utils/cn";
 
 const getTypographyClasses = (variant = "p") => {
   const variantClasses = {
-    h1: "text-[36px] lg:text-6xl font-bold ",
+    h1: "text-[36px] lg:text-6xl font-bold",
     h2: "text-[28px] lg:text-5xl font-bold ",
     h3: "text-lg lg:text-2xl font-bold ",
     h4: "text-[20px] lg:text-[32px] font-semibold ",
@@ -45,7 +45,7 @@ const Typography = React.forwardRef(
         {variant === "body" ? null : children}
       </Component>
     );
-  }
+  },
 );
 
 Typography.displayName = "Typography";

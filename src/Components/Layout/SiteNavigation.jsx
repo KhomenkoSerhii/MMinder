@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
-import { CHROME_REDIRECT_URL, SITE_ROUTES } from "@/utils/constants";
+import { SITE_ROUTES } from "@/utils/constants";
 import { cn } from "@/utils/cn";
 import { Button } from "../UI/Button";
+import { loginRedirect } from "@/utils";
 
 const SiteNavigation = () => {
   const location = useLocation();
@@ -47,18 +48,8 @@ const SiteNavigation = () => {
 
         <div className="hidden md:flex items-center gap-2">
           <Button
-            variant="transparent"
-            size="md"
-            className="w-full sm:w-[179px]"
-            onClick={() =>
-              window.open("https://app.minuteminder.io/login", "_blank")
-            }
-          >
-            Log in
-          </Button>
-          <Button
             variant="primary"
-            onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+            onClick={loginRedirect}
             size="md"
             className="w-full sm:w-[179px]"
           >
@@ -127,17 +118,7 @@ const SiteNavigation = () => {
           </div>
           <div className="flex pt-5 items-center flex-col gap-2">
             <Button
-              variant="transparent"
-              size="md"
-              className="w-full sm:w-[179px]"
-              onClick={() =>
-                window.open("https://app.minuteminder.io/login", "_blank")
-              }
-            >
-              Log in
-            </Button>
-            <Button
-              onClick={() => window.open(CHROME_REDIRECT_URL, "_blank")}
+              onClick={loginRedirect}
               variant="primary"
               size="md"
               className="w-full sm:w-[179px]"
