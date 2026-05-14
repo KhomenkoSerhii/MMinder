@@ -5,11 +5,12 @@ import { cn } from "@/utils/cn";
 const flipShell =
   "[perspective:1000px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-light)] rounded-[20px] cursor-pointer";
 const flipInner =
-  "relative size-full min-h-[6.75rem] [transform-style:preserve-3d] transition-transform duration-500 ease-[cubic-bezier(0.33,1,0.68,1)] motion-reduce:duration-150 group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]";
+  // Slower + symmetric ease — avoids the “snappy” end from high-y bezier handles
+  "relative size-full min-h-[6.75rem] [transform-style:preserve-3d] transition-transform duration-[750ms] ease-[cubic-bezier(0.45,0,0.55,1)] motion-reduce:duration-200 motion-reduce:ease-out will-change-transform group-hover:[transform:rotateY(180deg)] group-focus-within:[transform:rotateY(180deg)]";
 const flipFace =
   "absolute inset-0 flex rounded-[20px] p-5 [backface-visibility:hidden]";
 const flipFaceFront =
-  "flex-col items-start justify-between gap-2.5 bg-[var(--bg-light)] text-start shadow-sm border border-transparent transition-all group-hover:border-[var(--color-primary)] group-hover:shadow-md";
+  "flex-col items-start justify-between gap-2.5 bg-[var(--bg-light)] text-start shadow-sm transition-shadow duration-[750ms] ease-[cubic-bezier(0.45,0,0.55,1)] motion-reduce:duration-200 group-hover:shadow-md";
 const flipFaceBack =
   "[transform:rotateY(180deg)] flex-col justify-center items-start gap-3 bg-[var(--bg-light)] shadow-sm";
 

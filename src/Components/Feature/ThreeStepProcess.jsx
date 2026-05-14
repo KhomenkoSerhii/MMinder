@@ -1,6 +1,7 @@
 import React from "react";
 import { cn } from "@/utils/cn";
 import { Typography } from "../UI/Typography";
+import { loginRedirect } from "@/utils";
 
 const steps = [
   {
@@ -67,6 +68,7 @@ const steps = [
       "Finish on time, cut overtime, and protect your billable hours.",
     highlighted: true,
     badge: "Big impact",
+    ctaLabel: "Try for FREE",
   },
 ];
 
@@ -92,6 +94,8 @@ const ThreeStepProcess = () => {
             <div
               className={cn(
                 "relative flex flex-col gap-5 rounded-2xl p-6 flex-1 bg-[var(--bg-light)]",
+                "transition-[transform,box-shadow] duration-200 ease-out",
+
                 step.highlighted &&
                   "border-2 border-[var(--color-primary)] bg-[linear-gradient(145deg,#ffffff_0%,#edfaee_55%,#d6f5d8_100%)]",
               )}
@@ -134,6 +138,16 @@ const ThreeStepProcess = () => {
                   <p className="text-sm text-[var(--color-muted)] leading-relaxed">
                     {step.description}
                   </p>
+                  {step.ctaLabel && (
+                    <button
+                      type="button"
+                      onClick={loginRedirect}
+                      data-gtm="try-for-free"
+                      className="mt-2 w-fit text-left text-sm font-semibold text-[var(--color-primary)] underline-offset-2 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 rounded-sm"
+                    >
+                      {step.ctaLabel}
+                    </button>
+                  )}
                 </div>
               </div>
             </div>

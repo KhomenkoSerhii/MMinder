@@ -2,11 +2,11 @@
 export const seoConfig = {
   // Default/fallback SEO data
   default: {
-    title: "Minute Minder - Google Meet Timer & Smart Meeting Reminders",
+    title: "Minute Minder - Meeting Timer & AI Reminders",
     description:
-      "Stop overrunning meetings. Minute Minder adds a real‑time timer, smart nudges, and AI Agenda Timer to Google Meet — helping teams save up to $1,000/month in wasted time.",
+      "Never miss important moments in online calls. Minute Minder helps you track time and get AI-powered reminders during meetings.",
     keywords:
-      "meeting timer, google meet timer, AI reminders, video call assistant, meeting productivity, time tracking",
+      "meeting timer, online call timer, AI reminders, video call assistant, meeting productivity, time tracking",
     ogType: "website",
     ogImage: "/web-app-manifest-512x512.png",
     twitterCard: "summary_large_image",
@@ -15,16 +15,16 @@ export const seoConfig = {
   // Page-specific SEO data
   home: {
     title:
-      "Minute Minder - Google Meet timer & agenda cues for on‑time meetings",
+      "Run client meetings like a pro — with AI agendas, live timing, and smart nudges inside Google Meet.",
     description:
-      "Run meetings that end on time. In‑meeting timer, smart nudges, AI Agenda Timer, analytics, and team controls for Google Meet. 7‑day trial.",
+      "Connect Google Calendar, join Google Meet, and let MinuteMinder turn every call into a structured agenda with live section timers, smart nudges, team visibility, wrap-up prompts, and meeting analytics.",
     keywords:
       "google meet timer, meeting timer, agenda cues, AI meeting assistant, meeting analytics, team controls",
     ogType: "website",
     ogTitle:
-      "Minute Minder - Google Meet timer & agenda cues for on‑time meetings",
+      "Run client meetings like a pro — with AI agendas, live timing, and smart nudges inside Google Meet.",
     ogDescription:
-      "Run meetings that end on time with timer, gentle nudges, AI Agenda Timer, analytics, and team controls for Google Meet.",
+      "Connect Google Calendar, join Google Meet, and let MinuteMinder turn every call into a structured agenda with live section timers, smart nudges, team visibility, wrap-up prompts, and meeting analytics.",
     ogImage: "https://minuteminder.io/og/home-1200x630.png",
     ogImageWidth: "1200",
     ogImageHeight: "630",
@@ -117,22 +117,13 @@ export const seoConfig = {
   },
 
   landing: {
-    title: "Stop Overrunning Meetings — Save Up to $1,000/month | Minute Minder",
+    title:
+      "Meeting Timer & AI Agenda Assistant That Keeps Your Meetings On Track | Minute Minder",
     description:
-      "Install Minute Minder, customize smart reminders, and start protecting your billable hours. A 3-step Chrome extension that adds a real‑time timer and AI nudges to every Google Meet.",
+      "Transform your online meetings with Minute Minder's intelligent timer and AI-powered reminders. Available as a Chrome extension for seamless integration.",
     keywords:
-      "google meet timer, AI reminders, Chrome extension, meeting productivity, save meeting time, billable hours",
+      "online calls timer, AI reminders, Chrome extension, meeting productivity, video conferencing tools",
     ogType: "website",
-    ogTitle: "Stop Overrunning Meetings — Save Up to $1,000/month | Minute Minder",
-    ogDescription:
-      "Install the Chrome extension, set smart reminders, and start saving up to $1,000/month in wasted meeting time. Works inside Google Meet.",
-    ogImage: "https://minuteminder.io/og/home-1200x630.png",
-    ogImageWidth: "1200",
-    ogImageHeight: "630",
-    twitterTitle: "Stop Overrunning Meetings — Save Up to $1,000/month",
-    twitterDescription:
-      "3 steps: install extension → customize reminders → protect your billable hours. Timer + AI nudges for Google Meet.",
-    twitterImage: "https://minuteminder.io/og/home-1200x630.png",
     canonical: "/landing",
     structuredData: {
       "@context": "https://schema.org",
@@ -162,13 +153,13 @@ export const seoConfig = {
     title:
       "Features - Timer, nudges, AI Agenda Timer, Team timers, analytics | Minute Minder",
     description:
-      "See how Minute Minder keeps Google Meet on track: in‑meeting timer, halftime/5‑min/overtime cards, AI Agenda Timer, reminders library, analytics, timers for your team.",
+      "MinuteMinder helps you plan the call, guide the conversation, stay on time, and end with clear next steps - all inside Google Meet.",
     keywords:
       "google meet timer, meeting features, AI agenda timer, meeting nudges, team timers, meeting analytics, halftime cues, overtime alerts",
     ogType: "website",
     ogTitle: "Minute Minder features: timer, nudges, Agenda Timer AI",
     ogDescription:
-      "See how Minute Minder keeps Google Meet on track: in‑meeting timer, halftime/5‑min/overtime cards, AI Agenda Timer, reminders library, analytics, timers for your team.",
+      "MinuteMinder helps you plan the call, guide the conversation, stay on time, and end with clear next steps - all inside Google Meet.",
     ogImage: "https://minuteminder.io/og/features-1200x630.png",
     ogImageWidth: "1200",
     ogImageHeight: "630",
@@ -257,21 +248,18 @@ export const seoConfig = {
   },
 
   pricing: {
-    title: "Pricing - Plans for Teams & Enterprise | Minute Minder",
-    description:
-      "Simple, transparent pricing for teams that want on‑time meetings. Start with a 7‑day free trial — no credit card required. Minute Minder.",
+    title: "Pricing - for small teams and enterprise | Minute Minder",
+    description: "Find the  right plan for the way you meet. Minte Minder.",
     keywords:
       "meeting timer pricing, subscription plans, productivity tools pricing, team pricing, enterprise pricing, google meet timer pricing",
     ogType: "website",
-    ogTitle: "Pricing - Plans for Teams & Enterprise | Minute Minder",
-    ogDescription:
-      "Start free for 7 days. Minute Minder adds a timer, smart nudges, and AI Agenda Timer to Google Meet — helping teams save up to $1,000/month.",
+    ogTitle: "Pricing - for small teams and enterprise | Minute Minder",
+    ogDescription: "Find the  right plan for the way you meet. Minte Minder.",
     ogImage: "https://minuteminder.io/og/pricing-1200x630.png",
     ogImageWidth: "1200",
     ogImageHeight: "630",
-    twitterTitle: "Pricing - Plans for Teams & Enterprise | Minute Minder",
-    twitterDescription:
-      "7‑day free trial. Timer, nudges & AI Agenda Timer for Google Meet. Save up to $1,000/month in overrun time.",
+    twitterTitle: "Pricing - for small teams and enterprise | Minute Minder",
+    twitterDescription: "Find the  right plan for the way you meet.",
     twitterImage: "https://minuteminder.io/og/pricing-1200x630.png",
     canonical: "/pricing",
     structuredData: {
