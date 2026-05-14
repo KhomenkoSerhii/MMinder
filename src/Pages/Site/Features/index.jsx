@@ -40,7 +40,7 @@ const Features = () => {
           className="flex flex-col lg:gap-x-12 w-full justify-between lg:flex-row h-full"
           aria-labelledby="features-heading"
         >
-          <div className="flex flex-1 w-full lg:max-w-[750px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
+          <div className="flex flex-1 w-full lg:max-w-[830px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
             <header className="text-start">
               <Typography variant="h1">
                 Everything you need to lead better{" "}
@@ -98,7 +98,7 @@ const Features = () => {
             </Button>
 
             <div className="flex z-10 relative gap-2 shadow-sm rounded-[20px] bg-[var(--bg-light)]">
-              <div className="flex flex-wrap p-5 gap-2 z-10 items-center">
+              <div className="flex flex-wrap p-5 gap-2 z-10 items-center !pr-0">
                 {HERO_DATA.badges.map((badge) => (
                   <Badge key={badge.id} {...badge} />
                 ))}
@@ -106,7 +106,7 @@ const Features = () => {
               <img
                 src={Checked}
                 alt=""
-                className="w-[200px] xl:block hidden flex-shrink-0"
+                className="w-[180px] xl:block hidden flex-shrink-0"
               />
               <img
                 src={CheckedLg}

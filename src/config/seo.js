@@ -2,11 +2,11 @@
 export const seoConfig = {
   // Default/fallback SEO data
   default: {
-    title: "Minute Minder - Meeting Timer & AI Reminders",
+    title: "Minute Minder - Google Meet Timer & Smart Meeting Reminders",
     description:
-      "Never miss important moments in online calls. Minute Minder helps you track time and get AI-powered reminders during meetings.",
+      "Stop overrunning meetings. Minute Minder adds a real‑time timer, smart nudges, and AI Agenda Timer to Google Meet — helping teams save up to $1,000/month in wasted time.",
     keywords:
-      "meeting timer, online call timer, AI reminders, video call assistant, meeting productivity, time tracking",
+      "meeting timer, google meet timer, AI reminders, video call assistant, meeting productivity, time tracking",
     ogType: "website",
     ogImage: "/web-app-manifest-512x512.png",
     twitterCard: "summary_large_image",
@@ -117,12 +117,22 @@ export const seoConfig = {
   },
 
   landing: {
-    title: "Meeting Timer & AI Agenda Assistant That Keeps Your Meetings On Track | Minute Minder",
+    title: "Stop Overrunning Meetings — Save Up to $1,000/month | Minute Minder",
     description:
-      "Transform your online meetings with Minute Minder's intelligent timer and AI-powered reminders. Available as a Chrome extension for seamless integration.",
+      "Install Minute Minder, customize smart reminders, and start protecting your billable hours. A 3-step Chrome extension that adds a real‑time timer and AI nudges to every Google Meet.",
     keywords:
-      "online calls timer, AI reminders, Chrome extension, meeting productivity, video conferencing tools",
+      "google meet timer, AI reminders, Chrome extension, meeting productivity, save meeting time, billable hours",
     ogType: "website",
+    ogTitle: "Stop Overrunning Meetings — Save Up to $1,000/month | Minute Minder",
+    ogDescription:
+      "Install the Chrome extension, set smart reminders, and start saving up to $1,000/month in wasted meeting time. Works inside Google Meet.",
+    ogImage: "https://minuteminder.io/og/home-1200x630.png",
+    ogImageWidth: "1200",
+    ogImageHeight: "630",
+    twitterTitle: "Stop Overrunning Meetings — Save Up to $1,000/month",
+    twitterDescription:
+      "3 steps: install extension → customize reminders → protect your billable hours. Timer + AI nudges for Google Meet.",
+    twitterImage: "https://minuteminder.io/og/home-1200x630.png",
     canonical: "/landing",
     structuredData: {
       "@context": "https://schema.org",
@@ -247,21 +257,21 @@ export const seoConfig = {
   },
 
   pricing: {
-    title: "Pricing - for small teams and enterprise | Minute Minder",
+    title: "Pricing - Plans for Teams & Enterprise | Minute Minder",
     description:
-      "Simple pricing for teams that want on‑time meetings: 7‑day trial. Minte Minder.",
+      "Simple, transparent pricing for teams that want on‑time meetings. Start with a 7‑day free trial — no credit card required. Minute Minder.",
     keywords:
       "meeting timer pricing, subscription plans, productivity tools pricing, team pricing, enterprise pricing, google meet timer pricing",
     ogType: "website",
-    ogTitle: "Pricing - for small teams and enterprise | Minute Minder",
+    ogTitle: "Pricing - Plans for Teams & Enterprise | Minute Minder",
     ogDescription:
-      "Simple pricing for teams that want on‑time meetings: 7‑day trial. Minte Minder.",
+      "Start free for 7 days. Minute Minder adds a timer, smart nudges, and AI Agenda Timer to Google Meet — helping teams save up to $1,000/month.",
     ogImage: "https://minuteminder.io/og/pricing-1200x630.png",
     ogImageWidth: "1200",
     ogImageHeight: "630",
-    twitterTitle: "Pricing - for small teams and enterprise | Minute Minder",
+    twitterTitle: "Pricing - Plans for Teams & Enterprise | Minute Minder",
     twitterDescription:
-      "Simple pricing for teams that want on‑time meetings: 7‑day trial.",
+      "7‑day free trial. Timer, nudges & AI Agenda Timer for Google Meet. Save up to $1,000/month in overrun time.",
     twitterImage: "https://minuteminder.io/og/pricing-1200x630.png",
     canonical: "/pricing",
     structuredData: {

@@ -6,13 +6,14 @@ import Micro from "@/assets/icons/Micro.svg";
 import CameraIcon from "@/assets/icons/CameraIcon.svg";
 import EyeIcon from "@/assets/icons/EyeIcon.svg";
 import DataIcon from "@/assets/icons/DataIcon.svg";
+import IncognitoSlashIcon from "@/assets/icons/IncognitoSlashIcon.svg";
 
 export const HERO_DATA = {
   badges: [
     {
       id: 1,
-      text: "No microphone access",
-      icon: Micro,
+      text: "No data selling",
+      icon: DataIcon,
     },
     {
       id: 2,
@@ -21,17 +22,18 @@ export const HERO_DATA = {
     },
     {
       id: 3,
-      text: "Doesn’t read your tabs",
-      icon: EyeIcon,
+      text: "No private tab reading",
+      icon: IncognitoSlashIcon,
     },
     {
       id: 4,
-      text: "No data selling",
-      icon: DataIcon,
+      text: "No microphone access",
+      icon: Micro,
     },
+
     {
       id: 5,
-      text: "No private tab reading",
+      text: "Doesn’t read your tabs",
       icon: EyeIcon,
     },
   ],

@@ -56,7 +56,7 @@ const HeroSection = () => {
       className="flex flex-col lg:gap-x-12 w-full justify-between lg:flex-row h-full"
       aria-labelledby="features-heading"
     >
-      <div className="flex flex-1 w-full lg:max-w-[750px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
+      <div className="flex flex-1 w-full lg:max-w-[830px] lg:gap-[31px] gap-4 flex-col justify-between items-center xl:items-start">
         <header className="text-start">
           <Typography variant="h2">
             Run client meetings like a pro - with AI agendas, live timing, and
@@ -115,7 +115,12 @@ const HeroSection = () => {
             )}
           >
             {HERO_MAIN_FEATURE_CARDS.map((card) => (
-              <Card key={card.id} {...card} titleVariant="h6" />
+              <Card
+                key={card.id}
+                {...card}
+                titleVariant="h6"
+                flipDescriptionOnHover
+              />
             ))}
           </div>
         </section>
@@ -134,12 +139,12 @@ const HeroSection = () => {
         </Button>
 
         <div className="flex z-10 relative gap-2 shadow-sm rounded-[20px] bg-[var(--bg-light)]">
-          <div className="flex flex-wrap p-5 gap-2 z-10 items-center">
+          <div className="flex flex-wrap p-5 gap-2 z-10 items-center !pr-0">
             {HERO_DATA.badges.map((badge) => (
               <Badge key={badge.id} {...badge} />
             ))}
           </div>
-          <img src={Checked} alt="" className=" xl:block hidden w-[200px] " />
+          <img src={Checked} alt="" className=" xl:block hidden w-[180px] " />
           <img
             src={CheckedLg}
             alt=""
