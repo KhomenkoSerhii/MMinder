@@ -1,0 +1,109 @@
+/* vanilla-cookieconsent theme — matches site design system */
+#cc-main {
+  --cc-font-family: system-ui, Inter, Helvetica, Arial, sans-serif;
+
+  /* layout */
+  --cc-bg: #f7f7f5;
+  --cc-modal-border-radius: 20px;
+  --cc-btn-border-radius: 9999px;
+  --cc-modal-margin: 1rem;
+
+  /* text */
+  --cc-primary-color: #1e1e1e;
+  --cc-secondary-color: #535353;
+  --cc-link-color: #05810a;
+
+  /* primary button — Accept all */
+  --cc-btn-primary-bg: #3ec042;
+  --cc-btn-primary-color: #fff;
+  --cc-btn-primary-border-color: #3ec042;
+  --cc-btn-primary-hover-bg: #35a839;
+  --cc-btn-primary-hover-color: #fff;
+  --cc-btn-primary-hover-border-color: #35a839;
+
+  /* secondary button — Decline */
+  --cc-btn-secondary-bg: #ffffff;
+  --cc-btn-secondary-color: #1e1e1e;
+  --cc-btn-secondary-border-color: #dfdfda;
+  --cc-btn-secondary-hover-bg: #f0f0ec;
+  --cc-btn-secondary-hover-color: #1e1e1e;
+  --cc-btn-secondary-hover-border-color: #dfdfda;
+
+  /* separator & overlay */
+  --cc-separator-border-color: #dfdfda;
+  --cc-overlay-bg: rgba(0, 0, 0, 0.35);
+
+  /* toggle (preferences modal) */
+  --cc-toggle-on-bg: #3ec042;
+  --cc-toggle-off-bg: #9b9b9b;
+  --cc-toggle-on-knob-bg: #fff;
+  --cc-toggle-off-knob-bg: #fff;
+  --cc-toggle-enabled-icon-color: #fff;
+  --cc-toggle-disabled-icon-color: #fff;
+  --cc-toggle-readonly-bg: #dfdfda;
+  --cc-toggle-readonly-knob-bg: #fff;
+  --cc-toggle-readonly-knob-icon-color: #9b9b9b;
+
+  /* section header in preferences modal */
+  --cc-cookie-category-block-bg: #f7f7f5;
+  --cc-cookie-category-block-border: #dfdfda;
+  --cc-cookie-category-block-hover-bg: #f0f0ec;
+  --cc-cookie-category-block-hover-border: #dfdfda;
+  --cc-cookie-category-expanded-block-bg: #f7f7f5;
+  --cc-cookie-category-expanded-block-hover-bg: #f0f0ec;
+
+  /* footer */
+  --cc-footer-bg: #f7f7f5;
+  --cc-footer-color: #535353;
+  --cc-footer-border-color: #dfdfda;
+}
+
+/* Decline / Decline all buttons — target by data-role="necessary" */
+#cc-main .cm__btn[data-role="necessary"],
+#cc-main .pm__btn[data-role="necessary"] {
+  background-color: #ffffff !important;
+  color: #1e1e1e !important;
+  border: 1px solid #dfdfda !important;
+}
+
+#cc-main .cm__btn[data-role="necessary"]:hover,
+#cc-main .pm__btn[data-role="necessary"]:hover {
+  background-color: #f0f0ec !important;
+}
+
+/* Save preferences — already has pm__btn--secondary */
+#cc-main .cm__btn--secondary,
+#cc-main .pm__btn--secondary {
+  background-color: #ffffff !important;
+  color: #1e1e1e !important;
+  border: 1px solid #dfdfda !important;
+}
+
+#cc-main .cm__btn--secondary:hover,
+#cc-main .pm__btn--secondary:hover {
+  background-color: #f0f0ec !important;
+}
+
+/* pill-shaped buttons with bold text — matches site Button component */
+#cc-main .cm__btn,
+#cc-main .pm__btn {
+  font-weight: 700;
+  font-size: 0.9375rem;
+  padding: 0 1.25rem;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* bar layout — subtle top border instead of full shadow */
+#cc-main .cm {
+  box-shadow: 0 -1px 0 0 #dfdfda, 0 4px 24px 0 rgba(0,0,0,0.08);
+}
+
+/* preferences modal shadow */
+#cc-main .pm {
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.12);
+}

@@ -9,11 +9,13 @@ import PrivacyPolicy from "@/Pages/Site/PrivacyPolicy";
 import TermsAndConditions from "@/Pages/Site/TermsAndConditions";
 import SupportRedirect from "@/Pages/Site/SupportRedirect";
 import ScrollToTop from "./Components/Feature/ScrollToTop";
+import CookieConsent from "./Components/Feature/CookieConsent";
 
 function App() {
   return (
     <Layout>
       <ScrollToTop />
+      <CookieConsent />
       <Routes>
         <Route path={SITE_ROUTES.HOME} element={<Home />} />
 
