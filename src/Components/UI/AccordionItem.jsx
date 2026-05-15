@@ -6,7 +6,7 @@ const AccordionItem = memo(({ faq }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-full px-4 lg:px-5 py-3 bg-[var(--bg-light)] flex-col rounded-xl flex justify-between items-center  text-left hover:bg-gray-100 transition-colors duration-200">
+    <div className="w-full px-4 lg:px-5 py-3 bg-[var(--bg-light)] flex-col rounded-xl flex justify-between items-stretch text-left hover:bg-gray-100 transition-colors duration-200">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={`w-full flex justify-between items-center gap-2.5 text-left ${isOpen ? "pb-2 gap-4 border-b border-[var(--stroke-light)]" : ""}`}
@@ -28,12 +28,12 @@ const AccordionItem = memo(({ faq }) => {
 
       <div
         id={`faq-answer-${faq.id || faq.question}`}
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`w-full overflow-hidden transition-all duration-300 ease-in-out text-left self-stretch ${
           isOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="pr-12">
-          <Typography variant="body" className="text-gray-600">
+        <div className="pr-12 w-full text-left">
+          <Typography variant="body" className="text-gray-600 text-left w-full">
             {faq.answer}
           </Typography>
         </div>

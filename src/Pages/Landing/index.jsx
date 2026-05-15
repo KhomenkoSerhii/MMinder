@@ -85,7 +85,6 @@ const Landing = () => {
         <PrivacySection />
 
         <CTASection />
-        {/* Founder/FAQ Section */}
 
         <FounderSection title={title} description={description} faqs={faqs} />
       </div>

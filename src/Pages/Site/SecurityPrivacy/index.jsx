@@ -2,13 +2,12 @@ import React from "react";
 import { Typography } from "@/Components/UI/Typography";
 import { Badge } from "@/Components/UI/Badge";
 import { Button } from "@/Components/UI/Button";
-import FAQItem from "@/Components/Feature/FAQItem";
+import FounderSection from "@/Components/Feature/FounderSection";
 import { EmojiFeatureCard } from "@/Components/Feature/EmojiFeatureCard";
 import SEO from "@/Components/SEO/SEO";
 import { loginRedirect } from "@/utils";
 import Checked from "@/assets/Images/Checked.png";
 import CheckedLg from "@/assets/Images/CheckedLg.png";
-import SecurityBanner from "@/assets/Images/SecurityBanner.png";
 import {
   TRUST_BADGES,
   DATA_USE_CARDS,
@@ -44,14 +43,14 @@ const SecurityPrivacy = () => {
             aria-labelledby="security-hero-heading"
           >
             <header className="text-start flex flex-col gap-4 lg:gap-5">
-              <Typography variant="h1" id="security-hero-heading">
+              <Typography variant="h2" id="security-hero-heading">
                 Security{" "}
                 <span className="text-[var(--color-primary)]">& Privacy</span>
               </Typography>
               <Typography variant="h5" className="font-semibold text-[#1e1e1e]">
                 Meeting guidance without invasive tracking.
               </Typography>
-              <Typography variant="p" className="max-w-3xl leading-relaxed">
+              <Typography variant="p" className="leading-relaxed">
                 MinuteMinder helps you run better Google Meet calls with live
                 timing, AI agendas, smart nudges, and wrap-up prompts - without
                 listening to your calls, recording your meetings, or reading
@@ -78,14 +77,6 @@ const SecurityPrivacy = () => {
                 className="sm:relative  z-0 absolute bottom-0 right-0 xl:hidden block flex-shrink-0"
               />
             </div>
-          </section>
-
-          <section className=" items-center relative hidden lg:flex rounded-[32px] pb-8 lg:pt-10 pl-8 bg-[var(--color-secondary)] flex-col gap-6">
-            <img
-              src={SecurityBanner}
-              alt=""
-              className="w-full max-w-[456px] rounded-tl-[8px]  rounded-bl-[8px]"
-            />
           </section>
         </section>
 
@@ -146,19 +137,16 @@ const SecurityPrivacy = () => {
           </ul>
         </section>
 
-        {/* 5. FAQ */}
-        <section
-          className="flex flex-col gap-6 lg:gap-8"
-          aria-labelledby="security-faq-heading"
-        >
-          <Typography variant="h2" id="security-faq-heading">
+        {/* 5. FAQ — same layout as FounderSection (copy + accordions) */}
+        <section aria-labelledby="security-faq-heading">
+          <h2 id="security-faq-heading" className="sr-only">
             Frequently asked questions
-          </Typography>
-          <div className="flex flex-col">
-            {SECURITY_FAQ.map((item, index) => (
-              <FAQItem key={item.id} item={item} index={index} />
-            ))}
-          </div>
+          </h2>
+          <FounderSection
+            title="FAQs"
+            description="Got questions? We’ve got answers."
+            faqs={SECURITY_FAQ}
+          />
         </section>
 
         {/* 6. Final CTA */}
