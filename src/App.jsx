@@ -6,6 +6,7 @@ import { SITE_ROUTES } from "@/utils/constants";
 import Features from "@/Pages/Site/Features";
 import Pricing from "@/Pages/Site/Pricing";
 import PrivacyPolicy from "@/Pages/Site/PrivacyPolicy";
+import SecurityPrivacy from "@/Pages/Site/SecurityPrivacy";
 import TermsAndConditions from "@/Pages/Site/TermsAndConditions";
 import SupportRedirect from "@/Pages/Site/SupportRedirect";
 import ScrollToTop from "./Components/Feature/ScrollToTop";
@@ -26,6 +27,10 @@ function App() {
         <Route path={SITE_ROUTES.SUPPORT} element={<SupportRedirect />} />
 
         <Route path={SITE_ROUTES.PRIVACY_POLICY} element={<PrivacyPolicy />} />
+        <Route
+          path={SITE_ROUTES.SECURITY_PRIVACY}
+          element={<SecurityPrivacy />}
+        />
         <Route
           path={SITE_ROUTES.TERMS_AND_CONDITIONS}
           element={<TermsAndConditions />}

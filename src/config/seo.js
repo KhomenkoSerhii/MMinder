@@ -310,6 +310,44 @@ export const seoConfig = {
     },
   },
 
+  securityPrivacy: {
+    title: "Security & Privacy – Minute Minder",
+    description:
+      "Meeting guidance without invasive tracking. MinuteMinder helps you run better Google Meet calls with live timing, AI agendas, smart nudges, and wrap-up prompts - without listening to calls, recording meetings, or reading unrelated tabs.",
+    keywords:
+      "MinuteMinder security, no call recording, no tab reading, Google Meet privacy, Chrome extension permissions, no data selling",
+    ogType: "website",
+    ogTitle: "Security & Privacy – meeting guidance without invasive tracking",
+    ogDescription:
+      "No recording, no live audio listening, no unrelated tab reading. Learn how MinuteMinder uses Calendar context for timers, agendas, nudges & analytics.",
+    twitterTitle: "Minute Minder – Security & Privacy",
+    twitterDescription:
+      "Better Meet calls without invasive tracking. Transparent data use & extension permissions.",
+    canonical: "/security",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://minuteminder.io/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Security & Privacy",
+              item: "https://minuteminder.io/security",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
   privacyPolicy: {
     title: "Privacy Policy - Minute Minder",
     description:

@@ -47,6 +47,9 @@ const CTA_CONFIG = {
   [SITE_ROUTES.PRIVACY_POLICY]: {
     showCTA: false,
   },
+  [SITE_ROUTES.SECURITY_PRIVACY]: {
+    showCTA: false,
+  },
   [SITE_ROUTES.TERMS_AND_CONDITIONS]: {
     showCTA: false,
   },

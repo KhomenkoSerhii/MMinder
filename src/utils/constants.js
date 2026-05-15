@@ -5,6 +5,7 @@ export const SITE_ROUTES = {
   SUPPORT: "/support",
 
   PRIVACY_POLICY: "/privacy",
+  SECURITY_PRIVACY: "/security",
   TERMS_AND_CONDITIONS: "/terms",
 
   LANDING: "/online-calls-timer-and-AI-reminders",

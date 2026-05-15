@@ -13,6 +13,7 @@ const SiteNavigation = () => {
   const navLinks = [
     { path: SITE_ROUTES.FEATURES, label: "Features" },
     { path: SITE_ROUTES.PRICING, label: "Pricing" },
+    { path: SITE_ROUTES.SECURITY_PRIVACY, label: "Security & Privacy" },
   ];
 
   const isActive = (path) => location.pathname === path;
