@@ -6,8 +6,8 @@ import FounderSection from "@/Components/Feature/FounderSection";
 import { EmojiFeatureCard } from "@/Components/Feature/EmojiFeatureCard";
 import SEO from "@/Components/SEO/SEO";
 import { loginRedirect } from "@/utils";
-import Checked from "@/assets/Images/Checked.png";
-import CheckedLg from "@/assets/Images/CheckedLg.png";
+import DashboardFilled from "@/assets/Images/DashboardFilled.png";
+import SecurityHeroShield from "@/assets/Images/SecurityHeroShield.svg";
 import {
   TRUST_BADGES,
   DATA_USE_CARDS,
@@ -35,14 +35,14 @@ const SecurityPrivacy = () => {
       <div className="main-layout">
         {/* 1. Hero */}
         <section
-          className="flex flex-col lg:gap-x-12 w-full justify-between lg:flex-row h-full"
+          className="flex w-full h-full flex-col justify-between lg:flex-row lg:items-stretch lg:gap-x-12"
           aria-labelledby="features-heading"
         >
           <section
-            className="flex flex-col gap-6 lg:gap-8 max-w-4xl"
+            className="flex max-w-4xl flex-col gap-5 lg:flex-1 lg:gap-6"
             aria-labelledby="security-hero-heading"
           >
-            <header className="text-start flex flex-col gap-4 lg:gap-5">
+            <header className="text-start flex flex-col gap-3 lg:gap-4">
               <Typography variant="h2" id="security-hero-heading">
                 Security{" "}
                 <span className="text-[var(--color-primary)]">& Privacy</span>
@@ -60,21 +60,20 @@ const SecurityPrivacy = () => {
             <TryFreeButton />
             {/* 2. Trust badges */}
 
-            <div className="flex z-10 relative gap-2 shadow-sm rounded-[20px] bg-[var(--bg-light)]">
-              <div className="flex flex-wrap p-5 gap-2 z-10 items-center !pr-0">
+            <div className="relative z-10 flex rounded-[20px] border border-[var(--stroke-light)] bg-[var(--bg-light)] p-5 shadow-sm lg:p-6">
+              <div className="z-10 flex flex-wrap items-center gap-2">
                 {TRUST_BADGES.map((badge) => (
                   <Badge key={badge.id} icon={badge.icon} text={badge.text} />
                 ))}
               </div>
+            </div>
+          </section>
+          <section className="relative mt-6 flex w-full items-stretch justify-center lg:mt-0 lg:w-auto lg:max-w-[540px] lg:flex-1 lg:justify-end">
+            <div className="flex w-full max-w-[500px] items-center rounded-[28px] border border-[var(--stroke-light)] bg-[var(--color-secondary)] p-4 shadow-sm lg:p-5 xl:p-6">
               <img
-                src={Checked}
-                alt=""
-                className=" xl:block hidden w-[180px] "
-              />
-              <img
-                src={CheckedLg}
-                alt=""
-                className="sm:relative  z-0 absolute bottom-0 right-0 xl:hidden block flex-shrink-0"
+                src={SecurityHeroShield}
+                alt="MinuteMinder security shield illustration"
+                className="w-full h-auto object-contain"
               />
             </div>
           </section>
@@ -149,21 +148,37 @@ const SecurityPrivacy = () => {
           />
         </section>
 
-        {/* 6. Final CTA */}
-        <section
-          className="rounded-[24px] lg:rounded-[32px] bg-[var(--color-secondary)] p-6 lg:p-10 flex flex-col gap-6 items-start max-w-4xl"
-          aria-labelledby="security-final-cta-heading"
-        >
-          <Typography variant="h2" id="security-final-cta-heading">
-            Run better meetings with confidence.
-          </Typography>
-          <Typography variant="p" className="max-w-2xl leading-relaxed">
-            Use MinuteMinder to keep Google Meet calls structured, on time, and
-            outcome-focused - without invasive tracking.
-          </Typography>
-          <TryFreeButton />
-        </section>
       </div>
+
+      {/* 6. Final CTA */}
+      <section
+        className="w-full"
+        aria-labelledby="security-final-cta-heading"
+      >
+        <div className="main-layout py-8 lg:py-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 rounded-[20px] pb-0 border border-[var(--stroke-light)] bg-[var(--color-secondary)] lg:px-8 lg:pt-8 pt-4 px-4">
+            <div className="flex-1 flex flex-col lg:gap-10 gap-4 lg:pb-8 pb-5">
+              <header>
+                <Typography variant="h2" id="security-final-cta-heading">
+                  Run better meetings with confidence.
+                </Typography>
+              </header>
+              <Typography variant="p" className="max-w-2xl leading-relaxed">
+                Use MinuteMinder to keep Google Meet calls structured, on time,
+                and outcome-focused - without invasive tracking.
+              </Typography>
+              <TryFreeButton className="sm:w-[179px]" />
+            </div>
+            <div className="hidden lg:flex lg:items-end">
+              <img
+                src={DashboardFilled}
+                alt="MinuteMinder dashboard preview"
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 };

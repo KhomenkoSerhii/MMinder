@@ -43,7 +43,7 @@ const SiteFooter = memo(() => {
             @ {currentYear} Minute Minder
           </Typography>
           <Typography variant="p-muted">
-            Run meetings that end on time.
+            Take the control of your meetings without compromising your privacy
           </Typography>
         </div>
         <div className="flex flex-col m-auto lg:flex-row lg:text-start text-center gap-y-2.5 lg:gap-x-20">

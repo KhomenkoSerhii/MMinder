@@ -15,7 +15,7 @@ const Footer = memo(() => {
               @ {currentYear} Minute Minder
             </Typography>
             <Typography variant="p-muted">
-              Run meetings that end on time.
+              Take the control of your meetings without compromising your privacy
             </Typography>
           </div>
         </div>
