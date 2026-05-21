@@ -348,6 +348,47 @@ export const seoConfig = {
     },
   },
 
+  howToUse: {
+    title: "How to Set Up and Use MinuteMinder – Step-by-Step Guide",
+    description:
+      "Install MinuteMinder, connect Google Calendar, set smart nudges, and join Google Meet. A step-by-step guide to live timers, AI Agenda, and smart nudges during your meetings.",
+    keywords:
+      "how to use MinuteMinder, setup guide, google meet timer setup, AI agenda setup, chrome extension setup, meeting timer tutorial",
+    ogType: "website",
+    ogTitle: "How to Set Up and Use MinuteMinder – Step-by-Step Guide",
+    ogDescription:
+      "Install MinuteMinder, connect Google Calendar, and get live timers, smart nudges, and AI Agenda guidance inside Google Meet.",
+    canonical: "/how-to-use",
+    structuredData: {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "HowTo",
+          name: "How to set up and use MinuteMinder in Google Meet",
+          description:
+            "A step-by-step guide to installing MinuteMinder, connecting Google Calendar, setting nudges, and using the live timer and AI Agenda inside Google Meet.",
+          totalTime: "PT5M",
+          step: [
+            { "@type": "HowToStep", name: "Install the Chrome extension", text: "Add MinuteMinder from the Chrome Web Store." },
+            { "@type": "HowToStep", name: "Sign in with Google", text: "Sign in with your Google account to connect your calendar." },
+            { "@type": "HowToStep", name: "Allow Calendar access", text: "Grant read-only Google Calendar access so MinuteMinder can set up meeting timers." },
+            { "@type": "HowToStep", name: "Create or open a calendar event", text: "Open a Google Calendar event that has a Google Meet link." },
+            { "@type": "HowToStep", name: "Set smart nudges", text: "Configure halftime, 5-min, and custom nudges in the dashboard." },
+            { "@type": "HowToStep", name: "Join Google Meet", text: "Click the Meet link — MinuteMinder activates automatically." },
+            { "@type": "HowToStep", name: "See the timer, nudges, and AI agenda", text: "Use the live countdown, smart nudge cards, and AI Agenda guidance to stay on track." },
+          ],
+        },
+        {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://minuteminder.io/" },
+            { "@type": "ListItem", position: 2, name: "How to Use", item: "https://minuteminder.io/how-to-use" },
+          ],
+        },
+      ],
+    },
+  },
+
   privacyPolicy: {
     title: "Privacy Policy - Minute Minder",
     description:

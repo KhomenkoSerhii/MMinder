@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import Logo from "./Logo";
 import { Typography } from "@/Components/UI/Typography";
+import { Link } from "react-router-dom";
 
 const SiteFooter = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -13,6 +14,10 @@ const SiteFooter = memo(() => {
     {
       title: "Pricing",
       href: "/pricing",
+    },
+    {
+      title: "How to Use",
+      href: "/how-to-use",
     },
   ];
 
@@ -47,13 +52,14 @@ const SiteFooter = memo(() => {
           </Typography>
         </div>
         <div className="flex flex-col m-auto lg:flex-row lg:text-start text-center gap-y-2.5 lg:gap-x-20">
-          <ul className="flex flex-1 flex-col">
+          <ul className="flex w-max flex-col">
             {links.map((link) => (
               <li
                 key={link.title}
                 className="py-2 text-black font-medium text-base"
               >
-                <a href={link.href}>{link.title}</a>
+                {/* <a href={link.href}>{link.title}</a> */}
+                <Link to={link.href}>{link.title}</Link>
               </li>
             ))}
           </ul>
@@ -63,7 +69,11 @@ const SiteFooter = memo(() => {
                 key={article.title}
                 className="py-2 text-black font-medium text-base"
               >
-                <a href={article.href} target={article.target} rel={article.rel}>
+                <a
+                  href={article.href}
+                  target={article.target}
+                  rel={article.rel}
+                >
                   {article.title}
                 </a>
               </li>

@@ -98,3 +98,7 @@ body {
 .main-layout {
   @apply flex h-full flex-col lg:gap-25 gap-8 lg:py-12 py-0;
 }
+
+.rounded-with-border {
+  @apply flex w-full items-center rounded-[28px] border border-[var(--stroke-light)] bg-[var(--color-secondary)] p-4 shadow-sm lg:p-5 xl:p-6;
+}
