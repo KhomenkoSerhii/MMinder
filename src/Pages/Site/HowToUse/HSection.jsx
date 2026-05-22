@@ -27,32 +27,31 @@ const HSection = memo(({
 }) => (
   <section className="flex flex-col gap-6" aria-labelledby={id}>
     {children ? (
-      <>
-        <div className="flex flex-col gap-2">
-          {step && (
-            <div className="flex items-center gap-3">
-              <StepBadge number={step} />
+      <div className={gridCls(imgLeft)}>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
+            {step ? (
+              <div className="flex items-center gap-3">
+                <StepBadge number={step} />
+                <Typography variant={titleVariant} id={id} className={titleClass}>
+                  {title}
+                </Typography>
+              </div>
+            ) : (
               <Typography variant={titleVariant} id={id} className={titleClass}>
                 {title}
               </Typography>
-            </div>
-          )}
-          {!step && (
-            <Typography variant={titleVariant} id={id} className={titleClass}>
-              {title}
-            </Typography>
-          )}
-          {description && (
-            <Typography variant="p" className="leading-relaxed text-[var(--color-muted)] max-w-2xl">
-              {description}
-            </Typography>
-          )}
+            )}
+            {description && (
+              <Typography variant="p" className="leading-relaxed text-[var(--color-muted)]">
+                {description}
+              </Typography>
+            )}
+          </div>
+          {children}
         </div>
-        <div className={gridCls(imgLeft)}>
-          <div className="flex flex-col gap-4">{children}</div>
-          <LazyImage src={image} alt={imageLabel} />
-        </div>
-      </>
+        <LazyImage src={image} alt={imageLabel} />
+      </div>
     ) : (
       <div className={gridCls(imgLeft)}>
         <div className="flex flex-col gap-3">

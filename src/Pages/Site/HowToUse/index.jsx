@@ -226,7 +226,7 @@ const HowToUse = () => (
           titleClass="text-[var(--color-primary)]"
           description="Nudges are short reminders that help you stay on track during the call. Set them up in the dashboard before meetings."
           imageLabel="Dashboard nudge/reminder setup"
-          imgLeft
+          imgLeft={false}
           image={DashboardNudgeSetup}
         >
           <div className="flex flex-col gap-2">
@@ -263,7 +263,7 @@ const HowToUse = () => (
           titleClass="text-[var(--color-primary)]"
           description="AI Agenda creates a structured, time-boxed agenda from your meeting context. It works best when your calendar event has a clear title and description."
           imageLabel="AI Agenda Assistant screen"
-          imgLeft
+          imgLeft={false}
           image={AIAssistantScreen}
         >
           <div className="flex flex-col gap-2">
