@@ -93,17 +93,18 @@ const HeroSection = () => {
         style={{ animationDelay: "250ms" }}
       >
         <img
-          src={Timer}
-          alt=""
-          className="absolute top-0 left-[-80px]"
-          aria-hidden="true"
-        />
-        <img
           src={ImgBlock}
           alt="MinuteMinder agenda and timer inside Google Meet"
           className="animate-float w-full max-w-[456px]"
         />
-        <div className="p-5 bg-[var(--bg-light)] max-w-[456px] text-center rounded-[20px] border border-[var(--stroke-light)]">
+        <div
+          className="absolute top-[18px] left-[-40px] z-20 w-[172px] h-[58px] rounded-[16px] bg-[#1E1E1E] text-white grid place-items-center text-[22px] font-bold tracking-[0.08em] shadow-[0_14px_28px_rgba(0,0,0,0.28)] overflow-hidden"
+          aria-hidden="true"
+        >
+          00 : 02 : 30
+          <span className="timer-progress-bar" />
+        </div>
+        <div className="animate-float-soft p-5 bg-[var(--bg-light)] max-w-[456px] text-center rounded-[20px] border border-[var(--stroke-light)]">
           <Typography variant="p">
             Trusted by marketing, product & ops teams running faster standups
             and sharper reviews.

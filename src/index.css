@@ -130,13 +130,49 @@ body {
   animation: hero-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+@keyframes hero-float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 .animate-float {
   animation: hero-float 6s ease-in-out infinite;
 }
 
+.animate-float-soft {
+  animation: hero-float-soft 5.2s ease-in-out infinite;
+}
+
+@keyframes hero-timer-bar {
+  0%,
+  100% {
+    width: 34%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+.timer-progress-bar {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 5px;
+  border-radius: 999px;
+  background: #c8e35a;
+  animation: hero-timer-bar 3.8s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-up,
-  .animate-float {
+  .animate-float,
+  .animate-float-soft,
+  .timer-progress-bar {
     animation: none;
     opacity: 1;
   }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography } from "@/Components/UI/Typography";
+import Reveal from "@/Components/UI/Reveal";
 
 const REVIEWS = [
   {
@@ -45,7 +46,7 @@ const REVIEWS = [
     avatarColor: "#8B6F5E",
     rating: 5,
     date: "Feb 26, 2026",
-    text: "PERFECT, my ceo sees how much time I spend on calls and doesn't make me work overtime \"because he thinks I'm doing nothing\"... Thx!",
+    text: 'PERFECT, my ceo sees how much time I spend on calls and doesn\'t make me work overtime "because he thinks I\'m doing nothing"... Thx!',
   },
 ];
 
@@ -80,20 +81,17 @@ const StarRating = ({ rating, max = 5, size = 14 }) => (
 );
 
 const ReviewCard = ({ name, initials, avatarColor, rating, date, text }) => (
-  <article className="flex flex-col gap-3 p-5 rounded-[20px] bg-[var(--bg-light)] h-full">
+  <article className="flex flex-col gap-3.5 p-[22px] h-full rounded-[20px] bg-white border border-[var(--stroke-light)] shadow-[0_14px_36px_rgba(17,24,39,0.05)]">
     <div className="flex items-center gap-3">
       <div
-        className="size-9 rounded-full flex items-center justify-center flex-shrink-0 text-white text-sm font-semibold"
+        className="size-[38px] rounded-full flex items-center justify-center flex-shrink-0 text-white text-[15px] font-bold"
         style={{ backgroundColor: avatarColor }}
         aria-hidden="true"
       >
         {initials}
       </div>
-      <div className="flex flex-col gap-0.5 min-w-0">
-        <Typography
-          variant="h6"
-          className="text-[14px] lg:text-[16px] truncate"
-        >
+      <div className="flex flex-col gap-1 min-w-0">
+        <Typography variant="h6" className="text-[15px] truncate">
           {name}
         </Typography>
         <div className="flex items-center gap-2">
@@ -102,7 +100,10 @@ const ReviewCard = ({ name, initials, avatarColor, rating, date, text }) => (
         </div>
       </div>
     </div>
-    <Typography variant="p-muted" className="text-sm leading-relaxed">
+    <Typography
+      variant="p-muted"
+      className="text-[15px] leading-relaxed text-[#2F3A33]"
+    >
       {text}
     </Typography>
   </article>
@@ -110,7 +111,7 @@ const ReviewCard = ({ name, initials, avatarColor, rating, date, text }) => (
 
 const ReviewsSection = () => (
   <section
-    className="flex flex-col lg:gap-10 gap-4"
+    className="flex flex-col lg:gap-10 gap-6"
     aria-labelledby="reviews-heading"
   >
     <header className="flex flex-col items-center gap-3 text-center">
@@ -125,17 +126,23 @@ const ReviewsSection = () => (
       </div>
     </header>
 
-    <div className="flex flex-col lg:gap-5 gap-2">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 gap-2">
-        {REVIEWS.slice(0, 3).map((review) => (
-          <ReviewCard key={review.id} {...review} />
+    <div className="flex flex-col lg:gap-5 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5 gap-3">
+        {REVIEWS.slice(0, 3).map((review, i) => (
+          <Reveal key={review.id} delay={i * 100}>
+            <ReviewCard {...review} />
+          </Reveal>
         ))}
       </div>
-      <div className="flex justify-center lg:gap-5 gap-2">
-        {REVIEWS.slice(3).map((review) => (
-          <div key={review.id} className="w-full lg:max-w-[calc(33.333%-10px)]">
+      <div className="flex flex-col sm:flex-row justify-center lg:gap-5 gap-3">
+        {REVIEWS.slice(3).map((review, i) => (
+          <Reveal
+            key={review.id}
+            delay={(i + 3) * 100}
+            className="w-full lg:max-w-[calc(33.333%-13px)]"
+          >
             <ReviewCard {...review} />
-          </div>
+          </Reveal>
         ))}
       </div>
     </div>

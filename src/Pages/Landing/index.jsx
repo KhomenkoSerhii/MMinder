@@ -14,7 +14,6 @@ import WhyMinuteCardBg from "@/assets/Images/WhyMinuteCardBg.png";
 import HeroSection from "./HeroSection";
 import FounderSection from "@/Components/Feature/FounderSection";
 import { FOUNDER_SECTION_DATA } from "@/utils/Data/FAQs";
-import Reveal from "@/Components/UI/Reveal";
 
 const Landing = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.landing;
@@ -24,8 +23,7 @@ const Landing = () => {
         <HeroSection />
 
         {/* Why Minute Minder Section */}
-        <Reveal
-          as="section"
+        <section
           className="flex flex-col lg:gap-10 gap-4"
           aria-labelledby="features-heading"
         >
@@ -81,20 +79,14 @@ const Landing = () => {
               </section>
             </div>
           </div>
-        </Reveal>
+        </section>
 
         {/* Privacy & Security Section */}
-        <Reveal>
-          <PrivacySection />
-        </Reveal>
+        <PrivacySection />
 
-        <Reveal>
-          <CTASection />
-        </Reveal>
+        <CTASection />
 
-        <Reveal>
-          <FounderSection title={title} description={description} faqs={faqs} />
-        </Reveal>
+        <FounderSection title={title} description={description} faqs={faqs} />
       </div>
     </main>
   );
