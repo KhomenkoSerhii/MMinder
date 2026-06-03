@@ -17,19 +17,28 @@ const HeroSection = () => {
       {/* Left column */}
       <div className="flex flex-1 w-full lg:max-w-[720px] lg:gap-10 gap-6 flex-col justify-center items-start">
         {/* Context pill */}
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium bg-[var(--color-secondary)] text-[var(--color-primary-dark)]">
+        <span
+          className="animate-fade-up inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium bg-[var(--color-secondary)] text-[var(--color-primary-dark)]"
+          style={{ animationDelay: "0ms" }}
+        >
           <img src={ChromeIcon} alt="" className="size-4" aria-hidden="true" />
           Chrome Extension · Google Meet
         </span>
 
         {/* Headline + sub */}
         <div className="flex flex-col gap-4">
-          <Typography variant="h1" id="hero-heading">
+          <Typography
+            variant="h1"
+            id="hero-heading"
+            className="animate-fade-up"
+            style={{ animationDelay: "100ms" }}
+          >
             Keep every Google Meet structured
           </Typography>
           <Typography
             variant="p"
-            className="text-lg lg:text-xl text-[var(--color-muted)] max-w-[560px]"
+            className="animate-fade-up text-lg lg:text-xl text-[var(--color-muted)] max-w-[560px]"
+            style={{ animationDelay: "200ms" }}
           >
             AI agendas, live timing, and smart nudges - built right into your
             call. Connect Google Calendar once and MinuteMinder handles the
@@ -40,10 +49,11 @@ const HeroSection = () => {
         {/* CTA */}
         <Button
           variant="primary"
-          className="fex w-full flex-col lg:w-max"
+          className="animate-fade-up fex w-full flex-col lg:w-max transition-transform duration-200 hover:scale-[1.03] hover:shadow-lg"
           size="lg"
           onClick={loginRedirect}
           data-gtm="try-for-free"
+          style={{ animationDelay: "300ms" }}
         >
           Try for FREE
           <p className="text-xs font-normal">
@@ -67,7 +77,10 @@ const HeroSection = () => {
         </section>
 
         {/* Privacy badges */}
-        <div className="flex flex-wrap gap-2">
+        <div
+          className="animate-fade-up flex flex-wrap gap-2"
+          style={{ animationDelay: "400ms" }}
+        >
           {HERO_DATA.badges.map((badge) => (
             <Badge key={badge.id} {...badge} />
           ))}
@@ -75,7 +88,10 @@ const HeroSection = () => {
       </div>
 
       {/* Right column — desktop preview */}
-      <section className="items-center relative hidden lg:flex rounded-[32px] pb-8 px-8 bg-[var(--color-secondary)] flex-col gap-6 flex-shrink-0">
+      <section
+        className="animate-fade-up items-center relative hidden lg:flex rounded-[32px] pb-8 px-8 bg-[var(--color-secondary)] flex-col gap-6 flex-shrink-0"
+        style={{ animationDelay: "250ms" }}
+      >
         <img
           src={Timer}
           alt=""
@@ -85,7 +101,7 @@ const HeroSection = () => {
         <img
           src={ImgBlock}
           alt="MinuteMinder agenda and timer inside Google Meet"
-          className="w-full max-w-[456px]"
+          className="animate-float w-full max-w-[456px]"
         />
         <div className="p-5 bg-[var(--bg-light)] max-w-[456px] text-center rounded-[20px] border border-[var(--stroke-light)]">
           <Typography variant="p">

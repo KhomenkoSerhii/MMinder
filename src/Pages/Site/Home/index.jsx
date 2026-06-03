@@ -20,6 +20,7 @@ import WhatDoesDo from "@/Components/Feature/WhatDoesDo";
 import WhatDoesDoSubComponent from "@/Components/Feature/WhatDoesDoSubComponent";
 import ThreeStepProcess from "@/Components/Feature/ThreeStepProcess";
 import ReviewsSection from "@/Pages/Landing/ReviewsSection";
+import Reveal from "@/Components/UI/Reveal";
 
 const Home = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.home;
@@ -29,9 +30,14 @@ const Home = () => {
       <SEO page="home" />
       <div className="main-layout">
         <HeroSection />
-        <ReviewsSection />
-        <WhatDoesDo />
-        <section
+        <Reveal>
+          <ReviewsSection />
+        </Reveal>
+        <Reveal>
+          <WhatDoesDo />
+        </Reveal>
+        <Reveal
+          as="section"
           className="flex flex-col lg:gap-10 gap-4"
           aria-labelledby="features-heading"
         >
@@ -126,18 +132,25 @@ const Home = () => {
               />
             </div>
           </div>
-        </section>
-        <WhatDoesDoSubComponent />
+        </Reveal>
+        <Reveal>
+          <WhatDoesDoSubComponent />
+        </Reveal>
 
-        <section
+        <Reveal
+          as="section"
           className="flex flex-col gap-5 lg:gap-10"
           aria-labelledby="faq-heading"
         >
           <ThreeStepProcess />
-        </section>
-        <PrivacySection />
+        </Reveal>
+        <Reveal>
+          <PrivacySection />
+        </Reveal>
 
-        <FounderSection title={title} description={description} faqs={faqs} />
+        <Reveal>
+          <FounderSection title={title} description={description} faqs={faqs} />
+        </Reveal>
       </div>
     </main>
   );
