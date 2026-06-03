@@ -19,6 +19,7 @@ import SEO from "@/Components/SEO/SEO";
 import WhatDoesDo from "@/Components/Feature/WhatDoesDo";
 import WhatDoesDoSubComponent from "@/Components/Feature/WhatDoesDoSubComponent";
 import ThreeStepProcess from "@/Components/Feature/ThreeStepProcess";
+import ReviewsSection from "@/Pages/Landing/ReviewsSection";
 
 const Home = () => {
   const { title, description, faqs } = FOUNDER_SECTION_DATA.home;
@@ -28,6 +29,7 @@ const Home = () => {
       <SEO page="home" />
       <div className="main-layout">
         <HeroSection />
+        <ReviewsSection />
         <WhatDoesDo />
         <section
           className="flex flex-col lg:gap-10 gap-4"
@@ -126,6 +128,7 @@ const Home = () => {
           </div>
         </section>
         <WhatDoesDoSubComponent />
+
         <section
           className="flex flex-col gap-5 lg:gap-10"
           aria-labelledby="faq-heading"
