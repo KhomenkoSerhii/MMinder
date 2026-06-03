@@ -29,7 +29,6 @@ const Home = () => {
       <SEO page="home" />
       <div className="main-layout">
         <HeroSection />
-        <ReviewsSection />
         <WhatDoesDo />
         <section
           className="flex flex-col lg:gap-10 gap-4"
@@ -135,6 +134,7 @@ const Home = () => {
         >
           <ThreeStepProcess />
         </section>
+        <ReviewsSection />
         <PrivacySection />
 
         <FounderSection title={title} description={description} faqs={faqs} />
