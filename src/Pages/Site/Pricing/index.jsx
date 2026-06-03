@@ -7,6 +7,7 @@ import Percent from "@/assets/Images/Percent.png";
 import MailBg from "@/assets/Images/MailBg.png";
 import SEO from "@/Components/SEO/SEO";
 import { loginRedirect } from "@/utils";
+import ClockIcon from "@/assets/icons/ClockIcon.svg";
 
 const Pricing = () => {
   return (
@@ -83,12 +84,27 @@ const Pricing = () => {
 
         {/* Pricing Cards */}
         <section className=" space-y-5">
-          <header className="text-start lg:mb-10 mb-5">
-            <Typography variant="h2">Plans & Billing</Typography>
+          <header className="text-center lg:mb-10 mb-5">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <span className="bg-[var(--color-primary)] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
+                New
+              </span>
+              <Typography variant="h2" className="font-bold">
+                The Google Meet timer is{" "}
+                <span className="text-[var(--color-primary)]">free for everyone.</span>
+              </Typography>
+            </div>
+            <Typography variant="p" className="text-gray-500">
+              Upgrade anytime for AI agendas, smart nudges, team controls, and advanced insights.
+            </Typography>
           </header>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
             {PRICING_DATA.map((plan) => (
-              <PricingCard key={plan.id} {...plan} />
+              <PricingCard
+                key={plan.id}
+                {...plan}
+                image={plan.isFree ? ClockIcon : undefined}
+              />
             ))}
           </div>
           <section className="flex flex-wrap justify-between items-start overflow-hidden rounded-tl-[20px] rounded-[20px] bg-[var(--bg-light)] border border-[var(--stroke-light)]">

@@ -9,6 +9,7 @@ import PrivacyPolicy from "@/Pages/Site/PrivacyPolicy";
 import SecurityPrivacy from "@/Pages/Site/SecurityPrivacy";
 import TermsAndConditions from "@/Pages/Site/TermsAndConditions";
 import SupportRedirect from "@/Pages/Site/SupportRedirect";
+import HowToUse from "@/Pages/Site/HowToUse";
 import ScrollToTop from "./Components/Feature/ScrollToTop";
 import CookieConsent from "./Components/Feature/CookieConsent";
 
@@ -25,6 +26,7 @@ function App() {
         <Route path={SITE_ROUTES.FEATURES} element={<Features />} />
         <Route path={SITE_ROUTES.PRICING} element={<Pricing />} />
         <Route path={SITE_ROUTES.SUPPORT} element={<SupportRedirect />} />
+        <Route path={SITE_ROUTES.HOW_TO_USE} element={<HowToUse />} />
 
         <Route path={SITE_ROUTES.PRIVACY_POLICY} element={<PrivacyPolicy />} />
         <Route

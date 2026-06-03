@@ -1,4 +1,20 @@
+import ClockIcon from "@/assets/icons/ClockIcon.svg";
+
 export const PRICING_DATA = [
+  {
+    id: 0,
+    name: "Free Timer",
+    subtitle: "For meetings that just need a visible clock.",
+    isFree: true,
+    features: [
+      "Live timer inside Google Meet",
+      "Basic timer overlay",
+      "Works with Google Meet",
+      "No recording or listening",
+    ],
+    buttonText: "Add to Chrome",
+    note: "",
+  },
   {
     id: 1,
     name: "Starter",

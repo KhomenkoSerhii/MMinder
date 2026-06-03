@@ -14,6 +14,7 @@ const SiteNavigation = () => {
     { path: SITE_ROUTES.FEATURES, label: "Features" },
     { path: SITE_ROUTES.PRICING, label: "Pricing" },
     { path: SITE_ROUTES.SECURITY_PRIVACY, label: "Security & Privacy" },
+    { path: SITE_ROUTES.HOW_TO_USE, label: "How to Use" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -39,7 +40,7 @@ const SiteNavigation = () => {
                 "text-base font-medium transition-colors hover:text-[var(--color-primary)]",
                 isActive(link.path)
                   ? "text-[var(--color-primary)]"
-                  : "text-[var(--color-text)]"
+                  : "text-[var(--color-text)]",
               )}
             >
               {link.label}
@@ -110,7 +111,7 @@ const SiteNavigation = () => {
                   "text-base font-medium py-2 transition-colors hover:text-[var(--color-primary)]",
                   isActive(link.path)
                     ? "text-[var(--color-primary)]"
-                    : "text-[var(--color-text)]"
+                    : "text-[var(--color-text)]",
                 )}
               >
                 {link.label}

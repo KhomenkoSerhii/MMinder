@@ -9,6 +9,8 @@ export const SITE_ROUTES = {
   TERMS_AND_CONDITIONS: "/terms",
 
   LANDING: "/online-calls-timer-and-AI-reminders",
+
+  HOW_TO_USE: "/how-to-use",
 };
 
 export const CHROME_REDIRECT_URL =
