@@ -161,7 +161,7 @@ const HeroRightSection = ({ className = "", style }) => {
         </div>
 
         <div className="mm-usecase-strip">
-          <div className="flex items-center gap-2.5  w-full">
+          <div className="flex items-center gap-2.5 justify-center w-full">
             <div className="mm-usecase-icon" aria-hidden="true">
               👥
             </div>
