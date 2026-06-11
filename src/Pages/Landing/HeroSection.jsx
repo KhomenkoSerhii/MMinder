@@ -6,7 +6,7 @@ import Timer from "@/assets/Images/Timer.png";
 import { Button } from "@/Components/UI/Button";
 import { Badge } from "@/Components/UI/Badge";
 import ChromeIcon from "@/assets/icons/ChromeIcon.svg";
-import { loginRedirect } from "@/utils";
+import HeroRightSection from "@/Components/Feature/HeroRightSection";
 
 const HeroSection = () => {
   return (
@@ -33,16 +33,16 @@ const HeroSection = () => {
             className="animate-fade-up"
             style={{ animationDelay: "100ms" }}
           >
-            Keep every Google Meet structured
+            Run client meetings like a pro in Google Meet
           </Typography>
           <Typography
             variant="p"
             className="animate-fade-up text-lg lg:text-xl text-[var(--color-muted)] max-w-[560px]"
             style={{ animationDelay: "200ms" }}
           >
-            AI agendas, live timing, and smart nudges - built right into your
-            call. Connect Google Calendar once and MinuteMinder handles the
-            rest.
+            MinuteMinder adds live timing, agenda guidance, and smart nudges
+            inside every Google Meet call — so meetings stay focused, on time,
+            and end with clear next steps.
           </Typography>
         </div>
 
@@ -51,13 +51,19 @@ const HeroSection = () => {
           variant="primary"
           className="animate-fade-up fex w-full flex-col lg:w-max transition-transform duration-200 hover:scale-[1.03] hover:shadow-lg"
           size="lg"
-          onClick={loginRedirect}
+          onClick={() =>
+            window.open(
+              "https://app.minuteminder.io/",
+              "_blank",
+              "noopener,noreferrer",
+            )
+          }
           data-gtm="try-for-free"
           style={{ animationDelay: "300ms" }}
         >
           Try for FREE
           <p className="text-xs font-normal">
-            No credit card for the free plan
+            Free plan • No credit card required
           </p>
         </Button>
 
@@ -88,29 +94,10 @@ const HeroSection = () => {
       </div>
 
       {/* Right column — desktop preview */}
-      <section
-        className="animate-fade-up items-center relative hidden lg:flex rounded-[32px] pb-8 px-8 bg-[var(--color-secondary)] flex-col gap-6 flex-shrink-0"
+      <HeroRightSection
+        className="animate-fade-up hidden lg:block flex-shrink-0"
         style={{ animationDelay: "250ms" }}
-      >
-        <img
-          src={ImgBlock}
-          alt="MinuteMinder agenda and timer inside Google Meet"
-          className="animate-float w-full max-w-[456px]"
-        />
-        <div
-          className="absolute top-[18px] left-[-40px] z-20 w-[172px] h-[58px] rounded-[16px] bg-[#1E1E1E] text-white grid place-items-center text-[22px] font-bold tracking-[0.08em] shadow-[0_14px_28px_rgba(0,0,0,0.28)] overflow-hidden"
-          aria-hidden="true"
-        >
-          00 : 02 : 30
-          <span className="timer-progress-bar" />
-        </div>
-        <div className="animate-float-soft p-5 bg-[var(--bg-light)] max-w-[456px] text-center rounded-[20px] border border-[var(--stroke-light)]">
-          <Typography variant="p">
-            Trusted by marketing, product & ops teams running faster standups
-            and sharper reviews.
-          </Typography>
-        </div>
-      </section>
+      />
     </section>
   );
 };

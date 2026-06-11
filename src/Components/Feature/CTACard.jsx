@@ -12,7 +12,7 @@ const CTACard = ({ title }) => {
           <Typography variant="h2">{title}</Typography>
         </header>
         <Typography variant="p">
-          Add to Chrome – Free | Start 14‑day team pilot
+          Try it for free for 7 days
         </Typography>
         <div className="flex items-center lg:gap-4 flex-wrap gap-2">
           <Button
