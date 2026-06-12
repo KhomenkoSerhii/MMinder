@@ -15,4 +15,5 @@ export const getGridCols = (length) => {
   }
 };
 
-export const loginRedirect = () => window.open(LOGIN_REDIRECT_URL, "_self");
+export const loginRedirect = () =>
+  window.open(LOGIN_REDIRECT_URL, "_blank", "noopener,noreferrer");

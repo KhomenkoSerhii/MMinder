@@ -7,6 +7,7 @@ import { Button } from "@/Components/UI/Button";
 import { Badge } from "@/Components/UI/Badge";
 import ChromeIcon from "@/assets/icons/ChromeIcon.svg";
 import HeroRightSection from "@/Components/Feature/HeroRightSection";
+import { loginRedirect } from "@/utils";
 
 const HeroSection = () => {
   return (
@@ -51,13 +52,7 @@ const HeroSection = () => {
           variant="primary"
           className="animate-fade-up fex w-full flex-col lg:w-max transition-transform duration-200 hover:scale-[1.03] hover:shadow-lg"
           size="lg"
-          onClick={() =>
-            window.open(
-              "https://app.minuteminder.io/",
-              "_blank",
-              "noopener,noreferrer",
-            )
-          }
+          onClick={loginRedirect}
           data-gtm="try-for-free"
           style={{ animationDelay: "300ms" }}
         >

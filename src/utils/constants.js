@@ -16,7 +16,7 @@ export const SITE_ROUTES = {
 export const CHROME_REDIRECT_URL =
   "https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic";
 
-export const LOGIN_REDIRECT_URL = CHROME_REDIRECT_URL;
+export const LOGIN_REDIRECT_URL = "https://app.minuteminder.io/";
 
 export const SUPPORT_FORM_URL =
   "https://forms.gle/mBeGEeSFeNDJVSAs5";

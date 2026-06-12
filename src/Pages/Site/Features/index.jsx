@@ -129,6 +129,27 @@ const Features = () => {
           </section>
         </section>
 
+        {/* Demo Video Section */}
+        <section
+          className="flex flex-col gap-5 lg:gap-10"
+          aria-labelledby="demo-video"
+        >
+          <Typography variant="h2" id="demo-video">
+            See MinuteMinder{" "}
+            <span className="text-[var(--color-primary)]">in action</span>
+          </Typography>
+          <div className="w-full overflow-hidden rounded-[20px] lg:rounded-[32px] bg-[var(--color-secondary)]">
+            <iframe
+              className="w-full aspect-video"
+              src="https://www.youtube-nocookie.com/embed/ATkihXMtGlw?rel=0"
+              title="MinuteMinder demo video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </section>
+
         {/* Features Showcase Section */}
         <section
           className="flex flex-col gap-10"
