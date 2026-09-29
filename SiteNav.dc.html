@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<nav style="position:fixed;top:0;left:0;right:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #E6E6E6;font-family:'Inter',sans-serif">
+  <div style="display:grid;grid-template-columns:{{ cols }};align-items:center;gap:12px;max-width:1232px;margin:0 auto;padding:0 16px;height:64px">
+    <a href="/" data-gtm="nav-logo" aria-label="Minute Minder home" onClick="{{ logoClick }}" style="display:flex;align-items:center;gap:10px;text-decoration:none;justify-self:start;min-width:0;cursor:pointer">
+      <img src="assets/icons/CalendarIcon.svg" alt="" aria-hidden="true" style="width:22px;height:22px;display:block;flex:none">
+      <span style="font-size:{{ logoSize }};line-height:1;font-weight:700;color:#05810A;letter-spacing:-0.01em;white-space:nowrap">Minute Minder</span>
+    </a>
+    <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:36px">
+        <sc-for list="{{ links }}" as="l" hint-placeholder-count="4">
+          <a href="{{ l.href }}" data-gtm="{{ l.gtm }}" style="font-size:16px;line-height:24px;font-weight:500;text-decoration:none;white-space:nowrap;transition:color .15s;color:{{ l.color }}" style-hover="color:#05810A">{{ l.label }}</a>
+        </sc-for>
+      </div>
+    </sc-if>
+    <div style="display:flex;align-items:center;gap:4px;justify-self:end;margin-right:-6px">
+      <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="nav-add-to-chrome" style="display:flex;align-items:center;justify-content:center;height:44px;padding:0 {{ btnPad }};border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:{{ btnFont }};font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
+      <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+        <button type="button" data-gtm="nav-menu-toggle" onClick="{{ toggleMenu }}" aria-label="Menu" aria-expanded="{{ menuOpen }}" style="display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;color:#1E1E1E;flex:none">
+          <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+          </sc-if>
+          <sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}">
+            <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+          </sc-if>
+        </button>
+      </sc-if>
+    </div>
+  </div>
+  <sc-if value="{{ panelOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:absolute;top:64px;left:0;right:0;height:calc(100vh - 64px);background:#FFFFFF;border-top:1px solid #E6E6E6;padding:8px 16px 24px;display:flex;flex-direction:column">
+      <sc-for list="{{ links }}" as="l" hint-placeholder-count="4">
+        <a href="{{ l.href }}" data-gtm="{{ l.gtmMobile }}" onClick="{{ closeMenu }}" style="display:flex;align-items:center;min-height:56px;font-size:20px;font-weight:600;text-decoration:none;border-bottom:1px solid #E6E6E6;color:{{ l.color }}">{{ l.label }}</a>
+      </sc-for>
+    </div>
+  </sc-if>
+</nav>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;1440px&quot;,&quot;height&quot;:&quot;64px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;features&quot;,&quot;howto&quot;,&quot;pricing&quot;,&quot;security&quot;,&quot;none&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1440, open: false };
+  componentDidMount() {
+    this.onResize = () => this.setState({ w: window.innerWidth, open: window.innerWidth < 900 ? this.state.open : false });
+    window.addEventListener("resize", this.onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  renderVals() {
+    const a = this.props.active ?? "home";
+    const mobile = this.state.w < 900;
+    const small = this.state.w < 400;
+    const links = [
+      ["features", "Features", "/features", "features"],
+      ["howto", "How to use", "/how-to-use", "how-to-use"],
+      ["pricing", "Pricing", "/pricing", "pricing"],
+      ["security", "Privacy", "/security", "privacy"],
+    ].map(([k, label, href, g]) => ({ label, href, gtm: "nav-" + g, gtmMobile: "nav-mobile-" + g, color: a === k ? "#05810A" : "#1E1E1E" }));
+    return {
+      links,
+      cols: mobile ? "auto auto" : "1fr auto 1fr",
+      desktop: !mobile,
+      mobile,
+      menuOpen: this.state.open,
+      menuClosed: !this.state.open,
+      panelOpen: mobile && this.state.open,
+      logoSize: small ? "17px" : "22px",
+      btnPad: small ? "14px" : "22px",
+      btnFont: small ? "15px" : "16px",
+      toggleMenu: () => this.setState(s => ({ open: !s.open })),
+      closeMenu: () => this.setState({ open: false }),
+      logoClick: e => {
+        if (a !== "home") return;
+        e.preventDefault();
+        this.setState({ open: false });
+        const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <!-- Outer ring: thin border -->
-  <path fill-rule="evenodd" d="M12 2A10 10 0 1 0 12 22A10 10 0 1 0 12 2Z M12 4A8 8 0 1 1 12 20A8 8 0 1 1 12 4Z" fill="#D93025"/>
-  <!-- Inner record dot: small -->
-  <path d="M12 9.5A2.5 2.5 0 1 0 12 14.5A2.5 2.5 0 1 0 12 9.5Z" fill="#D93025"/>
-  <!-- Diagonal slash -->
-  <path d="M3 21L21 3" stroke="#D93025" stroke-width="1.5" stroke-linecap="round"/>
-</svg>

@@ -1,0 +1,13 @@
+# Netlify: same routing as vercel.json (use whichever host you deploy to)
+/privacy-policy                         /privacy                              301
+/privacy-policy/                        /privacy                              301
+/terms-and-conditions                   /terms                                301
+/terms-and-conditions/                  /terms                                301
+/support                                https://forms.gle/mBeGEeSFeNDJVSAs5   302
+/features                               /Features.dc.html                     200
+/how-to-use                             /HowToUse.dc.html                     200
+/pricing                                /Pricing.dc.html                      200
+/security                               /Security.dc.html                     200
+/privacy                                /Privacy.dc.html                      200
+/terms                                  /Terms.dc.html                        200
+/online-calls-timer-and-AI-reminders    /Landing.dc.html                      200

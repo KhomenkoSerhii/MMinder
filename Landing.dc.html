@@ -6,6 +6,7 @@
 <title>Minute Minder: Google Meet Timer with Calendar Sync &amp; Reminders</title>
 <meta name="description" content="A simple Google Meet timer that starts automatically from your calendar and reminds you before time runs out. Free to install. No recording.">
 <link rel="canonical" href="https://minuteminder.io/">
+<meta name="robots" content="noindex, follow">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Minute Minder">
@@ -19,143 +20,6 @@
 <meta name="twitter:title" content="Minute Minder: Google Meet Timer with Calendar Sync &amp; Reminders">
 <meta name="twitter:description" content="A simple Google Meet timer that starts automatically from your calendar and reminds you before time runs out. Free to install. No recording.">
 <meta name="twitter:image" content="https://minuteminder.io/og/og-home.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://minuteminder.io/#org",
-      "name": "Minute Minder",
-      "url": "https://minuteminder.io/",
-      "logo": "https://minuteminder.io/assets/logo-512.png",
-      "email": "support@minuteminder.io",
-      "sameAs": [
-        "https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://minuteminder.io/#website",
-      "url": "https://minuteminder.io/",
-      "name": "Minute Minder",
-      "publisher": {
-        "@id": "https://minuteminder.io/#org"
-      }
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://minuteminder.io/#app",
-      "name": "Minute Minder",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Chrome",
-      "description": "A simple Google Meet timer that starts automatically from your calendar and reminds you before time runs out.",
-      "featureList": [
-        "Timer inside Google Meet",
-        "Starts automatically from Google Calendar",
-        "Color cues and a sound before the end",
-        "Custom reminders during the call",
-        "AI agenda from the calendar invite",
-        "Meeting analytics dashboard",
-        "Team reminders"
-      ],
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Free Timer",
-          "price": "0",
-          "priceCurrency": "USD",
-          "url": "https://minuteminder.io/pricing"
-        },
-        {
-          "@type": "Offer",
-          "name": "Starter",
-          "price": "9",
-          "priceCurrency": "USD",
-          "url": "https://minuteminder.io/pricing"
-        },
-        {
-          "@type": "Offer",
-          "name": "Growth",
-          "price": "19",
-          "priceCurrency": "USD",
-          "url": "https://minuteminder.io/pricing"
-        },
-        {
-          "@type": "Offer",
-          "name": "Enterprise",
-          "price": "499",
-          "priceCurrency": "USD",
-          "url": "https://minuteminder.io/pricing"
-        }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.5",
-        "ratingCount": "10",
-        "bestRating": "5"
-      },
-      "publisher": {
-        "@id": "https://minuteminder.io/#org"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://minuteminder.io/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does Minute Minder work inside Google Meet?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The timer shows right inside your Google Meet call, with color cues and reminders with optional sound."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I change the reminders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. You choose when each reminder appears, what it says, and whether it plays a sound. You can also turn off any reminder you don't need."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens if the meeting time changes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Minute Minder picks up the change from Google Calendar and adjusts the timer and reminders."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I invite teammates?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Invite teammates by email. They see the reminders your admin sets and can add their own."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do plans and billing work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The timer is free. Every paid plan starts with a 7-day free trial, no credit card required. Choose the plan that fits your workflow, team, and meeting volume."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What analytics are included?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Weekly meetings, total hours, on-time percentage, and overtime count, shown as cards or graphs."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
 <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=2">
 <link rel="shortcut icon" href="/favicon.ico?v=2">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
@@ -183,10 +47,18 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
 </style>
 </helmet>
 <div style="min-height:100vh;display:flex;flex-direction:column">
-  <dc-import name="SiteNav" active="home" hint-size="100%,64px"></dc-import>
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #E6E6E6">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1232px;margin:0 auto;padding:0 16px;height:64px">
+      <div style="display:flex;align-items:center;gap:10px;min-width:0">
+        <img src="assets/icons/CalendarIcon.svg" alt="" aria-hidden="true" style="width:22px;height:22px;flex:none">
+        <span style="font-size:{{ tbLogo }};line-height:1;font-weight:700;color:#05810A;letter-spacing:-0.01em;white-space:nowrap">Minute Minder</span>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="landing-topbar-add-to-chrome" style="display:flex;align-items:center;justify-content:center;height:44px;padding:0 {{ tbBtnPad }};border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:{{ tbBtnFont }};font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
+    </div>
+  </header>
 
   <main style="flex:1;width:100%;padding-top:64px">
-  <section data-screen-label="Home · Hero" style="background:#F3F8F1;padding:{{ heroPad }} 0;overflow:hidden">
+  <section data-screen-label="Landing · Hero" style="background:#F3F8F1;padding:{{ heroPad }} 0;overflow:hidden">
     <div style="max-width:1392px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ heroCols }};gap:{{ heroGap }};align-items:center">
       <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px;max-width:560px;min-width:0">
         <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;border-radius:9999px;background:#FFFFFF;color:#05810A;font-size:14px;line-height:20px;font-weight:600">
@@ -197,7 +69,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
         <p style="font-size:20px;line-height:1.5;color:#555555;text-wrap:pretty">A simple timer that starts from your calendar and reminds you before time runs out.</p>
         <div style="display:flex;flex-direction:column;gap:16px;width:{{ btnWrap }};margin-top:8px">
           <div style="display:flex;flex-direction:column;gap:12px">
-            <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="home-hero-add-to-chrome" style="display:flex;align-items:center;justify-content:center;align-self:{{ btnSelf }};height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
+            <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="landing-hero-add-to-chrome" style="display:flex;align-items:center;justify-content:center;align-self:{{ btnSelf }};height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
             <p style="font-size:14px;line-height:20px;color:#555555;text-align:{{ helperAlign }}">Free to install. No credit card required.</p>
           </div>
           <ul style="display:flex;flex-wrap:wrap;gap:8px;justify-content:{{ pillJustify }}">
@@ -324,7 +196,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     </div>
   </section>
 
-  <section data-screen-label="Home · Problem" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section data-screen-label="Landing · Problem" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:{{ h2Gap }}">
       <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E">Sound familiar?</h2>
       <ul style="display:grid;grid-template-columns:{{ probCols }};gap:{{ cardGap }}">
@@ -403,7 +275,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     </div>
   </section>
 
-  <section id="features" data-screen-label="Home · Everything you expect" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section id="features" data-screen-label="Landing · Everything you expect" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:32px">
       <h2 style="font-size:{{ h3Lg }};line-height:1.25;font-weight:600;color:#1E1E1E;text-align:center;text-wrap:balance">Everything you expect from a meeting timer</h2>
       <ul style="display:grid;grid-template-columns:{{ cols3 }};gap:1px;background:#EDEFEA;border:1px solid #EDEFEA;border-radius:24px;overflow:hidden;box-shadow:0 8px 24px rgba(16,40,20,0.06)">
@@ -443,7 +315,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     </div>
   </section>
 
-  <section data-screen-label="Home · Why Minute Minder" style="position:relative;overflow:hidden;background:#111814;padding:{{ bandPad }} 0;scroll-margin-top:64px">
+  <section data-screen-label="Landing · Why Minute Minder" style="position:relative;overflow:hidden;background:#111814;padding:{{ bandPad }} 0;scroll-margin-top:64px">
     <div aria-hidden="true" style="position:absolute;left:-220px;top:-260px;width:680px;height:680px;border-radius:50%;background:rgba(62,192,66,0.22);filter:blur(120px);pointer-events:none"></div>
     <div aria-hidden="true" style="position:absolute;right:-180px;top:28%;width:600px;height:600px;border-radius:50%;background:rgba(120,220,180,0.14);filter:blur(120px);pointer-events:none"></div>
     <div aria-hidden="true" style="position:absolute;right:6%;bottom:-300px;width:560px;height:560px;border-radius:50%;background:rgba(255,199,0,0.10);filter:blur(120px);pointer-events:none"></div>
@@ -532,11 +404,10 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
         </li>
       </ul>
 
-      <a href="/features" data-gtm="home-see-features" style="font-size:18px;line-height:1.5;font-weight:600;color:#6FD66F;text-decoration:none;text-align:center" style-hover="color:#9BE59B;text-decoration:underline">See all features →</a>
     </div>
   </section>
 
-  <section data-screen-label="Home · Who it's for" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section data-screen-label="Landing · Who it's for" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:{{ h2Gap }}">
       <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">For any meeting where time <span style="color:#05810A">matters</span></h2>
       <ul style="display:grid;grid-template-columns:{{ useCols }};gap:{{ cardGap }}">
@@ -572,7 +443,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     </div>
   </section>
 
-  <section data-screen-label="Home · How it works" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section data-screen-label="Landing · How it works" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:{{ h2Gap }}">
       <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E">How it works</h2>
       <ol style="display:grid;grid-template-columns:{{ stepCols }};gap:{{ stepGap }}">
@@ -610,11 +481,10 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
           <p style="font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty;max-width:340px">Join your next Google Meet call. The timer appears automatically.</p>
         </li>
       </ol>
-      <a href="/how-to-use" data-gtm="home-how-to-use" style="align-self:flex-start;font-size:18px;line-height:1.5;font-weight:600;color:#05810A;text-decoration:none" style-hover="color:#046F09;text-decoration:underline">How to use →</a>
     </div>
   </section>
 
-  <section data-screen-label="Home · Loved by users" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section data-screen-label="Landing · Loved by users" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:{{ h2Gap }}">
       <div style="display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
         <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E">Loved by <span style="color:#05810A">users</span></h2>
@@ -628,7 +498,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
             <span style="position:absolute;left:0;top:0;width:12px;height:24px;overflow:hidden"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="#F4B400"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg></span>
           </span>
         </div>
-        <p style="font-size:16px;line-height:1.5;color:#555555"><a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="home-reviews-rating" style-hover="text-decoration:underline">Rated 4.5/5 on the Chrome Web Store</a></p>
+        <p style="font-size:16px;line-height:1.5;color:#555555"><a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="landing-reviews-rating" style-hover="text-decoration:underline">Rated 4.5/5 on the Chrome Web Store</a></p>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:24px">
         <div aria-roledescription="carousel" aria-label="User reviews" onPointerEnter="{{ rvEnter }}" onPointerLeave="{{ rvLeave }}" onPointerDown="{{ rvDown }}" onPointerMove="{{ rvMove }}" onPointerUp="{{ rvUp }}" onPointerCancel="{{ rvUp }}" style="width:100%;overflow:hidden;margin:-12px 0 -32px;padding:12px 0 32px;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:{{ rvCursor }}">
@@ -662,7 +532,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     </div>
   </section>
 
-  <section data-screen-label="Home · Privacy" style="position:relative;overflow:hidden;background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section data-screen-label="Landing · Privacy" style="position:relative;overflow:hidden;background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div aria-hidden="true" style="position:absolute;inset:0;background:{{ glowBg }};pointer-events:none"></div>
     <div style="position:relative;max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;align-items:center;text-align:center">
       <span style="width:96px;height:96px;border-radius:28px;background:#E2FAE3;display:flex;align-items:center;justify-content:center;margin-bottom:32px">
@@ -692,51 +562,50 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
           <span style="font-size:16px;line-height:1.5;color:#1E1E1E">We do not sell your data.</span>
         </li>
       </ul>
-      <a href="/security" data-gtm="home-privacy-link" style="margin-top:40px;font-size:18px;line-height:1.5;font-weight:600;color:#05810A;text-decoration:none" style-hover="color:#046F09;text-decoration:underline">How we handle your data →</a>
     </div>
   </section>
 
-  <section id="faq" data-screen-label="Home · FAQ" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
+  <section id="faq" data-screen-label="Landing · FAQ" style="background:#FFFFFF;padding:{{ pad }} 0;scroll-margin-top:64px">
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;align-items:center;gap:{{ h2Gap }}">
       <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-align:center">Questions</h2>
       <div style="width:100%;max-width:760px;border-top:1px solid #E6E6E6">
         <div style="border-bottom:1px solid #E6E6E6">
-          <button type="button" data-gtm="home-faq-toggle-1" onClick="{{ t0 }}" aria-expanded="{{ o0 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
+          <button type="button" data-gtm="landing-faq-toggle-1" onClick="{{ t0 }}" aria-expanded="{{ o0 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
             <span style="font-size:20px;line-height:1.4;font-weight:600;color:#1E1E1E">Does Minute Minder work inside Google Meet?</span>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none"><path d="M5 12h14"></path><sc-if value="{{ c0 }}" hint-placeholder-val="{{ true }}"><path d="M12 5v14"></path></sc-if></svg>
           </button>
           <p style="display:{{ d0 }};padding:0 48px 24px 0;font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">Yes. The timer shows right inside your Google Meet call, with color cues and reminders with optional sound.</p>
         </div>
         <div style="border-bottom:1px solid #E6E6E6">
-          <button type="button" data-gtm="home-faq-toggle-2" onClick="{{ t1 }}" aria-expanded="{{ o1 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
+          <button type="button" data-gtm="landing-faq-toggle-2" onClick="{{ t1 }}" aria-expanded="{{ o1 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
             <span style="font-size:20px;line-height:1.4;font-weight:600;color:#1E1E1E">Can I change the reminders?</span>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none"><path d="M5 12h14"></path><sc-if value="{{ c1 }}" hint-placeholder-val="{{ true }}"><path d="M12 5v14"></path></sc-if></svg>
           </button>
           <p style="display:{{ d1 }};padding:0 48px 24px 0;font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">Yes. You choose when each reminder appears, what it says, and whether it plays a sound. You can also turn off any reminder you don't need.</p>
         </div>
         <div style="border-bottom:1px solid #E6E6E6">
-          <button type="button" data-gtm="home-faq-toggle-3" onClick="{{ t2 }}" aria-expanded="{{ o2 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
+          <button type="button" data-gtm="landing-faq-toggle-3" onClick="{{ t2 }}" aria-expanded="{{ o2 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
             <span style="font-size:20px;line-height:1.4;font-weight:600;color:#1E1E1E">What happens if the meeting time changes?</span>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none"><path d="M5 12h14"></path><sc-if value="{{ c2 }}" hint-placeholder-val="{{ true }}"><path d="M12 5v14"></path></sc-if></svg>
           </button>
           <p style="display:{{ d2 }};padding:0 48px 24px 0;font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">Minute Minder picks up the change from Google Calendar and adjusts the timer and reminders.</p>
         </div>
         <div style="border-bottom:1px solid #E6E6E6">
-          <button type="button" data-gtm="home-faq-toggle-4" onClick="{{ t3 }}" aria-expanded="{{ o3 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
+          <button type="button" data-gtm="landing-faq-toggle-4" onClick="{{ t3 }}" aria-expanded="{{ o3 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
             <span style="font-size:20px;line-height:1.4;font-weight:600;color:#1E1E1E">Can I invite teammates?</span>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none"><path d="M5 12h14"></path><sc-if value="{{ c3 }}" hint-placeholder-val="{{ true }}"><path d="M12 5v14"></path></sc-if></svg>
           </button>
           <p style="display:{{ d3 }};padding:0 48px 24px 0;font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">Yes. Invite teammates by email. They see the reminders your admin sets and can add their own.</p>
         </div>
         <div style="border-bottom:1px solid #E6E6E6">
-          <button type="button" data-gtm="home-faq-toggle-5" onClick="{{ t4 }}" aria-expanded="{{ o4 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
+          <button type="button" data-gtm="landing-faq-toggle-5" onClick="{{ t4 }}" aria-expanded="{{ o4 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
             <span style="font-size:20px;line-height:1.4;font-weight:600;color:#1E1E1E">How do plans and billing work?</span>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none"><path d="M5 12h14"></path><sc-if value="{{ c4 }}" hint-placeholder-val="{{ true }}"><path d="M12 5v14"></path></sc-if></svg>
           </button>
           <p style="display:{{ d4 }};padding:0 48px 24px 0;font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">The timer is free. Every paid plan starts with a 7-day free trial, no credit card required. Choose the plan that fits your workflow, team, and meeting volume.</p>
         </div>
         <div style="border-bottom:1px solid #E6E6E6">
-          <button type="button" data-gtm="home-faq-toggle-6" onClick="{{ t5 }}" aria-expanded="{{ o5 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
+          <button type="button" data-gtm="landing-faq-toggle-6" onClick="{{ t5 }}" aria-expanded="{{ o5 }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;text-align:left">
             <span style="font-size:20px;line-height:1.4;font-weight:600;color:#1E1E1E">What analytics are included?</span>
             <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none"><path d="M5 12h14"></path><sc-if value="{{ c5 }}" hint-placeholder-val="{{ true }}"><path d="M12 5v14"></path></sc-if></svg>
           </button>
@@ -746,17 +615,31 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     </div>
   </section>
 
-  <section data-screen-label="Home · Final CTA" style="background:#FFFFFF;padding:{{ pad }} 24px;scroll-margin-top:64px">
+  <section data-screen-label="Landing · Final CTA" style="background:#FFFFFF;padding:{{ pad }} 24px;scroll-margin-top:64px">
     <div style="max-width:1280px;margin:0 auto;padding:80px 24px;border-radius:32px;background:#F3F8F1;display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center">
       <h2 style="max-width:760px;font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">Try it on your <span style="color:#05810A">next Google Meet call</span></h2>
       <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:{{ btnWrap }}">
-        <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="home-final-add-to-chrome" style="display:flex;align-items:center;justify-content:center;width:100%;height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
+        <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="landing-final-add-to-chrome" style="display:flex;align-items:center;justify-content:center;width:100%;height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
       </div>
     </div>
   </section>
   </main>
 
-  <dc-import name="SiteFooter" hint-size="100%,260px"></dc-import>
+  <footer style="background:#FFFFFF;border-top:1px solid #E6E6E6;margin-top:auto">
+    <div style="max-width:1232px;margin:0 auto;padding:32px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="assets/icons/CalendarIcon.svg" alt="" aria-hidden="true" style="width:22px;height:22px;flex:none">
+        <span style="font-size:22px;line-height:1;font-weight:700;color:#05810A;letter-spacing:-0.01em;white-space:nowrap">Minute Minder</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:14px;line-height:20px;color:#555555">
+        <a href="/privacy" data-gtm="landing-footer-privacy-policy" style="color:#555555;text-decoration:none;transition:color .15s" style-hover="color:#05810A">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="/terms" data-gtm="landing-footer-terms" style="color:#555555;text-decoration:none;transition:color .15s" style-hover="color:#05810A">Terms</a>
+        <span aria-hidden="true">·</span>
+        <span>© 2026 Minute Minder</span>
+      </div>
+    </div>
+  </footer>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;animateTimer&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
@@ -842,7 +725,7 @@ class Component extends DCLogic {
       rvTransition: rvDrag || this.state.rvAnim === false || this.reduce ? "none" : "transform 600ms ease-in-out",
       rvCursor: rvDrag ? "grabbing" : "grab",
       rvDots: RV.map((r, i) => ({
-        gtm: "home-reviews-dot-" + (i + 1), label: "Review " + (i + 1) + " of 5: " + r[0], active: i === rvActive,
+        gtm: "landing-reviews-dot-" + (i + 1), label: "Review " + (i + 1) + " of 5: " + r[0], active: i === rvActive,
         w: i === rvActive ? "20px" : "8px", bg: i === rvActive ? "#05810A" : "#D9DDD6",
         go: () => { this.rvGo(5 + i); this.rvStart(); },
       })),
@@ -896,6 +779,7 @@ class Component extends DCLogic {
       barH: mob ? "auto" : "52px", btnS: mob ? "32px" : "36px", endW: mob ? "44px" : "48px",
       meetPadB: mob ? "40px" : "16px",
       mob, desk: !mob,
+      tbLogo: this.state.w < 400 ? "17px" : "22px", tbBtnPad: this.state.w < 400 ? "14px" : "22px", tbBtnFont: this.state.w < 400 ? "15px" : "16px",
       h2Size: mob ? "30px" : "44px",
       h2Gap: mob ? "32px" : "48px",
       h3Lg: mob ? "20px" : "24px",

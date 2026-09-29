@@ -1,12 +1,8 @@
 {
+  "trailingSlash": false,
   "redirects": [
     {
       "source": "/privacy-policy",
-      "destination": "/privacy",
-      "permanent": true
-    },
-    {
-      "source": "/privacy-policy/",
       "destination": "/privacy",
       "permanent": true
     },
@@ -16,15 +12,39 @@
       "permanent": true
     },
     {
-      "source": "/terms-and-conditions/",
-      "destination": "/terms",
-      "permanent": true
+      "source": "/support",
+      "destination": "https://forms.gle/mBeGEeSFeNDJVSAs5",
+      "permanent": false
     }
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "source": "/features",
+      "destination": "/Features.dc.html"
+    },
+    {
+      "source": "/how-to-use",
+      "destination": "/HowToUse.dc.html"
+    },
+    {
+      "source": "/pricing",
+      "destination": "/Pricing.dc.html"
+    },
+    {
+      "source": "/security",
+      "destination": "/Security.dc.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/Privacy.dc.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/Terms.dc.html"
+    },
+    {
+      "source": "/online-calls-timer-and-AI-reminders",
+      "destination": "/Landing.dc.html"
     }
   ]
 }

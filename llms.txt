@@ -1,0 +1,19 @@
+# Minute Minder
+
+> A simple Google Meet timer. A Chrome extension that starts the timer automatically from Google Calendar, shows time left inside the call with color cues and a sound before the end, and gives custom reminders during the call. Free to install.
+
+## Pages
+- https://minuteminder.io/ : Overview, how it works, privacy, FAQ
+- https://minuteminder.io/features : Calendar sync, custom reminders, color cues, AI agenda, meeting analytics, team features
+- https://minuteminder.io/how-to-use : Setup in 3 steps and quick fixes
+- https://minuteminder.io/pricing : Free Timer, Starter $9/month, Growth $19/month, Enterprise $499/month; paid plans have a 7-day free trial
+- https://minuteminder.io/security : Privacy: no recording, no listening, no camera or microphone access
+
+## Key facts
+- Platform: Google Meet, via a Chrome extension. Not available for Zoom or Microsoft Teams.
+- Starts automatically: the timer takes the meeting length from Google Calendar and updates if the meeting is moved or extended. Google Meet's built-in timer has to be set by hand.
+- Custom reminders: ready-made reminders for halftime, 10 minutes left, 5 minutes left, and overtime; choose when each appears, what it says, and whether it plays a sound.
+- AI is used only to draft an agenda from the calendar invite. It never listens to the call.
+- Privacy: does not record, listen to, or capture audio or video; does not read unrelated browser tabs; does not sell data.
+- Works with Google Workspace accounts.
+- Contact: support@minuteminder.io

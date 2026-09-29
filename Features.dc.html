@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features: Google Meet Timer &amp; Reminders | Minute Minder</title>
+<meta name="description" content="Calendar auto-start, custom reminders during the call, color cues and sound, AI agenda, meeting analytics, and team tools for Google Meet.">
+<link rel="canonical" href="https://minuteminder.io/features">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Minute Minder">
+<meta property="og:url" content="https://minuteminder.io/features">
+<meta property="og:title" content="Features: Google Meet Timer &amp; Reminders | Minute Minder">
+<meta property="og:description" content="Calendar auto-start, custom reminders during the call, color cues and sound, AI agenda, meeting analytics, and team tools for Google Meet.">
+<meta property="og:image" content="https://minuteminder.io/og/og-features.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Features: Google Meet Timer &amp; Reminders | Minute Minder">
+<meta name="twitter:description" content="Calendar auto-start, custom reminders during the call, color cues and sound, AI agenda, meeting analytics, and team tools for Google Meet.">
+<meta name="twitter:image" content="https://minuteminder.io/og/og-features.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://minuteminder.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://minuteminder.io/features"
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=2">
+<link rel="shortcut icon" href="/favicon.ico?v=2">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+<link rel="manifest" href="/site.webmanifest">
+<script src="/site-tracking.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFKNJHRB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;border:0 solid}
+html,body{background:#fff;color:#1e1e1e;font-family:"Inter",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+ol,ul{list-style:none}
+img,svg,iframe{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+a{color:#05810A;text-decoration:none}
+a:hover{color:#046F09}
+button{font:inherit;color:inherit;background:transparent;cursor:pointer}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <dc-import name="SiteNav" active="features" hint-size="100%,64px"></dc-import>
+
+  <main style="flex:1;width:100%;padding-top:64px">
+  <section data-screen-label="Features · Hero" style="background:#F3F8F1;padding:{{ heroPad }} 0">
+    <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ heroCols }};gap:{{ heroGap }};align-items:center">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px;max-width:560px;min-width:0">
+        <p style="font-size:13px;line-height:1.4;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#05810A">Features</p>
+        <h1 style="font-size:{{ h1Size }};line-height:1.05;letter-spacing:-0.02em;font-weight:700;color:#1E1E1E;text-wrap:balance">What Minute Minder does in <span style="color:#05810A">Google Meet</span></h1>
+        <p style="font-size:20px;line-height:1.5;color:#555555;text-wrap:pretty">A timer inside your call, started from your calendar, with reminders you set yourself.</p>
+        <div style="display:flex;flex-direction:column;gap:12px;width:{{ btnWrap }};margin-top:8px">
+          <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="features-hero-add-to-chrome" style="display:flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
+          <p style="font-size:14px;line-height:20px;color:#555555;text-align:{{ helperAlign }}">Free to install. No credit card required.</p>
+        </div>
+      </div>
+      <div style="position:relative;width:100%;aspect-ratio:16/9;border-radius:24px;overflow:hidden;background:#F3F8F1;box-shadow:0 32px 80px -24px rgba(22,52,24,.28),0 8px 24px -12px rgba(22,52,24,.18)">
+        <sc-if value="{{ playing }}" hint-placeholder-val="{{ false }}">
+          <iframe src="https://www.youtube-nocookie.com/embed/ATkihXMtGlw?rel=0&amp;autoplay=1" title="See Minute Minder in action" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+        </sc-if>
+        <sc-if value="{{ notPlaying }}" hint-placeholder-val="{{ true }}">
+          <button type="button" aria-label="Play video" data-gtm="features-video-play" onClick="{{ play }}" style="position:absolute;inset:0;width:100%;height:100%;padding:0;display:flex;align-items:center;justify-content:center;cursor:pointer">
+            <img src="assets/img/video-poster.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover">
+            <span style="position:relative;width:{{ playSize }};height:{{ playSize }};border-radius:9999px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 32px -8px rgba(22,52,24,.35);transition:transform .2s" style-hover="transform:scale(1.06)">
+              <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="#05810A" style="margin-left:4px"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"></path></svg>
+            </span>
+          </button>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Features · Calendar sync" style="background:#FFFFFF;padding:{{ pad }} 0">
+    <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ twoCols }};gap:{{ stepGap }};align-items:center">
+      <div style="display:flex;flex-direction:column;gap:16px;max-width:560px;min-width:0">
+        <p style="font-size:13px;line-height:1.4;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#05810A">Calendar sync</p>
+        <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">Starts automatically from your <span style="color:#05810A">calendar</span></h2>
+        <p style="font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">The timer takes the meeting length from Google Calendar and updates if the meeting is moved or extended. Google Meet's built-in timer has to be set by hand. It works with Google Workspace accounts too.</p>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column;align-items:center;padding:{{ calPad }}">
+            <div style="width:100%;max-width:400px;background:#FFFFFF;border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:18px;box-shadow:0 24px 60px -28px rgba(22,52,24,.22)">
+              <div style="display:flex;gap:14px;align-items:flex-start">
+                <span style="width:14px;height:14px;border-radius:4px;background:#05810A;margin-top:6px;flex:none"></span>
+                <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+                  <p style="font-size:20px;line-height:1.3;font-weight:600;color:#1E1E1E">Weekly team sync</p>
+                  <p style="font-size:15px;line-height:1.4;color:#555555">10:00 – 10:30</p>
+                </div>
+              </div>
+              <div style="height:1px;background:#E6E6E6"></div>
+              <div style="display:flex;align-items:center;gap:12px">
+                <img src="assets/img/meet-logo.png" alt="" aria-hidden="true" style="width:24px;height:22px;flex:none">
+                <span style="font-size:15px;line-height:1.4;font-weight:600;color:#1E1E1E">Join with Google Meet</span>
+              </div>
+            </div>
+            <svg aria-hidden="true" width="16" height="64" viewBox="0 0 16 64" fill="none" stroke="#05810A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:10px 0"><path d="M8 2v58"></path><path d="M2.5 54.5L8 60l5.5-5.5"></path></svg>
+            <div style="display:flex;flex-direction:column;gap:6px;padding:10px 24px 11px;border-radius:9999px;background:#3EC042;box-shadow:0 10px 24px -8px rgba(62,192,66,.55)">
+              <div style="display:flex;align-items:baseline;gap:12px;color:#FFFFFF">
+                <span style="font-size:15px;font-weight:700">Time left</span>
+                <span style="font-size:28px;line-height:1;font-weight:800;letter-spacing:-0.01em;font-variant-numeric:tabular-nums">00:30:00</span>
+              </div>
+              <div style="height:3px;border-radius:3px;background:rgba(255,255,255,.4)"></div>
+            </div>
+          </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Features · Reminders" style="background:#F3F8F1;padding:{{ pad }} 0">
+    <div ref="{{ remRef }}" style="max-width:1232px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ twoCols }};gap:{{ stepGap }};align-items:center">
+      <div style="display:flex;flex-direction:column;gap:20px;max-width:560px;min-width:0">
+        <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">Make reminders your <span style="color:#05810A">own</span></h2>
+        <p style="font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">You start with four ready-made reminders: halftime, 10 minutes left, 5 minutes left, and overtime. In your dashboard, choose when each one pops up, what it says, and whether it plays a sound. Turn off any you don't need.</p>
+        <ul style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+          <li style="display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:16px;background:#FFFFFF">
+            <span style="width:40px;height:40px;border-radius:10px;background:#FFC700;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#1E1E1E"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0z"></path></svg></span>
+            <p style="font-size:16px;line-height:1.4;color:#1E1E1E;min-width:0"><strong style="font-weight:700">Halftime:</strong> Are we on track?</p>
+          </li>
+          <li style="display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:16px;background:#FFFFFF">
+            <span style="width:40px;height:40px;border-radius:10px;background:#FFC700;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#1E1E1E"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0z"></path></svg></span>
+            <p style="font-size:16px;line-height:1.4;color:#1E1E1E;min-width:0"><strong style="font-weight:700">10 min left:</strong> Start wrapping up.</p>
+          </li>
+          <li style="display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:16px;background:#FFFFFF">
+            <span style="width:40px;height:40px;border-radius:10px;background:#FFC700;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#1E1E1E"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0z"></path></svg></span>
+            <p style="font-size:16px;line-height:1.4;color:#1E1E1E;min-width:0"><strong style="font-weight:700">5 min left:</strong> Agree on next steps.</p>
+          </li>
+          <li style="display:flex;align-items:center;gap:14px;padding:12px 16px 12px 12px;border-radius:16px;background:#FFFFFF">
+            <span style="width:40px;height:40px;border-radius:10px;background:#FFC700;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#1E1E1E"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0z"></path></svg></span>
+            <p style="font-size:16px;line-height:1.4;color:#1E1E1E;min-width:0"><strong style="font-weight:700">Overtime:</strong> End the call or book a follow-up.</p>
+          </li>
+        </ul>
+      </div>
+      <div style="position:relative;min-width:0;width:100%;max-width:480px;justify-self:{{ pillAlign }};margin-bottom:44px">
+        <div style="background:#FFFFFF;border-radius:24px;padding:{{ remPad }};padding-bottom:{{ remPadB }};box-shadow:0 24px 60px -24px rgba(22,52,24,.28),0 6px 18px -10px rgba(22,52,24,.16);display:flex;flex-direction:column;gap:20px">
+          <p style="font-size:20px;line-height:1.3;font-weight:600;color:#1E1E1E">Edit reminder</p>
+          <div ref="{{ ddRef }}" style="position:relative;display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:14px;line-height:20px;font-weight:500;color:#555555">When</span>
+            <button type="button" data-gtm="features-reminder-when-toggle" onClick="{{ toggleDd }}" aria-haspopup="listbox" aria-expanded="{{ ddOpen }}" style="width:100%;height:48px;padding:0 16px;border-radius:12px;border:1px solid {{ ddBorder }};box-shadow:{{ ddRing }};background:#FFFFFF;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:16px;color:#1E1E1E;text-align:left;transition:border-color .15s,box-shadow .15s">
+              <span>{{ when }}</span>
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none;transform:rotate({{ ddRot }});transition:transform .2s"><path d="M6 9l6 6 6-6"></path></svg>
+            </button>
+            <sc-if value="{{ ddOpen }}" hint-placeholder-val="{{ false }}">
+              <ul role="listbox" style="position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:5;background:#FFFFFF;border:1px solid #EDEFEA;border-radius:12px;box-shadow:0 16px 40px -12px rgba(16,40,20,.25),0 2px 8px rgba(16,40,20,.08);padding:6px;display:flex;flex-direction:column;gap:2px">
+                <sc-for list="{{ whenOpts }}" as="o" hint-placeholder-count="5">
+                  <li>
+                    <button type="button" role="option" aria-selected="{{ o.selected }}" data-gtm="features-reminder-when-option-{{ $index }}" onClick="{{ o.pick }}" style="width:100%;height:40px;padding:0 12px;border-radius:8px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:15px;color:#1E1E1E;font-weight:{{ o.weight }};background:{{ o.bg }};text-align:left" style-hover="background:#F3F8F1">
+                      <span>{{ o.label }}</span>
+                      <sc-if value="{{ o.selected }}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></sc-if>
+                    </button>
+                  </li>
+                </sc-for>
+              </ul>
+            </sc-if>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:14px;line-height:20px;font-weight:500;color:#555555">Message</span>
+            <input type="text" value="{{ msg }}" onChange="{{ setMsg }}" onFocus="{{ stopDemo }}" onMouseDown="{{ stopDemo }}" maxLength="40" placeholder="Type your reminder" style="width:100%;height:48px;padding:0 16px;border-radius:12px;border:1px solid #E6E6E6;background:#FFFFFF;font-family:inherit;font-size:16px;color:#1E1E1E;outline:none;transition:border-color .15s,box-shadow .15s" style-focus="border-color:#05810A;box-shadow:0 0 0 3px #E2FAE3">
+          </label>
+          <div style="display:flex;flex-direction:column;border-top:1px solid #E6E6E6">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid #E6E6E6">
+            <span style="font-size:16px;line-height:1.4;font-weight:500;color:#1E1E1E">Play sound</span>
+            <button type="button" role="switch" aria-label="Play sound" aria-checked="{{ sound }}" data-gtm="features-reminder-sound-toggle" onClick="{{ toggleSound }}" style="width:44px;height:26px;border-radius:9999px;background:{{ soundBg }};display:flex;align-items:center;padding:3px;flex:none;transition:background .2s"><span style="width:20px;height:20px;border-radius:9999px;background:#FFFFFF;box-shadow:0 1px 3px rgba(0,0,0,.2);transform:translateX({{ soundX }});transition:transform .2s"></span></button>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid #E6E6E6">
+            <span style="font-size:16px;line-height:1.4;font-weight:500;color:#1E1E1E">Reminder on</span>
+            <button type="button" role="switch" aria-label="Reminder on" aria-checked="{{ on }}" data-gtm="features-reminder-on-toggle" onClick="{{ toggleOn }}" style="width:44px;height:26px;border-radius:9999px;background:{{ onBg }};display:flex;align-items:center;padding:3px;flex:none;transition:background .2s"><span style="width:20px;height:20px;border-radius:9999px;background:#FFFFFF;box-shadow:0 1px 3px rgba(0,0,0,.2);transform:translateX({{ onX }});transition:transform .2s"></span></button>
+          </div>
+          </div>
+          <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="features-reminder-save" style="align-self:{{ saveSelf }};display:flex;align-items:center;justify-content:center;height:48px;padding:0 28px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:16px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Save</a>
+        </div>
+        <div aria-live="polite" style="position:absolute;left:{{ prevLeft }};bottom:-36px;z-index:2;max-width:{{ prevMax }};display:flex;align-items:center;gap:12px;padding:12px 16px 12px 12px;border-radius:14px;background:#FFF8E1;border:1px solid #FFE08A;box-shadow:0 16px 40px -14px rgba(16,40,20,.3);opacity:{{ prevOp }};transform:{{ prevScale }};transform-origin:left center;transition:opacity .2s ease-out,transform .22s ease-out">
+          <span style="width:40px;height:40px;border-radius:10px;background:#FFC700;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="#1E1E1E"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0z"></path></svg></span>
+          <div style="display:flex;flex-direction:column;min-width:0">
+            <span style="font-size:15px;line-height:1.25;font-weight:700;color:#1E1E1E">{{ when }}</span>
+            <span style="font-size:13px;line-height:1.35;color:{{ msgColor }};overflow-wrap:anywhere">{{ msgShown }}</span>
+          </div>
+          <sc-if value="{{ sound }}" hint-placeholder-val="{{ true }}">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E1E1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-left:4px"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#1E1E1E"></path><path d="M15.5 9a4 4 0 0 1 0 6"></path><path d="M18 6.5a7.5 7.5 0 0 1 0 11"></path></svg>
+          </sc-if>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Features · In the call" style="background:#FFFFFF;padding:{{ pad }} 0">
+    <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ twoCols }};gap:{{ stepGap }};align-items:center">
+      <div style="display:flex;flex-direction:column;gap:20px;max-width:560px;min-width:0">
+        <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">What you see in the call</h2>
+        <p style="font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">The timer shows how much time is left, right inside Google Meet. It turns from green to yellow, orange, and red as time runs out. A sound warns you before the end.</p>
+      </div>
+      <div style="min-width:0;display:flex;flex-direction:column;gap:{{ pillGap }};justify-self:{{ pillAlign }};width:100%;max-width:480px">
+        <div style="display:flex;align-items:center;gap:16px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding:{{ pillPad }};border-radius:9999px;background:#3EC042;box-shadow:0 14px 32px -14px rgba(62,192,66,.6)">
+            <div style="display:flex;align-items:baseline;justify-content:center;gap:14px;color:#FFFFFF;white-space:nowrap">
+              <span style="font-size:{{ pillLabel }};font-weight:700">Time left</span>
+              <span style="font-size:{{ pillTime }};line-height:1;font-weight:800;letter-spacing:-0.01em;font-variant-numeric:tabular-nums">00:25:00</span>
+            </div>
+            <div style="height:4px;border-radius:4px;background:rgba(255,255,255,.35);overflow:hidden"><div style="width:16%;height:100%;border-radius:4px;background:#FFFFFF"></div></div>
+          </div>
+          <span style="width:32px;flex:none"></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding:{{ pillPad }};border-radius:9999px;background:#FFC700;box-shadow:0 14px 32px -14px rgba(255,199,0,.65)">
+            <div style="display:flex;align-items:baseline;justify-content:center;gap:14px;color:#FFFFFF;white-space:nowrap">
+              <span style="font-size:{{ pillLabel }};font-weight:700">Halftime</span>
+              <span style="font-size:{{ pillTime }};line-height:1;font-weight:800;letter-spacing:-0.01em;font-variant-numeric:tabular-nums">00:15:00</span>
+            </div>
+            <div style="height:4px;border-radius:4px;background:rgba(255,255,255,.35);overflow:hidden"><div style="width:50%;height:100%;border-radius:4px;background:#FFFFFF"></div></div>
+          </div>
+          <svg aria-hidden="true" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFC700" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#FFC700"></path><path d="M15.5 9a4 4 0 0 1 0 6"></path><path d="M18 6.5a7.5 7.5 0 0 1 0 11"></path></svg>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <div style="flex:1;min-width:0;display:flex;flex-direction:column;gap:10px;padding:{{ pillPad }};border-radius:9999px;background:#E5483E;box-shadow:0 14px 32px -14px rgba(229,72,62,.6)">
+            <div style="display:flex;align-items:baseline;justify-content:center;gap:14px;color:#FFFFFF;white-space:nowrap">
+              <span style="font-size:{{ pillLabel }};font-weight:700">Overtime</span>
+              <span style="font-size:{{ pillTime }};line-height:1;font-weight:800;letter-spacing:-0.01em;font-variant-numeric:tabular-nums">00:02:10</span>
+            </div>
+            <div style="height:4px;border-radius:4px;background:#FFFFFF"></div>
+          </div>
+          <span style="width:32px;flex:none"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Features · AI agenda" style="background:#FFFFFF;padding:0 0 {{ pad }}">
+    <div style="max-width:1232px;margin:0 auto;padding:0 16px">
+      <div ref="{{ aiRef }}" style="background:#FAFAF8;border-radius:32px;padding:{{ aiPad }};display:flex;flex-direction:column;gap:{{ aiGap }}">
+        <div style="display:flex;flex-direction:column;gap:12px;max-width:560px;min-width:0">
+          <h2 style="font-size:{{ h3Size }};line-height:1.3;font-weight:600;color:#1E1E1E">Want a plan for the call?</h2>
+          <p style="font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">AI agenda turns your calendar invite into a goal and timed steps. Give the event a clear title and a short description for a better agenda. It never listens to the call.</p>
+        </div>
+        <div aria-hidden="true" style="display:flex;flex-direction:{{ aiDir }};align-items:stretch;justify-content:center">
+          <div style="flex:1 1 0;min-width:0;width:100%;max-width:440px;align-self:{{ cardSelf }};background:#FFFFFF;border:1px solid #EDEFEA;border-radius:20px;box-shadow:0 8px 24px rgba(16,40,20,0.06);padding:24px;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" style="flex:none"><rect x="3" y="4" width="18" height="17" rx="3" fill="#FFFFFF" stroke="#4285F4" stroke-width="2"></rect><path d="M3 9h18" stroke="#4285F4" stroke-width="2"></path><path d="M8 2.5v3M16 2.5v3" stroke="#4285F4" stroke-width="2" stroke-linecap="round"></path><rect x="7" y="12" width="4" height="4" rx="1" fill="#4285F4"></rect></svg>
+              <span style="font-size:13px;line-height:1.3;color:#555555">Google Calendar</span>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start">
+              <span style="width:14px;height:14px;border-radius:4px;background:#05810A;margin-top:6px;flex:none"></span>
+              <div style="display:flex;flex-direction:column;gap:4px;min-width:0">
+                <p style="font-size:20px;line-height:1.3;font-weight:600;color:#1E1E1E">Weekly team sync</p>
+                <p style="font-size:14px;line-height:1.4;color:#555555">Tuesday · 10:00 – 10:30</p>
+              </div>
+            </div>
+            <span style="align-self:flex-start;display:flex;align-items:center;gap:10px;height:40px;padding:0 18px 0 8px;border-radius:9999px;background:#1A73E8;color:#FFFFFF;font-size:14px;font-weight:600;white-space:nowrap"><span style="width:26px;height:26px;border-radius:999px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;flex:none"><img src="assets/img/meet-logo.png" alt="" aria-hidden="true" style="width:16px;height:15px"></span>Join with Google Meet</span>
+            <div style="display:flex;gap:10px;align-items:flex-start;padding-top:14px;border-top:1px solid #EDEFEA">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8A8F8A" stroke-width="1.8" stroke-linecap="round" style="flex:none;margin-top:1px"><path d="M4 6h16M4 11h16M4 16h10"></path></svg>
+              <p style="font-size:14px;line-height:1.45;color:#555555;text-wrap:pretty">Share updates, unblock issues, agree on next week's priorities.</p>
+            </div>
+          </div>
+          <div style="position:relative;flex:none;align-self:center;width:{{ conW }};height:{{ conH }};display:flex;align-items:center;justify-content:center">
+            <svg aria-hidden="true" width="96" height="24" viewBox="0 0 96 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" style="flex:none;transform:rotate({{ arrowRot }})"><path d="M8 12h80" stroke-dasharray="80" stroke-dashoffset="{{ lineOff }}" style="transition:stroke-dashoffset .5s ease-out"></path></svg>
+            <span style="position:absolute;left:50%;top:50%;width:32px;height:32px;margin:-16px 0 0 -16px;border-radius:999px;background:#E2FAE3;border:1.5px solid #05810A;display:flex;align-items:center;justify-content:center;transform:scale({{ sparkS }});transition:transform .3s ease-out .25s"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="#05810A"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg></span>
+          </div>
+          <div style="flex:1 1 0;min-width:0;width:100%;max-width:440px;align-self:{{ cardSelf }};background:#FFFFFF;border:1px solid #EDEFEA;border-radius:20px;box-shadow:0 8px 24px rgba(16,40,20,0.06);padding:24px;display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="#05810A" style="flex:none"><path d="M12 2.5l1.9 5.6 5.6 1.9-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.9z"></path><path d="M19 15l.8 2.2 2.2.8-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"></path></svg>
+              <span style="font-size:13px;line-height:1.3;font-weight:600;color:#05810A">AI agenda</span>
+            </div>
+            <p style="background:#EAF5E6;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.4;color:#1E1E1E;opacity:{{ agOp }};transform:{{ agT }};transition:opacity .3s ease-out 450ms,transform .3s ease-out 450ms"><span style="font-weight:700;color:#05810A">Goal:</span> agree on next week's priorities</p>
+            <div style="display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #EDEFEA;opacity:{{ agOp }};transform:{{ agT }};transition:opacity .3s ease-out 600ms,transform .3s ease-out 600ms">
+                <span style="width:24px;height:24px;border-radius:999px;border:1.5px solid #05810A;color:#05810A;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none">1</span>
+                <span style="flex:1;min-width:0;font-size:14px;font-weight:600;color:#1E1E1E">Updates</span>
+                <span style="font-size:14px;color:#555555;white-space:nowrap">5 min</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #EDEFEA;opacity:{{ agOp }};transform:{{ agT }};transition:opacity .3s ease-out 750ms,transform .3s ease-out 750ms">
+                <span style="width:24px;height:24px;border-radius:999px;border:1.5px solid #05810A;color:#05810A;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none">2</span>
+                <span style="flex:1;min-width:0;font-size:14px;font-weight:600;color:#1E1E1E">Blockers</span>
+                <span style="font-size:14px;color:#555555;white-space:nowrap">10 min</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #EDEFEA;opacity:{{ agOp }};transform:{{ agT }};transition:opacity .3s ease-out 900ms,transform .3s ease-out 900ms">
+                <span style="width:24px;height:24px;border-radius:999px;border:1.5px solid #05810A;color:#05810A;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none">3</span>
+                <span style="flex:1;min-width:0;font-size:14px;font-weight:600;color:#1E1E1E">Priorities</span>
+                <span style="font-size:14px;color:#555555;white-space:nowrap">15 min</span>
+              </div>
+            </div>
+            <div style="margin:auto -14px 0;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:12px;background:#F3F8F1;opacity:{{ agOp }};transition:opacity .3s ease-out 1050ms">
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg>
+              <span style="flex:1;min-width:0;font-size:16px;line-height:1.3;font-weight:700;color:#1E1E1E">Total</span>
+              <span style="font-size:16px;line-height:1.3;font-weight:700;color:#1E1E1E;white-space:nowrap">30 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Features · For you and your team" style="background:#FFFFFF;padding:{{ pad }} 0">
+    <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:flex;flex-direction:column;gap:{{ h2Gap }}">
+      <h2 style="font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">For you and your <span style="color:#05810A">team</span></h2>
+      <div style="display:flex;flex-direction:column;gap:{{ cardGap }}">
+        <article style="background:#FFFFFF;border:1px solid #EDEFEA;box-shadow:0 8px 24px rgba(16,40,20,0.06);border-radius:24px;padding:{{ bigPad }};min-width:0;transition:transform .3s ease-out;display:grid;grid-template-columns:{{ anCols }};gap:{{ stepGap }};align-items:center" style-hover="transform:translateY(-4px)">
+          <div style="display:flex;flex-direction:column;gap:12px;max-width:460px;min-width:0">
+            <span style="width:48px;height:48px;border-radius:14px;background:#E2FAE3;display:flex;align-items:center;justify-content:center;flex:none;margin-bottom:8px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#05810A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M7 16v-5M12 16V6M17 16V9"></path></svg></span>
+            <h3 style="font-size:{{ h3Size }};line-height:1.3;font-weight:600;color:#1E1E1E">Meeting analytics</h3>
+            <p style="font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">See how often calls stay on time, where meetings run over, and how your meeting habits improve.</p>
+          </div>
+          <div aria-hidden="true" style="min-width:0;border-radius:16px;background:#FFFFFF;border:1px solid #EDEFEA;box-shadow:0 12px 32px -12px rgba(16,40,20,0.16);overflow:hidden;display:flex;flex-direction:column">
+            <div style="height:32px;flex:none;display:flex;align-items:center;gap:6px;padding:0 14px;background:#F4F5F2;border-bottom:1px solid #EDEFEA"><span style="width:10px;height:10px;border-radius:999px;background:#D9DCD6"></span><span style="width:10px;height:10px;border-radius:999px;background:#D9DCD6"></span><span style="width:10px;height:10px;border-radius:999px;background:#D9DCD6"></span></div>
+            <div style="display:grid;grid-template-columns:{{ dashCols }}">
+              <sc-if value="{{ showSide }}" hint-placeholder-val="{{ true }}">
+                <div style="background:#FFFFFF;border-right:1px solid #EDEFEA;padding:16px 12px;display:flex;flex-direction:column;gap:4px">
+                  <div style="display:flex;align-items:center;gap:8px;padding:0 6px 14px"><img src="assets/icons/CalendarIcon.svg" alt="" aria-hidden="true" style="width:18px;height:18px"><span style="font-size:14px;line-height:1;font-weight:700;color:#05810A;letter-spacing:-0.01em;white-space:nowrap">Minute Minder</span></div>
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:#555555;font-size:13px;line-height:1.2"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 10.5L12 4l8 6.5V20H4z"></path><path d="M10 20v-5h4v5"></path></svg>Home</div>
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;background:#E2FAE3;color:#05810A;font-weight:600;font-size:13px;line-height:1.2"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M4 20h16"></path><path d="M7 16v-5M12 16V6M17 16V9"></path></svg>Analytics</div>
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:#555555;font-size:13px;line-height:1.2"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 19a2.5 2.5 0 0 0 5 0"></path></svg>Reminders</div>
+                  <div style="display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;color:#555555;font-size:13px;line-height:1.2"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 19a5.5 5.5 0 0 1 11 0"></path><path d="M16 5.5a3 3 0 0 1 0 5.5M18 19a5 5 0 0 0-2.5-4.3"></path></svg>Team</div>
+                </div>
+              </sc-if>
+              <div style="min-width:0;background:#FAFAF8;padding:{{ dashPad }};display:flex;flex-direction:column;gap:10px">
+                <div style="display:grid;grid-template-columns:{{ statCols }};gap:8px">
+                  <div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:10px;background:#FFFFFF;border:1px solid #EDEFEA;min-width:0"><span style="font-size:11px;line-height:1.3;color:#555555">Meetings this week</span><span style="font-size:20px;line-height:1.1;font-weight:700;color:#1E1E1E">12</span></div><div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:10px;background:#FFFFFF;border:1px solid #EDEFEA;min-width:0"><span style="font-size:11px;line-height:1.3;color:#555555">Hours in meetings</span><span style="font-size:20px;line-height:1.1;font-weight:700;color:#1E1E1E">9.5</span></div><div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:10px;background:#FFFFFF;border:1px solid #EDEFEA;min-width:0"><span style="font-size:11px;line-height:1.3;color:#555555">On time</span><span style="font-size:20px;line-height:1.1;font-weight:700;color:#05810A">83%</span></div><div style="display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:10px;background:#FFFFFF;border:1px solid #EDEFEA;min-width:0"><span style="font-size:11px;line-height:1.3;color:#555555">Overtime</span><span style="font-size:20px;line-height:1.1;font-weight:700;color:#E5483E">2</span></div>
+                </div>
+                <div style="border-radius:10px;background:#FFFFFF;border:1px solid #EDEFEA;padding:12px 14px 10px;display:flex;flex-direction:column;gap:8px">
+                  <div style="display:flex;justify-content:flex-end;gap:14px;font-size:11px;line-height:1;color:#555555">
+                    <span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:#3EC042"></span>On time</span>
+                    <span style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:#E5483E"></span>Overtime</span>
+                  </div>
+                  <div style="display:grid;grid-template-columns:24px minmax(0,1fr);column-gap:8px">
+                    <div style="position:relative;height:220px"><span style="position:absolute;right:0;top:0%;transform:translateY(-50%);font-size:10px;line-height:1;color:#8A8F8A">3h</span><span style="position:absolute;right:0;top:33.33%;transform:translateY(-50%);font-size:10px;line-height:1;color:#8A8F8A">2h</span><span style="position:absolute;right:0;top:66.67%;transform:translateY(-50%);font-size:10px;line-height:1;color:#8A8F8A">1h</span><span style="position:absolute;right:0;top:100%;transform:translateY(-50%);font-size:10px;line-height:1;color:#8A8F8A">0h</span></div>
+                    <div style="position:relative;height:220px">
+                      <span style="position:absolute;left:0;right:0;top:0%;height:1px;background:#EEF0EC"></span><span style="position:absolute;left:0;right:0;top:33.33%;height:1px;background:#EEF0EC"></span><span style="position:absolute;left:0;right:0;top:66.67%;height:1px;background:#EEF0EC"></span><span style="position:absolute;left:0;right:0;bottom:0;height:1px;background:#DCDFD8"></span>
+                      <div style="position:relative;height:100%;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:{{ barGap }}"><div style="height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center"><div style="width:100%;max-width:28px;display:flex;flex-direction:column"><span style="height:131px;border-radius:5px 5px 0 0;background:#3EC042"></span></div></div><div style="height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center"><div style="width:100%;max-width:28px;display:flex;flex-direction:column"><span style="height:29px;border-radius:5px 5px 0 0;background:#E5483E"></span><span style="height:162px;border-radius:0;background:#3EC042"></span></div></div><div style="height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center"><div style="width:100%;max-width:28px;display:flex;flex-direction:column"><span style="height:110px;border-radius:5px 5px 0 0;background:#3EC042"></span></div></div><div style="height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center"><div style="width:100%;max-width:28px;display:flex;flex-direction:column"><span style="height:21px;border-radius:5px 5px 0 0;background:#E5483E"></span><span style="height:139px;border-radius:0;background:#3EC042"></span></div></div><div style="height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center"><div style="width:100%;max-width:28px;display:flex;flex-direction:column"><span style="height:102px;border-radius:5px 5px 0 0;background:#3EC042"></span></div></div></div>
+                    </div>
+                    <span></span>
+                    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:{{ barGap }};padding-top:6px;font-size:11px;line-height:1;color:#8A8F8A;text-align:center"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article style="background:#FFFFFF;border:1px solid #EDEFEA;box-shadow:0 8px 24px rgba(16,40,20,0.06);border-radius:24px;padding:{{ bigPad }};min-width:0;transition:transform .3s ease-out;display:grid;grid-template-columns:{{ anCols }};gap:{{ stepGap }};align-items:center" style-hover="transform:translateY(-4px)">
+          <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div aria-hidden="true" style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-bottom:8px">
+            <div style="display:flex;align-items:center"><img src="assets/img/meet-lena.png" alt="" aria-hidden="true" style="width:44px;height:44px;border-radius:999px;border:3px solid #FFFFFF;object-fit:cover;object-position:center 45%;max-width:none;flex:none"><img src="assets/img/meet-marcus.png" alt="" aria-hidden="true" style="width:44px;height:44px;border-radius:999px;border:3px solid #FFFFFF;object-fit:cover;object-position:center 45%;max-width:none;flex:none;margin-left:-12px"><img src="assets/img/meet-daniel.png" alt="" aria-hidden="true" style="width:44px;height:44px;border-radius:999px;border:3px solid #FFFFFF;object-fit:cover;object-position:center 45%;max-width:none;flex:none;margin-left:-12px"><img src="assets/img/meet-sophie.png" alt="" aria-hidden="true" style="width:44px;height:44px;border-radius:999px;border:3px solid #FFFFFF;object-fit:cover;object-position:center 45%;max-width:none;flex:none;margin-left:-12px"></div>
+            <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 10px;border-radius:9999px;background:#E2FAE3;color:#05810A;font-size:14px;line-height:20px;font-weight:600;white-space:nowrap"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="#05810A"><path d="M12 3a6 6 0 0 0-6 6v3.6L4.3 15.4A1 1 0 0 0 5.2 17h13.6a1 1 0 0 0 .9-1.6L18 12.6V9a6 6 0 0 0-6-6z"></path><path d="M9.5 18.5a2.5 2.5 0 0 0 5 0z"></path></svg>Team reminder · set by admin</span>
+          </div>
+          <h3 style="font-size:{{ h3Size }};line-height:1.3;font-weight:600;color:#1E1E1E">Team features</h3>
+          <p style="max-width:720px;font-size:18px;line-height:1.5;color:#555555;text-wrap:pretty">Invite teammates, share agendas, use team reminders, and create a more consistent meeting structure across your team.</p>
+          </div>
+          <div aria-hidden="true" style="min-width:0;border-radius:16px;background:#FAFAF8;padding:{{ teamPad }};display:flex;justify-content:center">
+            <div style="width:100%;max-width:380px;background:#FFFFFF;border:1px solid #EDEFEA;border-radius:16px;box-shadow:0 12px 32px -12px rgba(16,40,20,0.16);padding:16px;display:flex;flex-direction:column">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding-bottom:10px"><span style="font-size:14px;line-height:1.3;font-weight:700;color:#1E1E1E">Team</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8A8F8A" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid #EDEFEA"><img src="assets/img/meet-lena.png" alt="" aria-hidden="true" style="width:32px;height:32px;border-radius:999px;object-fit:cover;object-position:center 45%;max-width:none;flex:none"><div style="display:flex;flex-direction:column;min-width:0"><span style="font-size:13px;line-height:1.3;font-weight:600;color:#1E1E1E">Lena Park</span><span style="font-size:11px;line-height:1.3;color:#8A8F8A">Admin</span></div></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid #EDEFEA"><img src="assets/img/meet-marcus.png" alt="" aria-hidden="true" style="width:32px;height:32px;border-radius:999px;object-fit:cover;object-position:center 45%;max-width:none;flex:none"><div style="display:flex;flex-direction:column;min-width:0"><span style="font-size:13px;line-height:1.3;font-weight:600;color:#1E1E1E">Marcus Johnson</span><span style="font-size:11px;line-height:1.3;color:#8A8F8A">Member</span></div></div>
+              <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid #EDEFEA"><img src="assets/img/meet-sophie.png" alt="" aria-hidden="true" style="width:32px;height:32px;border-radius:999px;object-fit:cover;object-position:center 45%;max-width:none;flex:none"><div style="display:flex;flex-direction:column;min-width:0"><span style="font-size:13px;line-height:1.3;font-weight:600;color:#1E1E1E">Sophie Miller</span><span style="font-size:11px;line-height:1.3;color:#8A8F8A">Member</span></div></div>
+              <div style="margin-top:8px;display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:#FFF8E1;border:1px solid #FFE08A">
+                <span style="width:28px;height:28px;border-radius:8px;background:#FFC700;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1E1E1E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9.5" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg></span>
+                <span style="flex:1;min-width:0;font-size:13px;line-height:1.35;color:#1E1E1E"><strong style="font-weight:700">15 min left:</strong> Move on to blockers</span>
+                <span style="font-size:11px;line-height:1.3;color:#8A8F8A;white-space:nowrap">Set by admin</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Features · Final CTA" style="background:#FFFFFF;padding:{{ pad }} 24px;scroll-margin-top:64px">
+    <div style="max-width:1280px;margin:0 auto;padding:80px 24px;border-radius:32px;background:#F3F8F1;display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center">
+      <h2 style="max-width:760px;font-size:{{ h2Size }};line-height:1.1;letter-spacing:-0.01em;font-weight:700;color:#1E1E1E;text-wrap:balance">See it in your <span style="color:#05810A">next call</span></h2>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px;width:{{ btnWrap }}">
+        <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="features-final-add-to-chrome" style="display:flex;align-items:center;justify-content:center;width:100%;height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <dc-import name="SiteFooter" hint-size="100%,260px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { w: typeof window !== "undefined" ? window.innerWidth : 1440, when: "15 min left", msg: "", sound: true, on: true, demo: true, ddOpen: false, pop: false, aiIn: false };
+  ddRef = React.createRef();
+  remRef = React.createRef();
+  aiRef = React.createRef();
+  EX = [["15 min left", "Move on to blockers"], ["10 min left", "Time for questions"], ["5 min left", "Book the next session"], ["Halftime", "Hear from everyone"]];
+  stopDemo = () => { clearTimeout(this.dt); if (this.state.demo) this.setState({ demo: false }); };
+  demoStep(i) {
+    if (!this.state.demo) return;
+    this.setState({ when: this.EX[i][0], msg: "" });
+    this.demoType(i, 1);
+  }
+  demoType(i, k) {
+    if (!this.state.demo) return;
+    const text = this.EX[i][1];
+    this.setState({ msg: text.slice(0, k) });
+    if (k < text.length) { this.dt = setTimeout(() => this.demoType(i, k + 1), 35); return; }
+    this.setState({ pop: true }); setTimeout(() => this.setState({ pop: false }), 240);
+    this.dt = setTimeout(() => this.demoDel(i, text.length - 1), 2000);
+  }
+  demoDel(i, k) {
+    if (!this.state.demo) return;
+    this.setState({ msg: this.EX[i][1].slice(0, k) });
+    if (k > 0) this.dt = setTimeout(() => this.demoDel(i, k - 1), 20);
+    else this.dt = setTimeout(() => this.demoStep((i + 1) % this.EX.length), 400);
+  }
+  componentDidMount() {
+    this.reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.onDoc = e => { if (this.state.ddOpen && this.ddRef.current && !this.ddRef.current.contains(e.target)) this.setState({ ddOpen: false }); };
+    document.addEventListener("mousedown", this.onDoc);
+    if (this.reduce) this.setState({ demo: false, msg: this.EX[0][1], aiIn: true });
+    else setTimeout(() => {
+      if (!("IntersectionObserver" in window) || !this.remRef.current) { this.demoStep(0); return; }
+      this.rio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { this.rio.disconnect(); this.demoStep(0); } }), { threshold: 0.3 });
+      this.rio.observe(this.remRef.current);
+    }, 50);
+    if (!this.reduce && "IntersectionObserver" in window) {
+      setTimeout(() => {
+        if (!this.aiRef.current) { this.setState({ aiIn: true }); return; }
+        this.aio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { this.setState({ aiIn: true }); this.aio.disconnect(); } }), { threshold: 0.3 });
+        this.aio.observe(this.aiRef.current);
+      }, 50);
+    } else this.setState({ aiIn: true });
+    this.onResize = () => this.setState({ w: window.innerWidth });
+    this.onResize(); requestAnimationFrame(this.onResize); setTimeout(this.onResize, 300);
+    window.addEventListener("resize", this.onResize);
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce && "IntersectionObserver" in window) {
+      setTimeout(() => {
+        const secs = Array.from(document.querySelectorAll("main > section")).slice(1);
+        this.io = new IntersectionObserver(es => es.forEach(e => {
+          if (e.isIntersecting) { e.target.style.opacity = "1"; e.target.style.transform = "none"; this.io.unobserve(e.target); }
+        }), { threshold: 0.08 });
+        secs.forEach(s => {
+          if (s.getBoundingClientRect().top < window.innerHeight) return;
+          s.style.opacity = "0"; s.style.transform = "translateY(16px)";
+          s.style.transition = "opacity 300ms ease-out, transform 300ms ease-out";
+          this.io.observe(s);
+        });
+      }, 0);
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.onResize); if (this.io) this.io.disconnect(); if (this.aio) this.aio.disconnect();
+    clearTimeout(this.dt); if (this.rio) this.rio.disconnect(); document.removeEventListener("mousedown", this.onDoc);
+  }
+  renderVals() {
+    const mob = this.state.w < 768, stack = this.state.w < 1000;
+    const { when, msg, sound, on, demo, ddOpen, aiIn } = this.state;
+    const hasMsg = msg.trim().length > 0;
+    const OPTS = ["Halftime", "15 min left", "10 min left", "5 min left", "Overtime"];
+    return {
+      when, msg, sound, on, ddOpen,
+      ddRef: this.ddRef, aiRef: this.aiRef, remRef: this.remRef,
+      stopDemo: this.stopDemo,
+      toggleDd: () => { this.stopDemo(); this.setState(s => ({ ddOpen: !s.ddOpen })); },
+      ddBorder: ddOpen ? "#05810A" : "#E6E6E6", ddRing: ddOpen ? "0 0 0 3px #E2FAE3" : "none", ddRot: ddOpen ? "180deg" : "0deg",
+      whenOpts: OPTS.map(o => ({ label: o, selected: o === when, weight: o === when ? 600 : 400, bg: o === when ? "#F3F8F1" : "transparent", pick: () => this.setState({ when: o, ddOpen: false }) })),
+      prevScale: this.state.pop ? "scale(1.05)" : "scale(1)",
+      setMsg: e => { this.stopDemo(); this.setState({ msg: e.target.value.slice(0, 40) }); },
+      toggleSound: () => this.setState(s => ({ sound: !s.sound })),
+      aiPad: mob ? "24px" : "48px", aiGap: mob ? "24px" : "40px",
+      conW: mob ? "72px" : "96px", conH: mob ? "72px" : "96px",
+      cardSelf: mob ? "center" : "stretch",
+      lineOff: aiIn ? 0 : 80, sparkS: aiIn ? 1 : 0,
+      agOp: aiIn ? 1 : 0, agT: aiIn ? "none" : "translateY(8px)",
+      dashCols: mob ? "minmax(0,1fr)" : "180px minmax(0,1fr)",
+      showSide: !mob,
+      teamPad: mob ? "16px" : "24px",
+      toggleOn: () => this.setState(s => ({ on: !s.on })),
+      soundBg: sound ? "#05810A" : "#C8CCC6", soundX: sound ? "18px" : "0px",
+      onBg: on ? "#05810A" : "#C8CCC6", onX: on ? "18px" : "0px",
+      prevOp: on ? 1 : 0.4,
+      msgShown: hasMsg ? msg : demo ? "\u00A0" : "Type your reminder",
+      msgColor: hasMsg || demo ? "#1E1E1E" : "#8A8F8A",
+      prevLeft: mob ? "16px" : "-24px",
+      prevMax: mob ? "calc(100% - 32px)" : "300px",
+      remPadB: mob ? "64px" : "32px",
+      saveSelf: mob ? "stretch" : "flex-end",
+      pad: mob ? "36px" : "60px",
+      heroPad: mob ? "40px" : "96px",
+      h1Size: mob ? "40px" : "56px",
+      h2Size: mob ? "30px" : "44px",
+      h3Size: mob ? "20px" : "24px",
+      h2Gap: mob ? "32px" : "48px",
+      heroCols: stack ? "minmax(0,1fr)" : "minmax(0,2fr) minmax(0,3fr)",
+      heroGap: stack ? "40px" : "48px",
+      helperAlign: mob ? "center" : "left",
+      calPad: mob ? "8px 0" : "24px 0",
+      cardGap: mob ? "12px" : "20px",
+      btnWrap: mob ? "100%" : "auto",
+      playSize: mob ? "64px" : "88px",
+      playing: !!this.state.playing,
+      notPlaying: !this.state.playing,
+      play: () => this.setState({ playing: true }),
+      twoCols: stack ? "minmax(0,1fr)" : "minmax(0,1fr) minmax(0,1fr)",
+      stepGap: stack ? "32px" : "64px",
+      aiCols: stack ? "minmax(0,1fr)" : "minmax(0,2fr) minmax(0,3fr)",
+      aiDir: mob ? "column" : "row",
+      arrowRot: mob ? "90deg" : "0deg",
+      anCols: stack ? "minmax(0,1fr)" : "minmax(0,4fr) minmax(0,8fr)",
+      statCols: mob || this.state.w < 1200 && !stack ? "repeat(2,minmax(0,1fr))" : "repeat(4,minmax(0,1fr))",
+      bigPad: mob ? "24px" : "40px",
+      dashPad: mob ? "12px" : "20px",
+      barGap: mob ? "10px" : "16px",
+      pillGap: mob ? "16px" : "24px",
+      pillAlign: stack ? "start" : "end",
+      pillPad: mob ? "14px 28px 16px" : "20px 40px 22px",
+      pillLabel: mob ? "16px" : "20px",
+      pillTime: mob ? "30px" : "40px",
+      remPad: mob ? "24px" : "32px",
+    };
+  }
+}
+</script>
+</body>
+</html>

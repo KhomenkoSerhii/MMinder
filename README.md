@@ -1,151 +1,42 @@
-# Minute Minder
+# minuteminder.io: new site
 
-## 🌟 Project Overview
+Static site. No build step: deploy this folder as is (it is the site root).
 
-This project supports two different deployment configurations from a single codebase:
+## Pages (URL → file)
 
-### 🎯 **Landing Mode**
+| URL | File |
+|---|---|
+| `/` | `index.html` (Home) |
+| `/features` | `Features.dc.html` |
+| `/how-to-use` | `HowToUse.dc.html` |
+| `/pricing` | `Pricing.dc.html` |
+| `/security` | `Security.dc.html` (privacy overview) |
+| `/privacy` | `Privacy.dc.html` (Privacy Policy) |
+| `/terms` | `Terms.dc.html` |
+| `/online-calls-timer-and-AI-reminders` | `Landing.dc.html` (ad landing page: no menu, `noindex`) |
 
-- **Purpose**: Marketing/Landing page only
-- **Routes**: Home page only (`/`)
-- **Use Case**: Public-facing landing page for marketing campaigns
+- The URL mapping is already set in `vercel.json` (Vercel) and `_redirects` (Netlify). Use the file for your host.
+- 301 redirects kept from the old site: `/privacy-policy` → `/privacy`, `/terms-and-conditions` → `/terms`, `/support` → the support Google Form.
+- Keep URLs without a trailing slash (`trailingSlash: false` in `vercel.json`). The pages load `support.js` and `assets/` by relative path from the root.
 
-### 🚀 **Site Mode**
+## How the pages work
 
-- **Purpose**: Full-featured application
-- **Routes**: All application routes (Home, Features, Pricing, etc.)
-- **Use Case**: Complete application with full navigation and features
+- Each `.dc.html` page renders through `support.js` (the Claude Design runtime). Do not remove it.
+- The menu and footer are shared components: `SiteNav.dc.html`, `SiteFooter.dc.html`. The runtime loads them from the root.
 
-## 🔧 Environment Configuration
+## Already included
 
-The deployment mode is controlled by the `VITE_APP_MODE` environment variable:
+- **Tracking:** `site-tracking.js` loads Google Tag Manager `GTM-MFKNJHRB` with Consent Mode v2 (denied by default) and the cookie banner (vanilla-cookieconsent 3.1.0, self-hosted in `vendor/`). Same setup as the old site. Every button and link has a `data-gtm` attribute. Landing page names start with `landing-`.
+- **SEO:** each page has title, meta description, canonical, Open Graph, Twitter tags, and JSON-LD (SoftwareApplication, FAQPage, HowTo, BreadcrumbList).
+- **Social previews:** `og/og-*.png` (1200×630).
+- **Root files:** `robots.txt`, `sitemap.xml`, `llms.txt`, `site.webmanifest`, favicons, `assets/logo-512.png` (used by JSON-LD).
 
-### **.env** (Development - Site Mode)
+## Checked locally (2026-09-28)
 
-```bash
-VITE_APP_MODE=site
-```
+All 8 URLs return 200 and render with menu, footer, cookie banner, and GTM. No console errors. Redirects return 301. Every asset referenced by the pages exists.
 
-### **.env.landing** (Landing Mode)
+## To do on deploy
 
-```bash
-VITE_APP_MODE=landing
-```
-
-## 📦 Available Scripts
-
-### Development
-
-```bash
-npm run dev              # Default development mode (site)
-npm run dev:landing      # Run in landing mode
-npm run dev:site         # Run in site mode
-```
-
-### Build
-
-```bash
-npm run build            # Default build (site)
-npm run build:landing    # Build landing page only
-npm run build:site       # Build full site
-```
-
-### Preview
-
-```bash
-npm run preview          # Preview production build
-npm run preview:landing  # Preview landing build
-npm run preview:site     # Preview site build
-```
-
-## 🚀 Getting Started
-
-1. **Install dependencies:**
-
-   ```bash
-   npm install
-   ```
-
-2. **Run development server:**
-
-   ```bash
-   npm run dev:site      # Full site mode
-   # or
-   npm run dev:landing   # Landing mode
-   ```
-
-3. **Build for production:**
-   ```bash
-   npm run build:site
-   # or
-   npm run build:landing
-   ```
-
-## 🔀 How Routing Works
-
-The application uses conditional routing in `src/App.jsx`:
-
-- **Landing Mode**: Only shows the landing home page, redirects all other routes to `/`
-- **Site Mode**: Shows all application routes with full navigation
-
-## 📤 Deployment
-
-### SEO + Deploy Preparation
-
-The build now auto-generates:
-
-- `public/sitemap.xml`
-- `public/robots.txt`
-
-Set `SITE_URL` in your deployment environment so these files use your production domain:
-
-```bash
-SITE_URL=https://minuteminder.io
-```
-
-You can run this manually as well:
-
-```bash
-npm run prepare:deploy
-```
-
-### Vercel Deployment (Recommended)
-
-**Landing Page:**
-
-```bash
-# Set environment variable in Vercel
-VITE_APP_MODE=landing
-
-# Build command
-npm run build:landing
-```
-
-**Full Site:**
-
-```bash
-# Set environment variable in Vercel
-VITE_APP_MODE=site
-
-# Build command
-npm run build:site
-```
-
-### Setup Two Vercel Projects
-
-1. **Project 1: Minute Minder Landing**
-   - Branch: `main` (or `landing`)
-   - Environment Variable: `VITE_APP_MODE=landing`
-   - Build Command: `npm run build:landing`
-
-2. **Project 2: Minute Minder App**
-   - Branch: `main`
-   - Environment Variable: `VITE_APP_MODE=site`
-   - Build Command: `npm run build:site`
-
-## 🔒 Environment Modes
-
-| Mode    | Environment Variable    | Pages Included    | Redirects        |
-| ------- | ----------------------- | ----------------- | ---------------- |
-| Landing | `VITE_APP_MODE=landing` | Landing page only | All routes → `/` |
-| Site    | `VITE_APP_MODE=site`    | All pages         | Standard routing |
+1. Deploy this folder.
+2. Check a few pages on the live domain, and test a link preview (for example with the LinkedIn Post Inspector) to refresh cached social images.
+3. Submit `https://minuteminder.io/sitemap.xml` in Google Search Console.
