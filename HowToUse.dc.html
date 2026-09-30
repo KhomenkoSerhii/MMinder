@@ -102,10 +102,10 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
   <main style="flex:1;width:100%;padding-top:64px">
 
   <section data-screen-label="How to use · Hero" style="background:#F3F8F1;padding:{{ heroPad }} 0">
-    <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ heroCols }};gap:{{ heroGap }};align-items:center">
-      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px;max-width:560px;min-width:0">
-        <h1 style="font-size:{{ h1Size }};line-height:1.05;letter-spacing:-0.02em;font-weight:700;color:#1E1E1E;text-wrap:balance">Set up Minute Minder in <span style="color:#05810A">30 seconds</span></h1>
-        <p style="font-size:20px;line-height:1.5;color:#555555;text-wrap:pretty">Add it to Chrome, connect your calendar, and join your call. The timer appears automatically.</p>
+    <div style="max-width:{{ heroMax }};margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ heroCols }};gap:{{ heroGap }};align-items:center">
+      <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px;max-width:640px;min-width:0">
+        <h1 style="font-size:{{ h1Size }};line-height:1.05;letter-spacing:-0.02em;font-weight:700;color:#1E1E1E;text-wrap:balance">Set up Minute Minder<sc-if value="{{ h1Break }}" hint-placeholder-val="{{ true }}"><br></sc-if> in <span style="color:#05810A">30 seconds</span></h1>
+        <p style="max-width:560px;font-size:20px;line-height:1.5;color:#555555;text-wrap:pretty">Add it to Chrome, connect your calendar, and join your call. The timer appears automatically.</p>
         <div style="display:flex;flex-direction:column;gap:12px;width:{{ btnWrap }};margin-top:8px">
           <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="howto-hero-add-to-chrome" style="display:flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
           <p style="font-size:14px;line-height:20px;color:#555555;text-align:{{ helperAlign }}">Free to install. No credit card required.</p>
@@ -156,14 +156,13 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
         <div style="display:flex;align-items:center;gap:12px;padding:4px 4px 2px">
           <span style="flex:1 1 0;min-width:0;color:#FFFFFF;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Weekly team sync</span>
           <sc-if value="{{ fullMockup }}" hint-placeholder-val="{{ true }}">
-            <div style="display:flex;align-items:center;gap:10px">
+            <div style="display:flex;align-items:center;gap:8px">
               <span style="width:36px;height:36px;border-radius:999px;background:#2B2C30;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8EAED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"></path></svg></span>
               <span style="width:36px;height:36px;border-radius:999px;background:#2B2C30;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8EAED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="12" height="10" rx="2"></rect><path d="M15 11l6-3.5v9L15 13"></path></svg></span>
               <span style="width:36px;height:36px;border-radius:999px;background:#2B2C30;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E8EAED" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></span>
-              <span style="width:52px;height:36px;border-radius:999px;background:#E5483E;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 9c-2.6 0-5.1.6-7.3 1.8-.6.3-.9 1-.8 1.6l.4 2c.1.6.7 1 1.3.9l2.7-.5c.6-.1 1-.6 1-1.2v-1.5c1.7-.4 3.6-.4 5.4 0v1.5c0 .6.4 1.1 1 1.2l2.7.5c.6.1 1.2-.3 1.3-.9l.4-2c.1-.6-.2-1.3-.8-1.6C17.1 9.6 14.6 9 12 9z"></path></svg></span>
+              <span style="width:36px;height:36px;border-radius:999px;background:#E5483E;display:flex;align-items:center;justify-content:center;flex:none"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M12 9c-2.6 0-5.1.6-7.3 1.8-.6.3-.9 1-.8 1.6l.4 2c.1.6.7 1 1.3.9l2.7-.5c.6-.1 1-.6 1-1.2v-1.5c1.7-.4 3.6-.4 5.4 0v1.5c0 .6.4 1.1 1 1.2l2.7.5c.6.1 1.2-.3 1.3-.9l.4-2c.1-.6-.2-1.3-.8-1.6C17.1 9.6 14.6 9 12 9z"></path></svg></span>
             </div>
           </sc-if>
-          <span style="flex:1 1 0"></span>
         </div>
       </div>
     </div>
@@ -345,23 +344,29 @@ class Component extends DCLogic {
   renderVals() {
     const s = this.props.animateTimer === false ? 18 * 60 : this.state.s;
     const m = Math.floor(s / 60), sec = s % 60;
-    const mob = this.state.w < 768, stack = this.state.w < 1000;
+    const mob = this.state.w < 768, stack = this.state.w < 1000, heroStack = stack;
+    const heroContent = Math.min(this.state.w, 1232) - 32;
+    const heroGapPx = heroContent >= 1100 ? 64 : 48;
+    const mockW = this.state.w >= 1200 ? 500 : 480;
+    const h1Px = stack ? (mob ? 40 : 56) : Math.min(56, Math.floor((heroContent - heroGapPx - mockW - 8) / 10.04));
     return {
       time: `00:${String(m).padStart(2, "0")}:${String(sec).padStart(2, "0")}`,
       progress: ((1800 - s) / 1800 * 100).toFixed(2) + "%",
       pad: mob ? "36px" : "60px",
-      heroPad: mob ? "40px" : "96px",
-      heroCols: stack ? "minmax(0,1fr)" : "minmax(0,560px) minmax(0,1fr)",
-      heroGap: stack ? "48px" : "64px",
-      h1Size: mob ? "40px" : "64px",
+      heroPad: mob ? "48px" : "64px",
+      heroMax: "1232px",
+      heroCols: heroStack ? "minmax(0,1fr)" : `minmax(0,1fr) minmax(0,${mockW}px)`,
+      heroGap: heroStack ? "48px" : heroGapPx + "px",
+      h1Size: h1Px + "px",
+      h1Break: !mob,
       h2Size: mob ? "30px" : "44px",
       h3Size: mob ? "20px" : "24px",
       h2Gap: mob ? "32px" : "48px",
       btnWrap: mob ? "100%" : "auto",
       helperAlign: mob ? "center" : "left",
       fullMockup: !mob,
-      mockAlign: stack ? "start" : "end",
-      heroMockMax: stack ? "544px" : "490px",
+      mockAlign: heroStack ? "start" : "end",
+      heroMockMax: heroStack ? "544px" : mockW + "px",
       stepCols: stack ? "minmax(0,1fr)" : "minmax(0,5fr) minmax(0,7fr)",
       twoCols: stack ? "minmax(0,1fr)" : "minmax(0,1fr) minmax(0,1fr)",
       stepGap: stack ? "32px" : "64px",

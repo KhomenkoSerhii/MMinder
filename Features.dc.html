@@ -74,7 +74,7 @@ button{font:inherit;color:inherit;background:transparent;cursor:pointer}
     <div style="max-width:1232px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:{{ heroCols }};gap:{{ heroGap }};align-items:center">
       <div style="display:flex;flex-direction:column;align-items:flex-start;gap:24px;max-width:560px;min-width:0">
         <p style="font-size:13px;line-height:1.4;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:#05810A">Features</p>
-        <h1 style="font-size:{{ h1Size }};line-height:1.05;letter-spacing:-0.02em;font-weight:700;color:#1E1E1E;text-wrap:balance">What Minute Minder does in <span style="color:#05810A">Google Meet</span></h1>
+        <h1 style="font-size:{{ h1Size }};line-height:1.05;letter-spacing:-0.02em;font-weight:700;color:#1E1E1E;text-wrap:balance">What Minute&nbsp;Minder<sc-if value="{{ h1Break }}" hint-placeholder-val="{{ true }}"><br></sc-if> does in <span style="color:#05810A">Google Meet</span></h1>
         <p style="font-size:20px;line-height:1.5;color:#555555;text-wrap:pretty">A timer inside your call, started from your calendar, with reminders you set yourself.</p>
         <div style="display:flex;flex-direction:column;gap:12px;width:{{ btnWrap }};margin-top:8px">
           <a href="https://chromewebstore.google.com/detail/minute-minder-meeting-tim/lkabejfjiohmfkpjngnomccnfapdcoic" target="_blank" rel="noopener" data-gtm="features-hero-add-to-chrome" style="display:flex;align-items:center;justify-content:center;height:56px;padding:0 32px;border-radius:9999px;background:#05810A;color:#FFFFFF;font-size:18px;font-weight:600;white-space:nowrap;text-decoration:none;transition:background .2s" style-hover="background:#046F09;color:#FFFFFF">Add to Chrome</a>
@@ -500,7 +500,8 @@ class Component extends DCLogic {
       saveSelf: mob ? "stretch" : "flex-end",
       pad: mob ? "36px" : "60px",
       heroPad: mob ? "40px" : "96px",
-      h1Size: mob ? "40px" : "56px",
+      h1Size: mob ? "40px" : Math.min(48, Math.floor((stack ? 560 : (Math.min(this.state.w, 1232) - 80) * 0.4) / 9.4)) + "px",
+      h1Break: !mob,
       h2Size: mob ? "30px" : "44px",
       h3Size: mob ? "20px" : "24px",
       h2Gap: mob ? "32px" : "48px",
